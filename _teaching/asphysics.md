@@ -1,5 +1,5 @@
 ---
-title: "CAIE A2-Level Physics"
+title: "CAIE AS-Level Physics"
 collection: teaching
 type: "AS-Level Course"
 permalink: /teaching/asphysics
