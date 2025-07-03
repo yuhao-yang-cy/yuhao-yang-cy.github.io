@@ -7,7 +7,7 @@ main:
     url: /teaching/    
     
   - title: "Contact"
-    url: /portfolio/
+    url: /contact/
         
-  - title: "Guide"
+  - title: "Posts"
     url: /markdown/
