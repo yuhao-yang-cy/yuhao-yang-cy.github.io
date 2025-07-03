@@ -16,12 +16,12 @@ Education
 
 Work Experience
 ======
-* Co-Founder & Academic Director @ Shanghai Easyday Education (April 2017 - Present)
+* **Co-Founder & Academic Director** @ _Shanghai Easyday Education_ (April 2017 - Present)
   * Physics & Maths Teacher (CAIE Physics / AQA Physics / Edexcel Mechanics / Edexcel Decision)
   * University Guidance Counselor for STEM Majors (Choices / Personal Statements / References)
   * Curriculum Development (Oxford MAT & PAT Courses / STEP Courses / University Interview Courses / Guided STEM Projects / Guided Reading)
 
-* Head of Physics Department & Deputy Head of Academic Affairs @ Shanghai Experimental Foreign Language School (August 2014 - June 2017)
+* **Head of Physics Department & Deputy Head of Academic Affairs** @ _Shanghai Experimental Foreign Language School_ (August 2014 - June 2017)
   * AP coordinator
   * Advisor of academic affairs
   * Trainer for new teachers
@@ -29,7 +29,7 @@ Work Experience
   * Organizer of school-based mid-term and final exams
   * Physics Teacher
 
-* Physics and Mathematics Teacher @ Shanghai Guanghua College (August 2012 – July 2014)
+* **Physics and Mathematics Teacher** @ _Shanghai Guanghua College_ (August 2012 – July 2014)
   * Physics and maths teacher
   
  
