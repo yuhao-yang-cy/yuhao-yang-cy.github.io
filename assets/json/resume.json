@@ -201,17 +201,13 @@
       "name": "Python",
       "level": "Intermediate",
       "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        ""
-      ],
-      [
+      "keywords": [""]
+    },
     {
       "name": "LaTeX",
       "level": "Intermediate",
       "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        ""
-      ]
+      "keywords": [""]
     }
   ],
   "languages": [
