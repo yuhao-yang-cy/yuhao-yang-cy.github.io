@@ -13,7 +13,7 @@
       institution: Imperial College London, UK
       year: 2011
       description:
-        - GPA: 3.83/4 in Quantum Fields and Fundamental Forces
+        - "GPA: 3.83/4 in Quantum Fields and Fundamental Forces"
         - title: List of Courses
           contents:
             - Quantum Field Theory
@@ -28,7 +28,7 @@
       institution: Fudan University, China
       year: 2009
       description:
-        - Overal GPA: 3.40/4; Major GPA: 3.55/4
+        - "Overal GPA: 3.40/4; Major GPA: 3.55/4"
         - title: List of Courses
           contents:
             - Advanced Mathematics
@@ -89,8 +89,8 @@
     - title: Shanghaiese (Native Language)
     - title: English (Professional Fluency)
       items:
-        - IELTS: Overal Band 8.0
-        - TOEFL (Internet Based): Overal Score 105
+        - "IELTS: Overal Band 8.0"
+        - "TOEFL (Internet Based): Overal Score 105"
     - title: French (CEFR B1 Level) 
 - title: Skills
   type: nested_list
