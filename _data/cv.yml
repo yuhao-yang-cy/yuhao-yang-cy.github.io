@@ -6,6 +6,29 @@
     - name: Languages
       value: Chinese, English, French
 
+- title: Experience
+  type: time_table
+  contents:
+    - title: Academic Director
+      institution: Shanghai Easyday Education Centre
+      year: 2017 - Present
+      description:
+        - Physics & Maths Teacher (CAIE Physics / AQA Physics / Edexcel Mechanics & Decision)
+        - University Guidance Counselor for STEM Majors (Choices / Personal Statements / References)
+        - Curriculum Development (Oxford MAT & PAT Preparation Courses / STEP Courses / University Admission Interview Preparation Courses / Guided STEM Projects / Guided Reading)
+    - title: Deputy Head of Academic Affairs & Head of Physics Department
+      institution: Shanghai Experimental Foreign Language School
+      year: 2014 - 2017
+      description:
+        - Organizer of school-based mid-term and final exams / AP Coordinator
+        - Advisor of academic affairs / Trainer for new teachers
+        - Person-in-charge of lab facilities / Physics Teacher
+        - "Taught courses: AS/A2 Physics, GCSE Physics"
+    - title: Physics Teacher
+      institution: Shanghai Guanghua College
+      year: 2011 - 2014
+      description:
+        - "Taught courses: A2 Physics, Pure Mathematics, Mechanics, Introductory Cosmology"
 - title: Education
   type: time_table
   contents:
@@ -47,29 +70,6 @@
             - Electronics
             - Material Science
             - Mathematical Modelling
-- title: Experience
-  type: time_table
-  contents:
-    - title: Academic Director
-      institution: Shanghai Easyday Education Centre
-      year: 2017 - Present
-      description:
-        - Physics & Maths Teacher (CAIE Physics / AQA Physics / Edexcel Mechanics & Decision)
-        - University Guidance Counselor for STEM Majors (Choices / Personal Statements / References)
-        - Curriculum Development (Oxford MAT & PAT Preparation Courses / STEP Courses / University Admission Interview Preparation Courses / Guided STEM Projects / Guided Reading)
-    - title: Deputy Head of Academic Affairs & Head of Physics Department
-      institution: Shanghai Experimental Foreign Language School
-      year: 2014 - 2017
-      description:
-        - Organizer of school-based mid-term and final exams / AP Coordinator
-        - Advisor of academic affairs / Trainer for new teachers
-        - Person-in-charge of lab facilities / Physics Teacher
-        - Taught courses: AS/A2 Physics, GCSE Physics
-    - title: Physics Teacher
-      institution: Shanghai Guanghua College
-      year: 2011 - 2014
-      description:
-        - Taught courses: A2 Physics, Pure Mathematics, Mechanics, Introductory Cosmology
 - title: Honours and Awards
   type: time_table
   contents:
@@ -82,10 +82,89 @@
     - year: 2007
       items:
         - People Scholarship (2nd Prize), Fudan University 
+- title: Open Course Certificates
+  type: time_table
+  contents:
+    - title: Convolutional Neural Networks
+      institution: DeepLearning.AI
+      year: 2025
+      url: https://www.coursera.org/account/accomplishments/verify/0Q60YZ97BUQK
+    - title: Neural Networks and Deep Learning
+      institution: DeepLearning.AI
+      year: 2025
+      url: https://www.coursera.org/account/accomplishments/verify/FA8HKS1CD8RO
+    - title: Machine Learning (Specialisation)
+      institution: University of Washington
+      year: 2024
+      url: https://www.coursera.org/account/accomplishments/specialization/HZNHCK6TUYGO
+      - title: List of Courses
+        description:
+        - "Machine Learning Foundations: A Case Study Approach"
+        - "Machine Learning: Regression"
+        - "Machine Learning: Classification"
+        - "Machine Learning: Clustering & Retrieval"
+    - title: The Physics of Emergence: Introduction to Condensed Matter (Specialisation)
+      institution: University of Colorado Boulder
+      year: 2023
+      url: https://www.coursera.org/account/accomplishments/specialization/5TF92UYJKNMZ
+      - title: List of Courses
+        description:
+        - "Phases of Matter: Solid, Liquid, Gas and Beyond"
+        - "Universal Theories"
+        - "Modern Topics in Condensed Matter Physics"
+    - title: Computers, Waves, Simulations
+      institution: Ludwig-Maximilians-Universität München (LMU)
+      year: 2024
+      url: https://www.coursera.org/account/accomplishments/verify/WMWGF6WBPDW7
+    - title: "Digital Signal Processing 1: Basic Concepts and Algorithms"
+      institution: École Polytechnique Fédérale de Lausanne (EPFL)
+      year: 2022
+      url: https://www.coursera.org/account/accomplishments/verify/4YDJ83U9YBXZ
+    - title: "Digital Signal Processing 2: Filtering"
+      institution: École Polytechnique Fédérale de Lausanne (EPFL)
+      year: 2022
+      url: https://www.coursera.org/account/accomplishments/verify/R7DGSAQWHMWF
+    - title: "Our Earth: Its Climate, History, and Processes"
+      institution: University of Manchester
+      year: 2022
+      url: https://www.coursera.org/account/accomplishments/verify/Z7SD8PBAS2X6
+    - title: "Astrobiology: Exploring Other Worlds"
+      institution: University of Arizona
+      year: 2022
+      url: https://www.coursera.org/account/accomplishments/verify/7LZNCMEQ4KMV
+    - title: Introduction to Physical Chemistry
+      institution: University of Manchester
+      year: 2021
+      url: https://www.coursera.org/account/accomplishments/verify/2VPEUUVDHE7Y
+    - title: Introduction to Electronics
+      institution: Georgia Institute of Technology
+      year: 2022
+      url: https://www.coursera.org/account/accomplishments/verify/53AL9WPU74VP
+    - title: Aerial Robotics
+      institution: University of Pennsylvania
+      year: 2021
+      url: https://www.coursera.org/account/accomplishments/verify/B8Y62UNH96SA
+    - title: Differential Equations for Engineers
+      institution: The Hong Kong University of Science and Technology
+      year: 2021
+      url: https://www.coursera.org/account/accomplishments/verify/NDFEEBPW2PUT
+    - title: Introduction to Complex Analysis
+      institution: Wesleyan University
+      year: 2018
+      url: https://www.coursera.org/account/accomplishments/verify/CLDZ65A35LTD
+    - title: Introduction to Finance
+      institution: University of Michigan
+      year: 2015
+    - title: Microeconomics Principles
+      institution: University of Illinois Urbana-Champaign
+      year: 2015
+    - title: Interactive Programming in Python
+      institution: Rice University
+      year: 2014
 - title: Languages
   type: nested_list
   contents:
-    - title: Mandarin (Native Language)
+    - title: Mandarin Chinese (Native Language)
     - title: Shanghaiese (Native Language)
     - title: English (Professional Fluency)
       items:
