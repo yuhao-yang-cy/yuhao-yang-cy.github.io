@@ -97,8 +97,7 @@
       institution: University of Washington
       year: 2024
       url: https://www.coursera.org/account/accomplishments/specialization/HZNHCK6TUYGO
-      - title: List of Courses
-        description:
+      contents:
         - "Machine Learning Foundations: A Case Study Approach"
         - "Machine Learning: Regression"
         - "Machine Learning: Classification"
@@ -107,8 +106,7 @@
       institution: University of Colorado Boulder
       year: 2023
       url: https://www.coursera.org/account/accomplishments/specialization/5TF92UYJKNMZ
-      - title: List of Courses
-        description:
+      contents:
         - "Phases of Matter: Solid, Liquid, Gas and Beyond"
         - "Universal Theories"
         - "Modern Topics in Condensed Matter Physics"
