@@ -3,31 +3,50 @@
   contents:
     - name: Full Name
       value: Colin Young
-    - name: Date of Birth
-      value: 14th March 1879
     - name: Languages
       value: Chinese, English, French
 
 - title: Education
   type: time_table
   contents:
-    - title: M.Sc
-      institution: Imperial College London
+    - title: M.Sc in Theoretical Physics with Distinction
+      institution: Imperial College London, UK
       year: 2011
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
+        - GPA: 3.83/4 in Quantum Fields and Fundamental Forces
+        - title: List of Courses
           contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+            - Quantum Field Theory
+            - Advanced Field Theory
+            - The Standard Model
+            - General Relativity
+            - Particle Symmetries
+            - Group Theory
+            - Differential Geometry
+            - Supersymmetry
+    - title: B.Sc in Physics
+      institution: Fudan University, China
+      year: 2009
       description:
-        - Description 1.
-        - Description 2.
-
+        - Overal GPA: 3.40/4; Major GPA: 3.55/4
+        - title: List of Courses
+          contents:
+            - Advanced Mathematics
+            - Linear Algebra
+            - General Physics
+            - General Chemistry
+            - Classical Mechanics
+            - Mathematical Methods for Physics
+            - Physics Experiments
+            - Quantum Mechanics
+            - Thermodynamics and Statistical Physics
+            - Electrodyanmics
+            - Solid State Physics
+            - Advanced Quantum Mechanics
+            - Quantum Field Theory
+            - Electronics
+            - Material Science
+            - Mathematical Modelling
 - title: Experience
   type: time_table
   contents:
@@ -35,54 +54,54 @@
       institution: Shanghai Easyday Education Centre
       year: 2017 - Present
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
+        - Physics & Maths Teacher (CAIE Physics / AQA Physics / Edexcel Mechanics & Decision)
+        - University Guidance Counselor for STEM Majors (Choices / Personal Statements / References)
+        - Curriculum Development (Oxford MAT & PAT Preparation Courses / STEP Courses / University Admission Interview Preparation Courses / Guided STEM Projects / Guided Reading)
     - title: Deputy Head of Academic Affairs & Head of Physics Department
       institution: Shanghai Experimental Foreign Language School
       year: 2014 - 2017
       description:
-        - Description 1.
-        - Description 2.
-
+        - Organizer of school-based mid-term and final exams / AP Coordinator
+        - Advisor of academic affairs / Trainer for new teachers
+        - Person-in-charge of lab facilities / Physics Teacher
+        - Taught courses: AS/A2 Physics, GCSE Physics
     - title: Physics Teacher
       institution: Shanghai Guanghua College
       year: 2011 - 2014
-
-- title: Open Source Projects
+      description:
+        - Taught courses: A2 Physics, Pure Mathematics, Mechanics, Introductory Cosmology
+- title: Honours and Awards
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
-
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 1921
+    - year: 2011
       items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
+        - Distinction honor for MSc & DIC degree, Imperial College London
+    - year: 2008
       items:
-        - Max Planck Medal
-
-- title: Academic Interests
+        - People Scholarship (1st Prize), Fudan University 
+    - year: 2007
+      items:
+        - People Scholarship (2nd Prize), Fudan University 
+- title: Languages
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Mandarin (Native Language)
+    - title: Shanghaiese (Native Language)
+    - title: English (Professional Fluency)
       items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
-      items:
-        - Description 1.
-        - Description 2.
-
-- title: Other Interests
-  type: list
+        - IELTS: Overal Band 8.0
+        - TOEFL (Internet Based): Overal Score 105
+    - title: French (CEFR B1 Level) 
+- title: Skills
+  type: nested_list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - title: Software
+      items:
+        - Python (Intermediate Level)
+        - LaTeX (Intermediate Level)
+    - title: Hobbies
+      items:
+        - Running
+        - Badminton
+        - Photography
+        - Blogging
