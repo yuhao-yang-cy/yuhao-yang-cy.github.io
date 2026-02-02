@@ -97,16 +97,16 @@
       institution: University of Washington
       year: 2024
       url: https://www.coursera.org/account/accomplishments/specialization/HZNHCK6TUYGO
-      contents:
+      description:
         - "Machine Learning Foundations: A Case Study Approach"
         - "Machine Learning: Regression"
         - "Machine Learning: Classification"
         - "Machine Learning: Clustering & Retrieval"
-    - title: The Physics of Emergence: Introduction to Condensed Matter (Specialisation)
+    - title: "The Physics of Emergence: Introduction to Condensed Matter (Specialisation)"
       institution: University of Colorado Boulder
       year: 2023
       url: https://www.coursera.org/account/accomplishments/specialization/5TF92UYJKNMZ
-      contents:
+      description:
         - "Phases of Matter: Solid, Liquid, Gas and Beyond"
         - "Universal Theories"
         - "Modern Topics in Condensed Matter Physics"
