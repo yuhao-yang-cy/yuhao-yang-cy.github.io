@@ -2,17 +2,17 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Easyday Education
+# subtitle:
 
 profile:
   align: right
   image: antelope.png
-  image_circular: false # crops the image to make it circular
+  image_circular: true # crops the image to make it circular
   more_info: >
-    <p>Easyday 作坊混饭吃</p>
-    <p>A-Level 复读机 / 教案垃圾制造机 / 佛系升学指导</p>
-    <p>五角场职业技术学院本科 / 南肯辛顿技术学院小硕</p>
-    <p>理论物理狗 / 纯业余码农 / 民科老咸鱼</p>
+    # <p>Easyday 作坊混饭吃</p>
+    # <p>A-Level 复读机 / 教案垃圾制造机 / 佛系升学指导</p>
+    # <p>五角场职业技术学院本科 / 南肯辛顿技术学院小硕</p>
+    # <p>理论物理狗 / 纯业余码农 / 民科老咸鱼</p>
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -27,6 +27,8 @@ latest_posts:
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
+
+## This Site Is Under Construction
 
 Hi! I'm Colin Young, a physics enthusiast working in an international education centre based in Shanghai.
 
