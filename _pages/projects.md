@@ -1,6 +1,6 @@
 ---
 layout: page
-title: projects
+title: resources
 permalink: /projects/
 description: A collection of my cool projects.
 nav: true
