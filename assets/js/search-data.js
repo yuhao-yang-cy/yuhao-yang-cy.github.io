@@ -65,6 +65,11 @@ ninja.data = [{
           description: "with background image",
           section: "Projects",handler: () => {
               window.location.href = "/projects/a2physics_notes/";
+            },},{id: "projects-as-physics-notes",
+          title: 'AS Physics Notes',
+          description: "with background image",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/asphysics_notes/";
             },},{
         id: 'social-github',
         title: 'GitHub',
