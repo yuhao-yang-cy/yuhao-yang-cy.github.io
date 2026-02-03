@@ -1,8 +1,8 @@
 ---
 layout: page
 title: A2 Physics Notes
-description: with background image
-img: assets/img/a2physics_notes.jpg
+description: lecture notes on A-Level physics
+img: assets/img/a2notes_cover.jpg
 importance: 1
 category: teaching
 related_publications: false
