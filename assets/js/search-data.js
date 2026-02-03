@@ -67,7 +67,7 @@ ninja.data = [{
               window.location.href = "/projects/a2physics_notes/";
             },},{id: "projects-as-physics-notes",
           title: 'AS Physics Notes',
-          description: "with background image",
+          description: "lecture notes on AS-Level physics",
           section: "Projects",handler: () => {
               window.location.href = "/projects/asphysics_notes/";
             },},{
