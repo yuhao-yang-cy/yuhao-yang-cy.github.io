@@ -2,12 +2,14 @@
 layout: page
 permalink: /teaching/
 title: teaching
-description:
+description: In learning you will teach, and in teaching you will learn.
 nav: true
 nav_order: 6
 ---
 
-I have been teaching mathematics and physics at GCE Advanced Level since 2011. Here are a list of syllabuses that I have taught:
+I have been teaching quite a wide range of STEM courses at GCE Advanced Level or beyond since 2011.
+
+Here are a list of courses that I have taught and/or designed:
 
 - Physics
 - - A-Level Physics (Cambridge International, Edexcel)
@@ -23,7 +25,8 @@ I have been teaching mathematics and physics at GCE Advanced Level since 2011. H
   - STEP Mathematics Tutorials
   - Oxford/Cambridge Mock Interviews
 - Guided STEM Projects
-- - Forced Oscillators: Numberial Simulations with Python
-  - PD Controllers: Principles and Simulations
-  - Mathematical Modelling for Infectious Diseases
+- - Forced Oscillators: Analytical Solutions and Numerical Simulations with Python/Excel
+  - Planetary Orbits: Analytical Solutions and Numerical Simulations with Python/Excel
+  - PD Controllers: Principles and Simulations with Python
+  - Mathematical Modelling for Infectious Diseases: SIR Model and Beyond
   - Beginner Course on Electronics with Arduino
