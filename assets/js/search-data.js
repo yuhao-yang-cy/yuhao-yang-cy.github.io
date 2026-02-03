@@ -16,6 +16,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/books/";
           },
+        },{id: "nav-teaching",
+          title: "teaching",
+          description: "In learning you will teach, and in teaching you will learn.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/teaching/";
+          },
         },{id: "nav-blog",
           title: "blog",
           description: "",
@@ -36,13 +43,6 @@ ninja.data = [{
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
-          },
-        },{id: "nav-teaching",
-          title: "teaching",
-          description: "In learning you will teach, and in teaching you will learn.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/teaching/";
           },
         },{id: "books-the-godfather",
           title: 'The Godfather',
