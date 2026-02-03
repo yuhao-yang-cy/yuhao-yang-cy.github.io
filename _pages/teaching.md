@@ -4,7 +4,7 @@ permalink: /teaching/
 title: teaching
 description: In learning you will teach, and in teaching you will learn.
 nav: true
-nav_order: 6
+nav_order: 1
 ---
 
 I have been teaching quite a wide range of STEM courses at GCE Advanced Level or beyond since 2011.
