@@ -1,8 +1,8 @@
 ---
 layout: page
 title: AS Physics Notes
-description: with background image
-img: assets/img/asphysics_notes.jpg
+description: lecture notes on AS-Level physics
+img: assets/img/asnotes_cover.jpg
 importance: 2
 category: teaching
 related_publications: false
