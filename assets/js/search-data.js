@@ -62,7 +62,7 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "projects-a2-physics-notes",
           title: 'A2 Physics Notes',
-          description: "with background image",
+          description: "lecture notes on A-Level physics",
           section: "Projects",handler: () => {
               window.location.href = "/projects/a2physics_notes/";
             },},{id: "projects-as-physics-notes",
