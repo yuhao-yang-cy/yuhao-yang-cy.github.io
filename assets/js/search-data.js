@@ -44,11 +44,16 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "books-the-godfather",
-          title: 'The Godfather',
+        },{id: "books-mathematics-a-very-short-introduction",
+          title: 'Mathematics: A Very Short Introduction',
           description: "",
           section: "Books",handler: () => {
-              window.location.href = "/books/the_godfather/";
+              window.location.href = "/books/2023_vsi_mathematics/";
+            },},{id: "books-上帝粒子-the-god-particle",
+          title: '上帝粒子（The God Particle）',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/2024_god_particle/";
             },},{id: "news-a-simple-inline-announcement",
           title: 'A simple inline announcement.',
           description: "",
