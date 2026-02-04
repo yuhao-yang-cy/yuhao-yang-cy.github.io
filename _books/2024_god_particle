@@ -5,8 +5,9 @@ author: Leon M. Lederman
 cover: assets/img/book_covers/god_particle_cover.jpg
 olid: OL18829085M # use Open Library ID to fetch cover (if no `cover` is provided)
 isbn: 9787572705069 # use ISBN to fetch cover (if no `olid` is provided, dashes are optional)
-categories: mathematics
-tags: mathematics
+categories: physics
+tags: physics
+date: 2024-09-27
 finished: 2024-09-27
 released: 2022
 stars: 4.5
