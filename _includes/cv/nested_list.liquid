@@ -6,7 +6,18 @@
         <ul class="subitems">
           {% for subitem in content.items %}
             <li>
-              <span class="subitem">{{ subitem }}</span>
+              {% if subitem.first %}
+                <span class="subitem">{{ subitem.first }}</span>
+                {% if subitem.size > 1 %}
+                  <ul class="nested-subitems">
+                    {% for nested_item in subitem offset:1 %}
+                      <li><span class="nested-subitem">{{ nested_item }}</span></li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+              {% else %}
+                <span class="subitem">{{ subitem }}</span>
+              {% endif %}
             </li>
           {% endfor %}
         </ul>
