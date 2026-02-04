@@ -3,10 +3,13 @@
   contents:
     - name: Full Name
       value: Colin Young
-    - name: Languages
-      value: Chinese, English, French
-
-- title: Experience
+    - name: Nick Name
+      value: 烤羚羊
+    - name: Location
+      value: Shanghai, China
+    - name: Email
+      value: colin hyphen young at live dot com
+- title: Work Experience
   type: time_table
   contents:
     - title: Academic Director
@@ -15,14 +18,14 @@
       description:
         - Physics & Maths Teacher (CAIE Physics / AQA Physics / Edexcel Mechanics & Decision)
         - University Guidance Counselor for STEM Majors (Choices / Personal Statements / References)
-        - Curriculum Development (Oxford MAT & PAT Preparation Courses / STEP Courses / University Admission Interview Preparation Courses / Guided STEM Projects / Guided Reading)
+        - Curriculum Development (Oxford MAT & PAT Courses / STEP Courses / University Admission Interview Preparation Courses / Guided STEM Projects / Guided Reading)
     - title: Deputy Head of Academic Affairs & Head of Physics Department
       institution: Shanghai Experimental Foreign Language School
       year: 2014 - 2017
       description:
-        - Organizer of school-based mid-term and final exams / AP Coordinator
-        - Advisor of academic affairs / Trainer for new teachers
-        - Person-in-charge of lab facilities / Physics Teacher
+        - Organizer of School-based Mid-term and Final Exams / AP Coordinator
+        - Advisor of Academic Affairs / Trainer for New Teachers
+        - Person-in-charge of Lab Facilities / Physics Teacher
         - "Taught courses: AS/A2 Physics, GCSE Physics"
     - title: Physics Teacher
       institution: Shanghai Guanghua College
