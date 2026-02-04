@@ -7,8 +7,6 @@ olid: OL7384524M # use Open Library ID to fetch cover (if no `cover` is provided
 isbn: 9780192853615 # use ISBN to fetch cover (if no `olid` is provided, dashes are optional)
 categories: mathematics
 tags: mathematics
-buy_link: https://www.amazon.com/Mathematics-Short-Introduction-Timothy-Gowers/dp/0192853619
-started: 2023-06-01
 finished: 2023-08-10
 released: 2002
 stars: 5
