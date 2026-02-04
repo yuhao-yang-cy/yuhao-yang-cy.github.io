@@ -170,18 +170,18 @@
     - title: English (Professional Fluency)
       items:
         - "IELTS: Overal Band 8.0"
-          description:
           - "Reading: 8.5"
           - "Listening: 8.5"
           - "Speaking: 7.0"
           - "Writing: 7.5"
         - "TOEFL (Internet Based): Overal Score 105"
-          description:
           - "Reading: 29"
           - "Listening: 25"
           - "Speaking: 24"
           - "Writing: 27"
     - title: French (CEFR B1 Level)
+      items:
+        - Ongoing Studies with Duolingo
 - title: Skills
   type: nested_list
   contents:
@@ -189,6 +189,7 @@
       items:
         - Python (Intermediate Level)
         - LaTeX (Intermediate Level)
+        - C (Limited)
     - title: Hobbies
       items:
         - Running
