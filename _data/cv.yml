@@ -105,6 +105,10 @@
         - "Machine Learning: Regression"
         - "Machine Learning: Classification"
         - "Machine Learning: Clustering & Retrieval"
+    - title: "Computers, Waves, Simulations: A Practical Introduction to Numerical Methods Using Python"
+      institution: Ludwig-Maximilians-Universität München (LMU)
+      year: 2024
+      url: https://www.coursera.org/account/accomplishments/verify/WMWGF6WBPDW7
     - title: "The Physics of Emergence: Introduction to Condensed Matter (Specialisation)"
       institution: University of Colorado Boulder
       year: 2023
@@ -113,10 +117,6 @@
         - "Phases of Matter: Solid, Liquid, Gas and Beyond"
         - "Universal Theories"
         - "Modern Topics in Condensed Matter Physics"
-    - title: Computers, Waves, Simulations
-      institution: Ludwig-Maximilians-Universität München (LMU)
-      year: 2024
-      url: https://www.coursera.org/account/accomplishments/verify/WMWGF6WBPDW7
     - title: "Digital Signal Processing 1: Basic Concepts and Algorithms"
       institution: École Polytechnique Fédérale de Lausanne (EPFL)
       year: 2022
@@ -133,14 +133,14 @@
       institution: University of Arizona
       year: 2022
       url: https://www.coursera.org/account/accomplishments/verify/7LZNCMEQ4KMV
-    - title: Introduction to Physical Chemistry
-      institution: University of Manchester
-      year: 2021
-      url: https://www.coursera.org/account/accomplishments/verify/2VPEUUVDHE7Y
     - title: Introduction to Electronics
       institution: Georgia Institute of Technology
       year: 2022
       url: https://www.coursera.org/account/accomplishments/verify/53AL9WPU74VP
+    - title: Introduction to Physical Chemistry
+      institution: University of Manchester
+      year: 2021
+      url: https://www.coursera.org/account/accomplishments/verify/2VPEUUVDHE7Y
     - title: Aerial Robotics
       institution: University of Pennsylvania
       year: 2021
@@ -170,8 +170,18 @@
     - title: English (Professional Fluency)
       items:
         - "IELTS: Overal Band 8.0"
+          description:
+          - "Reading: 8.5"
+          - "Listening: 8.5"
+          - "Speaking: 7.0"
+          - "Writing: 7.5"
         - "TOEFL (Internet Based): Overal Score 105"
-    - title: French (CEFR B1 Level) 
+          description:
+          - "Reading: 29"
+          - "Listening: 25"
+          - "Speaking: 24"
+          - "Writing: 27"
+    - title: French (CEFR B1 Level)
 - title: Skills
   type: nested_list
   contents:
