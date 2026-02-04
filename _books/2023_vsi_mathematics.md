@@ -7,7 +7,8 @@ olid: OL7384524M # use Open Library ID to fetch cover (if no `cover` is provided
 isbn: 9780192853615 # use ISBN to fetch cover (if no `olid` is provided, dashes are optional)
 categories: mathematics
 tags: mathematics
-finished: 2023-08-10
+date: 2023-08-04
+finished: 2023-08-04
 released: 2002
 stars: 5
 status: Finished
