@@ -66,6 +66,17 @@ ninja.data = [{
             window.location.href = "/blog/2026/deep-C4W4-face-recognition/";
           
         },
+      },{id: "post-image-semantic-segmentation-deep-learning-notes-c4w4",
+        
+          title: "Image Semantic Segmentation (Deep Learning Notes C4W4)",
+        
+        description: "labelling and colouring the pixels of an image into a set of predefined classes",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/deep-C4W3-segmentation/";
+          
+        },
       },{id: "books-mathematics-a-very-short-introduction",
           title: 'Mathematics: A Very Short Introduction',
           description: "",
