@@ -96,8 +96,4 @@ $$
 - $$\hat{y} = 1$$ if the two images are of the same person
 - $$\hat{y} = 0$$ if the two images are of the same person
 
-{% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-
-By loading the VGG19 model and choosing a suitable optimizer for the total cost, we are able to implement Neural Style Transfer and generate artistic images with lots of fun!
-
 {% include figure.liquid loading="eager" path="assets/img/deep/C4W4_distance_kiank.jpg" title="Binary Classification" class="img-fluid rounded z-depth-1" %}
