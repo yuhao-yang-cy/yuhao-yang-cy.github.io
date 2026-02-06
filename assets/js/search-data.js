@@ -44,15 +44,15 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-",
+        },{id: "post-neural-style-transfer-deep-learning-notes-c4w4",
         
-          title: "",
+          title: "Neural Style Transfer (Deep Learning Notes C4W4)",
         
-        description: "",
+        description: "generation of an image that blends the content from one image and the style of the other",
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2026/2026-01-06-deep-C4W4-NST/";
+            window.location.href = "/blog/2026/deep-C4W4-NST/";
           
         },
       },{id: "books-mathematics-a-very-short-introduction",
