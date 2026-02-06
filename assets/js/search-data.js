@@ -55,6 +55,17 @@ ninja.data = [{
             window.location.href = "/blog/2026/deep-C4W4-NST/";
           
         },
+      },{id: "post-face-recognition-deep-learning-notes-c4w4",
+        
+          title: "Face Recognition (Deep Learning Notes C4W4)",
+        
+        description: "training a Siamese network for face recognition tasks with a triplet loss function",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/deep-C4W4-face-recognition/";
+          
+        },
       },{id: "books-mathematics-a-very-short-introduction",
           title: 'Mathematics: A Very Short Introduction',
           description: "",
