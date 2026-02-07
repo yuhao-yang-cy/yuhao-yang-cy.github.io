@@ -25,14 +25,10 @@ layout: default
       </figure>
 
     <h1 class="post-title">{{ page.title }}</h1>
-    {% if page.author or page.released %}
+    {% if page.author %}
       <p class="post-meta">
         {% if page.author %}
           <h3>{{ page.author }}</h3>
-        {% endif %}
-        {% if page.author and page.released %} <h3>&nbsp;&middot;&nbsp;</h3> {% endif %}
-        {% if page.released %}
-          <h3>{{ page.released }}</h3>
         {% endif %}
       </p>
     {% endif %}
