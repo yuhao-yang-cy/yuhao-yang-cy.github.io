@@ -25,7 +25,7 @@ Face recognition problems commonly fall into one of the two categories:
   - Input: image
   - Output: whether the input image corresponds to any one of the registered persons in a database (1-to-$$K$$ matching problem)
 
-{% include figure.liquid loading="eager" path="assets/img/deep/C4W4_face_recog_tasks.png" title="Face Recognition Tasks" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="assets/img/deep/C4W4_face_recog_tasks.png" title="Face Recognition Tasks" class="img-natural rounded z-depth-1" %}
 
 #### One-shot Learning
 
@@ -46,14 +46,14 @@ $$
 
 To learn a similarity function, we use a **Siamese Network**, which takes a person's image $$x$$ as the input and outputs an **encoding** $$f(x)$$. In the course's programming assignment, we used a 128-dimensional encoding in the output layer, i.e., the output is a vector of 128 components.
 
-{% include figure.liquid loading="eager" path="assets/img/deep/C4W4_f_x.jpg" title="Encoding of a Face Image" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="assets/img/deep/C4W4_f_x.jpg" title="Encoding of a Face Image" class="img-natural rounded z-depth-1" %}
 
 The goal of training is to learn parameters so that
 
 - If $$x^{(i)}$$ and $$x^{(j)}$$ are the same person, then $$\| f(x^{(i)}) - f(x^{(j)}) \|^2$$ is small.
 - If $$x^{(i)}$$ and $$x^{(j)}$$ are different persons, then $$\| f(x^{(i)}) - f(x^{(j)}) \|^2$$ is large.
 
-{% include figure.liquid loading="eager" path="assets/img/deep/C4W4_siamese.jpg" title="Siamese Network for Face Recognition Tasks" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="assets/img/deep/C4W4_siamese.jpg" title="Siamese Network for Face Recognition Tasks" class="img-natural rounded z-depth-1" %}
 
 #### Triplet Loss
 
@@ -69,7 +69,7 @@ $$
 d(A, P) + \alpha < d(A, N)
 $$
 
-{% include figure.liquid loading="eager" path="assets/img/deep/C4W4_triplet-loss.png" title="Triplet Loss" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="assets/img/deep/C4W4_triplet-loss.png" title="Triplet Loss" class="img-natural rounded z-depth-1" %}
 
 If we measure the similarity with an $$L_2$$ distance, then this becomes
 
@@ -96,4 +96,4 @@ $$
 - $$\hat{y} = 1$$ if the two images are of the same person
 - $$\hat{y} = 0$$ if the two images are of the same person
 
-{% include figure.liquid loading="eager" path="assets/img/deep/C4W4_distance_kiank.jpg" title="Binary Classification" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="assets/img/deep/C4W4_distance_kiank.jpg" title="Binary Classification" class="img-natural rounded z-depth-1" %}

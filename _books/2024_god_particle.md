@@ -3,8 +3,7 @@ layout: book-review
 title: 上帝粒子（The God Particle）
 author: Leon M. Lederman
 cover: assets/img/book_covers/god_particle_cover.jpg
-olid: OL18829085M # use Open Library ID to fetch cover (if no `cover` is provided)
-isbn: 9787572705069 # use ISBN to fetch cover (if no `olid` is provided, dashes are optional)
+isbn: 9787572705069 # use ISBN to fetch cover
 categories: physics
 tags: physics
 date: 2024-09-27
@@ -14,23 +13,23 @@ stars: 4.5
 status: Finished
 ---
 
-非常值得一读的粒子物理的科普，读完中文的电子版后，我果断下单把中英文版两套都摆上藏书架了。
+非常值得一读的粒子物理的科普。读完中文的电子版后，我果断下单把中英文版两套都摆上藏书架了。
 
-{% include figure.liquid loading="eager" path="assets/img/books/god_particle_books.jpg" title="" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="assets/img/books/god_particle_books.jpg" title="" class="img-natural rounded z-depth-1" %}
 
-Wikipedia 上的文章对这本书分章节的内容总结得太好了，我就懒得自己写了，直接搬运过来。
+[Wikipedia 上的文章](https://en.wikipedia.org/wiki/The_God_Particle_(book))对这本书分章节的内容总结得太好了，我就懒得自己写了，直接搬运过来。
 
-{% include figure.liquid loading="eager" path="assets/img/books/god_particle_toc.png" title="" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="assets/img/books/god_particle_toc.png" title="" class="img-natural rounded z-depth-1" %}
 
 书名《上帝粒子》（The God Particle）。对近代粒子物理略有所闻的朋友们也许在各类科普报道中听说过“上帝粒子”这个很吸睛的名词，它的大名叫做 Higgs 玻色子，大约是基本粒子的标准模型（Standard Model of Particle Physics）的最后一片拼图：正是与 Higgs 场和基本粒子们的相互作用解释了基本粒子的质量起源。而好端端的 Higgs 玻色子之所以会有“上帝粒子”这种标题党一般的名字，这事全得赖这本书的作者，因为这个叫法就是这本科普里最早出现的，其背后的故事可见下图。
 
-{% include figure.liquid loading="eager" path="assets/img/books/god_particle_excerpt1C.jpg" title="" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="assets/img/books/god_particle_excerpt1C.jpg" title="" class="img-natural rounded z-depth-1" %}
 
-{% include figure.liquid loading="eager" path="assets/img/books/god_particle_excerpt1E.jpg" title="" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="assets/img/books/god_particle_excerpt1E.jpg" title="" class="img-natural rounded z-depth-1" %}
 
-所以 Leon Lederman 究竟何许人也？嗯，翻个身份牌：美国实验物理大佬，1988年诺贝尔物理奖、1982年 Wolf 奖、及其他一大堆重要科学奖章获得者，在科研领域的重要工作一抓一大把。
+所以 [Leon Lederman](https://en.wikipedia.org/wiki/Leon_M._Lederman) 究竟何许人也？嗯，翻个身份牌：美国实验物理大佬，[1988年诺贝尔物理奖](https://www.nobelprize.org/prizes/physics/1988/summary/)、1982年 Wolf 奖、及其他一大堆重要科学奖章获得者，在科研领域的重要工作一抓一大把。
 
-{% include figure.liquid loading="eager" path="assets/img/books/god_particle_lederman.png" title="" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="assets/img/books/god_particle_lederman.png" title="" class="img-natural rounded z-depth-1" %}
 
 Leon Lederman 生涯早期在当时粒子物理学研究的重镇——哥伦比亚大学工作，此后担任美国费米国家实验室（Fermilab）主任十余年。他在高能粒子物理的实验领域作出的一系列重要的工作，包括但不限于：
 
@@ -46,9 +45,9 @@ Leon Lederman 生涯早期在当时粒子物理学研究的重镇——哥伦比
 
 作为粒子物理中重大实验发现的亲身经历者，Lederman 在这本科普中以第一人称的视角，回顾并科普了跟他的学术生涯紧密交织在一起的粒子物理史。20世纪初始，科学界对原子的概念都尚处一种懵懂的状态。随着一系列的实验探索和理论的跟进，一代又一代的物理学家对微观世界中的自然法则有了越来越深刻的认识。从 Lederman 回顾年轻时土法手搓粒子计数器，当年刚想到 $\pi\text{-}\mu\text{-}e$ 衰变实验的点子说干就干的鸡血劲，到后来 Fermilab 和 CERN 两方的竞争与合作，再到对粒子物理学未来的憧憬和展望，Lederman 本人对科学探索的热爱，渗透在这本书的字里行间，也勾起了我这个曾经的理论物理狗内心的火花。
 
-{% include figure.liquid loading="eager" path="assets/img/books/god_particle_excerpt2C.jpg" title="" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="assets/img/books/god_particle_excerpt2C.jpg" title="" class="img-natural rounded z-depth-1" %}
 
-{% include figure.liquid loading="eager" path="assets/img/books/god_particle_excerpt2E.jpg" title="" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="assets/img/books/god_particle_excerpt2E.jpg" title="" class="img-natural rounded z-depth-1" %}
 
 而 Lederman 与生俱来的幽默感也是为本书添色不少，一些大佬视角下的吐槽也是非常犀利。
 

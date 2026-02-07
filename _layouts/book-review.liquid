@@ -26,10 +26,15 @@ layout: default
 
     <h1 class="post-title">{{ page.title }}</h1>
     {% if page.author %}
-      <p class="post-meta">
+      <p class="post-meta"><h3>
         {% if page.author %}
-          <h3>{{ page.author }}</h3>
+          {{ page.author }}
         {% endif %}
+      {% if page.author and page.released %} &nbsp;&middot;&nbsp; {% endif %}
+      {% if page.released %}
+        {{ page.released }}
+      {% endif %}
+      </h3>
       </p>
     {% endif %}
 
@@ -115,86 +120,93 @@ layout: default
 </div>
 
 <style>
-      figure {
-        float: none;
-        width: auto;
-        display: block;
-        margin-right: auto;
-        margin-left: auto;
+  .img-natural {
+  max-width: 100%;
+  width: auto !important;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  }
+  
+  figure {
+    float: none;
+    width: auto;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    }
+
+  figure  > img {
+    vertical-align: top;
+    display: block;
+    margin-right: 0px;
+    margin-left: 0px;
+    padding: 0px;
+    }
+
+  figure figcaption {
+    display: block;
+    caption-side: bottom;
+    text-align: center;
+    }
+
+  @media screen and (min-width: 600px)  {
+    .empty-review{
+      float: left;
+      display: block; /* in-line block; */
+      margin: 0px 0px 0px 0px;  /* adjust as needed */
+      padding: 0px 0px 0px 20px;
       }
 
-      figure  > img {
-           vertical-align: top;
-           display: block;
-           margin-right: 0px;
-           margin-left: 0px;
-           padding: 0px;
+    .empty-review-caption {
+      caption-side: left;
+      text-align: left;
       }
 
-      figure figcaption {
-        display: block;
-        caption-side: bottom;
-        text-align: center;
+    .empty-review-cover {
+      width:250px;
+      vertical-align: top;
+      padding-right: 40px;
       }
 
-      @media screen and (min-width: 600px)  {
+    figure.book-cover {
+      float: right;
+      display: inline-block;
+      margin: 0px 0px 20px 20px;
+      padding: 0px;
+      }
 
-        .empty-review{
-          float: left;
-          display: block; /* in-line block; */
-          margin: 0px 0px 0px 0px;  /* adjust as needed */
-          padding: 0px 0px 0px 20px;
-         /* top right bottom left */
-          }
+    figure.book-cover img {
+      width: 120px;
+      vertical-align: top;
+      }
 
-         .empty-review-caption {
-            caption-side: left;
-            text-align: left;
-            }
+    figure.book-cover figcaption {
+      caption-side: bottom;
+      text-align: left;
+      max-height: 150px;
+      }
 
-        .empty-review-cover {
-            width:250px;
-            vertical-align: top;
-            padding-right: 40px;
-            }
+    /* Regular figures in content - centered */
+    article figure:not(.book-cover) {
+      float: none;
+      display: block;
+      margin: 20px auto;
+      max-width: 90%;
+      text-align: center;
+      }
 
-        figure.book-cover {
-                float: right;
-                display: inline-block;
-                margin: 0px 0px 20px 20px;
-                padding: 0px;
-              }
+    article figure:not(.book-cover) img {
+      max-width: 90%;
+      height: auto;
+      }
 
-          figure.book-cover img {
-                  width: 120px;
-                  vertical-align: top;
-                }
+    article figure:not(.book-cover) figcaption {
+      text-align: center;
+      }
 
-          figure.book-cover figcaption {
-                  caption-side: bottom;
-                  text-align: left;
-                  max-width: 108px;
-                  }
-
-          /* Regular figures in content - centered */
-          article figure:not(.book-cover) {
-                float: none;
-                display: block;
-                margin: 20px auto;
-                max-width: 100%;
-                text-align: center;
-              }
-
-          article figure:not(.book-cover) img {
-                  max-width: 100%;
-                  height: auto;
-                }
-
-          article figure:not(.book-cover) figcaption {
-                  text-align: center;
-                  }
-
-          .mobile-break { display: none; }
+    .mobile-break { display: none; }
 
   /* =Blockquote
   -------------------------------------------------------------- */
@@ -204,9 +216,7 @@ layout: default
       display: table;
   }
   blockquote:before, blockquote:after {
-
    /* properties to format the block quotes /*
-
   }
   blockquote:before {
       top: 0;

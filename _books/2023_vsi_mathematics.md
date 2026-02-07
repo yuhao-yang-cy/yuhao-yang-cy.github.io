@@ -3,8 +3,7 @@ layout: book-review
 title: "Mathematics: A Very Short Introduction"
 author: Timothy Gowers
 cover: assets/img/book_covers/vsi_mathematics_cover.jpg
-olid: OL7384524M # use Open Library ID to fetch cover (if no `cover` is provided)
-isbn: 9780192853615 # use ISBN to fetch cover (if no `olid` is provided, dashes are optional)
+isbn: 9780192853615 # use ISBN to fetch cover
 categories: mathematics
 tags: mathematics
 date: 2023-08-04

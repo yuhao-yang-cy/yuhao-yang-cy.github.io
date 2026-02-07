@@ -6,11 +6,23 @@ img: assets/img/asnotes_cover.jpg
 importance: 2
 category: teaching
 related_publications: false
+images:
+  slider: true
 ---
 
 This is a set of very concise lecture notes written for [CIE AS-level Physics](https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-international-as-and-a-level-physics-9702/) (syllabus code 9702). Presumably the target audience of the notes are students studying the relevant course.
 
 If you spot any errors, please let me know.
+
+## Preview
+
+Here are some screenshots from the notes.
+
+<swiper-container keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true">
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/asnotes_toc.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/asnotes_mechanics.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/asnotes_circuits.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+</swiper-container>
 
 ## Table of Contents
 
