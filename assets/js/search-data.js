@@ -66,9 +66,9 @@ ninja.data = [{
             window.location.href = "/blog/2026/deep-C4W4-face-recognition/";
           
         },
-      },{id: "post-image-semantic-segmentation-deep-learning-notes-c4w4",
+      },{id: "post-image-semantic-segmentation-deep-learning-notes-c4w3",
         
-          title: "Image Semantic Segmentation (Deep Learning Notes C4W4)",
+          title: "Image Semantic Segmentation (Deep Learning Notes C4W3)",
         
         description: "labelling and colouring the pixels of an image into a set of predefined classes",
         section: "Posts",
@@ -77,11 +77,48 @@ ninja.data = [{
             window.location.href = "/blog/2025/deep-C4W3-segmentation/";
           
         },
+      },{id: "post-object-detection-deep-learning-notes-c4w3",
+        
+          title: "Object Detection (Deep Learning Notes C4W3)",
+        
+        description: "object detection and the YOLO algorithm",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/deep-C4W3-object-detection/";
+          
+        },
+      },{id: "post-training-deeper-cnns-deep-learning-notes-c4w2",
+        
+          title: "Training Deeper CNNs (Deep Learning Notes C4W2)",
+        
+        description: "residual networks (ResNets), depthwise separable convolutions and further advices",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/deep-C4W2-deeper-CNN/";
+          
+        },
       },{id: "books-mathematics-a-very-short-introduction",
           title: 'Mathematics: A Very Short Introduction',
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/2023_vsi_mathematics/";
+            },},{id: "books-applied-mathematics-a-very-short-introduction",
+          title: 'Applied Mathematics: A Very Short Introduction',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/2023_vsi_applied_maths/";
+            },},{id: "books-量子怪才-保罗-狄拉克传",
+          title: '量子怪才：保罗·狄拉克传',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/2023_dirac/";
+            },},{id: "books-feynman-39-s-lost-lectures",
+          title: 'Feynman&amp;#39;s Lost Lectures',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/2024_lost_lectures/";
             },},{id: "books-上帝粒子-the-god-particle",
           title: '上帝粒子（The God Particle）',
           description: "",
