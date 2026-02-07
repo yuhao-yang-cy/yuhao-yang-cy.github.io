@@ -17,19 +17,10 @@ layout: default
     <figure class="book-cover">
         {% if page.cover %}
           <img alt="{{ page.title }} cover" src="{{ site.baseurl }}/{{ page.cover }}">
-          <figcaption>
-            Cover of <em>{{ page.title }}</em>
-          </figcaption>
         {% elsif page.olid %}
           <img alt="{{ page.title }} cover" src="https://covers.openlibrary.org/b/olid/{{ page.olid }}-L.jpg?default=false">
-          <figcaption>
-            Cover of <em>{{ page.title }}</em> on the <a href="https://openlibrary.org/olid/{{ page.olid }}">Open Library</a>.
-          </figcaption>
         {% elsif page.isbn %}
           <img alt="{{ page.title }} cover" src="https://covers.openlibrary.org/b/isbn/{{ page.isbn }}-L.jpg?default=false">
-          <figcaption>
-            Cover of <em>{{ page.title }}</em> on the <a href="https://openlibrary.org/isbn/{{ page.isbn }}">Open Library</a>.
-          </figcaption>
         {% endif %}
       </figure>
 
@@ -37,11 +28,11 @@ layout: default
     {% if page.author or page.released %}
       <p class="post-meta">
         {% if page.author %}
-          {{ page.author }}
+          <h3>{{ page.author }}</h3>
         {% endif %}
-        {% if page.author and page.released %} &nbsp;&middot;&nbsp; {% endif %}
+        {% if page.author and page.released %} <h3>&nbsp;&middot;&nbsp;</h3> {% endif %}
         {% if page.released %}
-          {{ page.released }}
+          <h3>{{ page.released }}</h3>
         {% endif %}
       </p>
     {% endif %}
@@ -74,21 +65,6 @@ layout: default
           {%- for i in (1..empty_stars) -%}
             <i class="fa-regular fa-star fa-sm"></i>
           {%- endfor -%}
-          {% if page.goodreads_review %}
-            </a>
-          {% endif %}
-        {% endif %}
-        {% if page.buy_link %}
-          {% if page.started or page.finished or page.stars %}
-            &nbsp;&middot;&nbsp;
-          {% endif %}
-          <a target="_blank" href="{{ page.buy_link }}"
-            ><i class="fa-solid fa-cart-shopping"></i>
-            {% assign is_amazon_link = page.buy_link | slice: 0, 19 %}
-            {% if is_amazon_link == 'https://www.amazon.' %}
-              <i class="fa-brands fa-amazon"></i>
-            {% endif %}
-          </a>
         {% endif %}
       </p>
     {% endif %}
@@ -201,7 +177,7 @@ layout: default
           figure.book-cover figcaption {
                   caption-side: bottom;
                   text-align: left;
-                  max-width: 120px;
+                  max-width: 108px;
                   }
 
           /* Regular figures in content - centered */
