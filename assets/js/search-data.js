@@ -335,16 +335,36 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/2024_code_breaker/";
+            },},{id: "books-地磁简史",
+          title: '地磁简史',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/2024_spinning_magnet/";
             },},{id: "books-上帝粒子-the-god-particle",
           title: '上帝粒子（The God Particle）',
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/2024_god_particle/";
+            },},{id: "books-双螺旋-the-double-helix",
+          title: '双螺旋 The Double Helix',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/2025_double_helix/";
+            },},{id: "books-hands-on-machine-learning-volume-1",
+          title: 'Hands-On Machine Learning (Volume 1)',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/2025_hands_on_ml/";
             },},{id: "books-an-immense-world",
           title: 'An Immense World',
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/2025_immense_world/";
+            },},{id: "books-step-mat-tmua-skills-for-success-in-university-admissions-tests-for-mathematics",
+          title: 'STEP, MAT, TMUA: Skills for Success in University Admissions Tests for Mathematics',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/2025_step_mat_tmua/";
             },},{id: "news-a-simple-inline-announcement",
           title: 'A simple inline announcement.',
           description: "",
