@@ -99,7 +99,193 @@ ninja.data = [{
             window.location.href = "/blog/2025/deep-C4W2-deeper-CNN/";
           
         },
-      },{id: "books-mathematics-a-very-short-introduction",
+      },{id: "post-圆周率是无理数的最短证明",
+        
+          title: "圆周率是无理数的最短证明",
+        
+        description: "大半页纸就证明完了圆周率是无理数，就说秀不秀？",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/why-pi-is-irrational/";
+          
+        },
+      },{id: "post-潮汐力与洛希极限",
+        
+          title: "潮汐力与洛希极限",
+        
+        description: "蹭个流浪地球的热度，聊一聊电影里提到的洛希极限",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/tidal-forces/";
+          
+        },
+      },{id: "post-霍尔效应-hall-effect",
+        
+          title: "霍尔效应 Hall Effect",
+        
+        description: "A-Level 物理中不少熊孩纸学不明白的霍尔效应，一篇文章讲个通透",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2022/hall-effect/";
+          
+        },
+      },{id: "post-sir-传染病模型",
+        
+          title: "SIR 传染病模型",
+        
+        description: "用数学模型来探究传染病在人群中的传播规律",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2022/SIR-model/";
+          
+        },
+      },{id: "post-无人机轨迹规划",
+        
+          title: "无人机轨迹规划",
+        
+        description: "飞行器的轨迹规划问题，依然是自娱自乐学习 Coursera 公开课的流水报告",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2021/traj-planning/";
+          
+        },
+      },{id: "post-lotka-volterra-猎食者-猎物模型",
+        
+          title: "Lotka-Volterra 猎食者-猎物模型",
+        
+        description: "数学模型的视角来理解生态系统中的两个物种的数量变化规律",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2021/lotka-volterra/";
+          
+        },
+      },{id: "post-二维-pd-控制器",
+        
+          title: "二维 PD 控制器",
+        
+        description: "来自 Coursera 的一门关于飞行器基础理论和应用的公开课笔记",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2021/2D-PD-controller/";
+          
+        },
+      },{id: "post-一维-pd-控制器",
+        
+          title: "一维 PD 控制器",
+        
+        description: "来自 Coursera 的一门关于飞行器基础理论和应用的公开课笔记",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2021/1D-PD-controller/";
+          
+        },
+      },{id: "post-分析力学读书笔记-bertrand-定理",
+        
+          title: "分析力学读书笔记：Bertrand 定理",
+        
+        description: "why does the gravitational force obey inverse square law?",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2021/bertrand-theorem/";
+          
+        },
+      },{id: "post-从勾股数到费马大定理",
+        
+          title: "从勾股数到费马大定理",
+        
+        description: "受西蒙·辛格的数学科普《费马大定理》启发，写写费马大定理的故事，然后写写 $$n=4$$ 和 $$n=3$$ 时费马大定理的证明",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2020/fermat-last-theorem/";
+          
+        },
+      },{id: "post-lorentz-变换的推导以及钟慢效应-尺缩效应-速度叠加公式",
+        
+          title: "Lorentz 变换的推导以及钟慢效应、尺缩效应、速度叠加公式",
+        
+        description: "从第一性原理推导狭义相对论的 Lorentz Transformation",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2020/lorentz-transfrom/";
+          
+        },
+      },{id: "post-从最速降曲线谈起-浅谈变分大法",
+        
+          title: "从最速降曲线谈起：浅谈变分大法",
+        
+        description: "a minimal introduction to the variational principle",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2020/variational-principle/";
+          
+        },
+      },{id: "post-受迫阻尼振动与共振",
+        
+          title: "受迫阻尼振动与共振",
+        
+        description: "如果一个简谐振子同时受到阻力和一个周期性的驱动力的作用，那么它会做怎样的运动？",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2020/resonance/";
+          
+        },
+      },{id: "post-无阻尼受迫振动-振幅-相位及共振",
+        
+          title: "无阻尼受迫振动：振幅、相位及共振",
+        
+        description: "我们讨论一个简谐振子在一个周期性的外加驱动力影响下，受迫振动行为会有如何的响应",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2020/forced-oscillation/";
+          
+        },
+      },{id: "post-简谐振动之阻尼振动",
+        
+          title: "简谐振动之阻尼振动",
+        
+        description: "数学上推导欠阻尼、过阻尼和临界阻尼的判据和运动方程",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2020/damped-oscillator/";
+          
+        },
+      },{id: "post-简谐振动之运动方程推导",
+        
+          title: "简谐振动之运动方程推导",
+        
+        description: "从简谐振动的定义出发，用两种方法推导简谐振子的位移-时间关系式",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2020/simple-harmonics/";
+          
+        },
+      },{id: "books-on-gravity",
+          title: 'On Gravity',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/2023_on_gravity/";
+            },},{id: "books-we-have-no-idea",
+          title: 'We Have No Idea',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/2023_no_idea/";
+            },},{id: "books-mathematics-a-very-short-introduction",
           title: 'Mathematics: A Very Short Introduction',
           description: "",
           section: "Books",handler: () => {
@@ -109,21 +295,56 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/2023_vsi_applied_maths/";
+            },},{id: "books-接触-contact",
+          title: '接触 Contact',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/2023_contact/";
             },},{id: "books-量子怪才-保罗-狄拉克传",
           title: '量子怪才：保罗·狄拉克传',
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/2023_dirac/";
+            },},{id: "books-杨振宁传-规范与对称之美",
+          title: '杨振宁传：规范与对称之美',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/2023_yang/";
+            },},{id: "books-所罗门王的指环",
+          title: '所罗门王的指环',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/2023_solomon/";
+            },},{id: "books-随椋鸟飞行",
+          title: '随椋鸟飞行',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/2024_parisi/";
+            },},{id: "books-数学大师-men-of-mathematics",
+          title: '数学大师 Men of Mathematics',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/2024_men_of_mathematics/";
             },},{id: "books-feynman-39-s-lost-lectures",
           title: 'Feynman&amp;#39;s Lost Lectures',
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/2024_lost_lectures/";
+            },},{id: "books-解码者-the-code-breaker",
+          title: '解码者 The Code Breaker',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/2024_code_breaker/";
             },},{id: "books-上帝粒子-the-god-particle",
           title: '上帝粒子（The God Particle）',
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/2024_god_particle/";
+            },},{id: "books-an-immense-world",
+          title: 'An Immense World',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/2025_immense_world/";
             },},{id: "news-a-simple-inline-announcement",
           title: 'A simple inline announcement.',
           description: "",
@@ -145,6 +366,11 @@ ninja.data = [{
           description: "lecture notes on AS-Level physics",
           section: "Projects",handler: () => {
               window.location.href = "/projects/asphysics_notes/";
+            },},{id: "projects-sir-modelling",
+          title: 'SIR Modelling',
+          description: "a short course on the mathematical modelling of epidemics",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/epidemic-modelling/";
             },},{
         id: 'social-github',
         title: 'GitHub',
