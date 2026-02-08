@@ -30,13 +30,13 @@ For the reference if you want to check out, I have also written a set of [blog p
 - Week 8: Wrap-up
 
 <swiper-container keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true">
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/SIR-course-fitting.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/SIR-course-parameter.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/SIR-course-spread.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/SIR-course-SEQIR.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/SIR-course-fitting.jpg" class="img-natural rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/SIR-course-parameter.jpg" class="img-natural rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/SIR-course-spread.jpg" class="img-natural rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/SIR-course-SEQIR.jpg" class="img-natural rounded z-depth-1" %}</swiper-slide>
 </swiper-container>
 
-There are a lot of things beyond the school curriculum that are covered in the course, and I do not expect a high school student would dive into and understand all the materials that I have prepared for this course. However, there are several directions that any curious student could go into. If you are interested in any of the following
+There are a lot of things beyond the school curriculum that are covered in the course, and I do not expect a high school student would dive into and understand all the materials that I have prepared. However, there are several directions that any curious student could go into. If you are interested in any of the following
 - solving complex equations numerically with a computer program
 - refining the model by introducing more realistic elements into the problem
 - studying the mathematical structures behind the differential equations
