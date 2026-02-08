@@ -15,9 +15,25 @@ categories: "machine-learning"
 
 Semantic image segmentation is the task of labelling each pixel of an image into a predefined set of classes. The output assigns a semantic class label to each pixel, so a segmented map can be drawn such that regions of the same class labelled with the same colour.
 
-{% include figure.liquid loading="eager" path="assets/img/deep/C4W3_sementation_map.jpg" title="Semantic Segmentation as A Probability Map" class="img-natural rounded z-depth-1" %}
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/deep/C4W3_sementation_map.jpg" title="Semantic Segmentation as A Probability Map" class="img-natural rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Semantic Segmentation as A Probability Map
+</div>
 
-{% include figure.liquid loading="eager" path="assets/img/deep/C4W3_FSO-1.jpg" title="Semantic Segmentation as A Colour Labelled Map" class="img-natural rounded z-depth-1" %}
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/deep/C4W3_FSO-1.jpg" title="Semantic Segmentation as A Colour Labelled Map" class="img-natural rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Semantic Segmentation as A Colour Labelled Map
+</div>
+
+
 
 Applications of semantic segmentations include
 
@@ -26,11 +42,33 @@ Applications of semantic segmentations include
 - Satellite imagery: map land use, model cities, analyse urban development, monitor water bodies, etc.
 - Augmented reality and photography: enable live background replacement, portrait modes and advanced filters
 
-{% include figure.liquid loading="eager" path="assets/img/deep/C4W3_segmentaion-in-real-time.gif" title="Real-time Semantic Segmentation for Autonomous Vehicles" class="img-natural rounded z-depth-1" %}
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/deep/C4W3_segmentaion-in-real-time.gif" title="Real-time Semantic Segmentation for Autonomous Vehicles" class="img-natural rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Real-time Semantic Segmentation for Autonomous Vehicles
+</div>
 
-{% include figure.liquid loading="eager" path="assets/img/deep/C4W3_medical-image-segmentation_feature_Image.png" title="Medical Image Segmentation" class="img-natural rounded z-depth-1" %}
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/deep/C4W3_medical-image-segmentation_feature_Image.png" title="Medical Image Segmentation" class="img-natural rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Medical Image Segmentation
+</div>
 
-{% include figure.liquid loading="eager" path="assets/img/deep/C4W3_satellite-imagery.jpg" title="Semantic Segmentation for Satellite Imagery" class="img-natural rounded z-depth-1" %}
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/deep/C4W3_satellite-imagery.jpg" title="Semantic Segmentation for Satellite Imagery" class="img-natural rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Semantic Segmentation for Satellite Imagery
+</div>
+
 
 ## Fully Convolutional Networks (FCNs)
 
@@ -38,7 +76,14 @@ Like other computer vision tasks, we use a CNN for semantic segmentation. Howeve
 
 To retain the spatial information that is lost during the downsampling phase, we replace the fully-connected layers in the network by a series of **upsampling** layers followed by more convolutional layers to reproduce higher resolution feature maps. This architecture is called a **Fully Convolutional Network (FCN)**.
 
-{% include figure.liquid loading="eager" path="assets/img/deep/C4W3_segmentation-CNN.jpg" title="Fully Convolutional Network (FCN)" class="img-natural rounded z-depth-1" %}
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/deep/C4W3_segmentation-CNN.jpg" title="Fully Convolutional Network (FCN)" class="img-natural rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Fully Convolutional Network (FCN)
+</div>
 
 The reason behind this general architecture is the following. A typical CNN starts with a high resolution image so it is impractical to connect each neuron to all other neurons. Hence, the initial layers in a CNN can only capture information about smaller regions of the image and learn low-level features like lines, edges and colours. As the feature map is passed through more layers, the size of the image keeps on decreasing and the number of the channels keeps on increasing. Despite the loss of spatial information, the deeper layers become able to learn high-level features like faces and objects. These high-level information about the input image is contained in its various channels.
 
@@ -50,11 +95,25 @@ Now that we have obtained this low-resolution tensor, we have to increase its re
 
 The example below illustrates how the transposed convolution with a $$2\times2$$ filter is computed for a $$2\times2$$ input tensor with a stride of $$1$$ and no padding.
 
-{% include figure.liquid loading="eager" path="assets/img/deep/C4W3_transpose-convolution.png" title="Transpose Convolution" class="img-natural rounded z-depth-1" %}
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/deep/C4W3_transpose-convolution.png" title="Transpose Convolution" class="img-natural rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Transpose Convolution
+</div>
 
 The next example illustrates how the transposed convolution is computed with stride $$s=2$$ and padding $$p=1$$.
 
-{% include figure.liquid loading="eager" path="assets/img/deep/C4W3_transpose-convolution-with-stride.png" title="Transpose Convolution with Strides" class="img-natural rounded z-depth-1" %}
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/deep/C4W3_transpose-convolution-with-stride.png" title="Transpose Convolution with Strides" class="img-natural rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Transpose Convolution with Strides
+</div>
 
 In general, if an input feature map of size $$n_h\times n_w$$ is passed through a weighted filter of size $$f \times f$$ with a stride of $$s$$ and padding of $$p$$, then the output of the transposed convolutional layer will be:
 
@@ -70,13 +129,29 @@ This could result in an output that is larger than the input, and hence increase
 
 U-Net improves on the FCN, using a somewhat similar design, but differing in some important ways. It uses a matching number of convolutions for downsampling and transposed convolutions for upsampling. It also adds **skip connections**, to retain information that would otherwise become lost during encoding. Skip connections send information to every upsampling layer in the decoder from the corresponding downsampling layer in the encoder, capturing finer information while also keeping computation low. These help prevent information loss, as well as model overfitting.
 
-{% include figure.liquid loading="eager" path="assets/img/deep/C4W3_u-net-architecture.png" title="U-Net" class="img-natural rounded z-depth-1" %}
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/deep/C4W3_u-net-architecture.png" title="U-Net" class="img-natural rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    U-Net Architecture
+</div>
+
+
 
 #### U-Net: Model Details
 
 In the programming assignment of the course, we got to build our own U-Net for image segmentation. The architecture of this particular U-Net is shown below.
 
-{% include figure.liquid loading="eager" path="assets/img/deep/C4W3_unet.jpg" title="U-Net" class="img-natural rounded z-depth-1" %}
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/deep/C4W3_unet.jpg" title="U-Net" class="img-natural rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    U-Net Model
+</div>
 
 - **Contracting path** (Encoder containing downsampling steps): The contracting path follows a regular CNN architecture to downsample the image and extract its features. In detail, it consists of the repeated application of two $$3\times3$$ same padding convolutions, each followed by a ReLU unit and a $$2\times2$$ max pooling operation with stride 2 for downsampling. At each downsampling step, the number of feature channels is doubled.
 
@@ -94,6 +169,20 @@ The U-Net model for semantic image segmentation is implemented with **sparse cat
 
 Although the model was only trained for 40 epochs due to computational constraints for the assignment, we get some pretty amazing results.
 
-{% include figure.liquid loading="eager" path="assets/img/deep/C4W3_unet-result-2.png" title="Training Results" class="img-natural rounded z-depth-1" %}
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/deep/C4W3_unet-result-2.png" title="Training Results" class="img-natural rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Training Results 1
+</div>
 
-{% include figure.liquid loading="eager" path="assets/img/deep/C4W3_unet-result-3.png" title="Training Results" class="img-natural rounded z-depth-1" %}
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/deep/C4W3_unet-result-3.png" title="Training Results" class="img-natural rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Training Results 2
+</div>

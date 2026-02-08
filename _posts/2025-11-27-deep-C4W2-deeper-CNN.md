@@ -21,7 +21,14 @@ ResNets introduce **shortcuts**, or **skip connections**, across two or more lay
 
 The diagram shows a skip connection being added between the $$l^\text{th}$$ layer and the $$(l+2)^\text{th}$$ layer, which can be symbollically represented as: $$a^{[l+2]} = g\left( z^{[l+2]} + a^{[l]}\right)$$
 
-{% include figure.liquid loading="eager" path="assets/img/deep/C4W2_skip_connection.png" title="Skip Connection" class="img-natural rounded z-depth-1" %}
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/deep/C4W2_skip_connection.png" title="Skip Connection" class="img-natural rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Skip Connection
+</div>
 
 #### Why ResNets work?
 
@@ -31,11 +38,26 @@ A residual block can easily learn an **identity function**. By tuning the weight
 
 - **Identity block**: input activation has the same dimention as output activation
 
-{% include figure.liquid loading="eager" path="assets/img/deep/C4W2_idblock3_kiank.png" title="The Identity Block" class="img-natural rounded z-depth-1" %}
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/deep/C4W2_idblock3_kiank.png" title="The Identity Block" class="img-natural rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    The Identity Block
+</div>
 
 - **Convolutional block**: dimenstions of input and output do not match up, so an additional convolutional layer is needed in the shortcut path to adjust the dimension of the previous activations before forwarding them to the upcoming layer
 
-{% include figure.liquid loading="eager" path="assets/img/deep/C4W2_convblock_kiank.png" title="The Convolutional Block" class="img-natural rounded z-depth-1" %}
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/deep/C4W2_convblock_kiank.png" title="The Convolutional Block" class="img-natural rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    The Convolutional Block
+</div>
+
 
 ## Depthwise Separable Convolutions
 
@@ -45,7 +67,14 @@ For normal convolution operation, suppose the input data has dimensions $$n^{[l]
 
 Let's see how the computations can be greatly reduced by breaking down this single convolution operation into a depthwise convolution followed by a pointwise convolution.
 
-{% include figure.liquid loading="eager" path="assets/img/deep/C4W2_depthwise_separable.png" title="Normal Convolution v.s. Depthwise Separable Convolution" class="img-natural rounded z-depth-1" %}
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/deep/C4W2_depthwise_separable.png" title="Normal Convolution v.s. Depthwise Separable Convolution" class="img-natural rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Normal Convolution v.s. Depthwise Separable Convolution
+</div>
 
 In depthwise step, instead of applying convolution to all the $$n_C^{[l]}$$ channels, the convolution is applied to a single channel at a time. So the filters will be of the size $$f \times f \times 1$$ and $$n_C^{[l]}$$ of such filters are required. The number of multiplications at depthwise step is: $$n_C^{[l]} \times {n^{[l+1]}}^2 \times f^2$$.
 
@@ -63,17 +92,38 @@ Take $$N=512$$ and $$f=5$$ as an example, the ratio is found to be ~4.2%, so thi
 
 The diagram below shows the architecture of MobileNetV2, which takes advantage of depthwise separable convolutions together with shortcut connections to speed up training and improve predictions. This allows MobileNetV2 to be run on mobile or other low-power applications with good efficiency. 
 
-{% include figure.liquid loading="eager" path="assets/img/deep/C4W2_mobilenetv2.png" title="MobileNetV2 Architecture" class="img-natural rounded z-depth-1" %}
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/deep/C4W2_mobilenetv2.png" title="MobileNetV2 Architecture" class="img-natural rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    MobileNetV2 Architecture
+</div>
 
 ## Inception Networks
 
 We can apply different convolutions and pooling with filters of multiple sizes at the same layer, and concatenate them to give an output volume.
 
-{% include figure.liquid loading="eager" path="assets/img/deep/C4W2_inception_block.jpg" title="Inception Blocks" class="img-natural rounded z-depth-1" %}
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/deep/C4W2_inception_block.jpg" title="Inception Blocks" class="img-natural rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Inception Blocks
+</div>
 
 One problem with such inception block is its high computation cost. In order to save computations, we can shrink the number of channels by using $$1\times1$$ convolution filters. The following example shows how the number of computations is greatly reduced by the bottleneck layer of $$1\times1$$ convolutions.
 
-{% include figure.liquid loading="eager" path="assets/img/deep/C4W2_reduce_cost.png" title="1×1 Convolution Filters" class="img-natural rounded z-depth-1" %}
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/deep/C4W2_reduce_cost.png" title="1×1 Convolution Filters" class="img-natural rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    1×1 Convolution Filters
+</div>
 
 ## Further Advices
 
@@ -89,7 +139,14 @@ If we have enough data and computation power, instead of starting training a NN 
 
 Data augmentation is the process of artificially generating new data from existing data. This method helps us to have more training examples when we do not have enough data. 
 
-{% include figure.liquid loading="eager" path="assets/img/deep/C4W2_data_augmentation.png" title="Examples of Data Augmentation Methods" class="img-natural rounded z-depth-1" %}
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/deep/C4W2_data_augmentation.png" title="Examples of Data Augmentation Methods" class="img-natural rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Examples of Data Augmentation Methods
+</div>
 
 Common data augmentation methods used for computer vision tasks include:
 

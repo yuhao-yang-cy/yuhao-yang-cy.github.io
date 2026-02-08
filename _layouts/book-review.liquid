@@ -69,28 +69,29 @@ layout: default
         {% endif %}
       </p>
     {% endif %}
-    <p class="post-tags">
-      <a href="{{ year | prepend: '/books/' | relative_url }}"> <i class="fa-solid fa-calendar fa-sm"></i> {{ year }}</a>
-      {% if tags != '' %}
-        &nbsp;&middot;&nbsp;
+
+    {% if tags != '' %}
+      <p class="post-tags" style="margin-bottom: 0;">
         {% for tag in page.tags %}
           <a href="{{ tag | slugify | prepend: '/books/tag/' | relative_url }}"> <i class="fa-solid fa-hashtag fa-sm"></i> {{ tag }}</a>
           {% unless forloop.last %}
             &nbsp;
           {% endunless %}
         {% endfor %}
-      {% endif %}
-
-      {% if categories != '' %}
-        &nbsp;&middot;&nbsp;
+      </p>
+    {% endif %}
+    
+    {% if categories != '' %}
+      <p class="post-tags" style="margin-top: -20px;">
         {% for category in page.categories %}
           <a href="{{ category | slugify | prepend: '/books/category/' | relative_url }}"> <i class="fa-solid fa-tag fa-sm"></i> {{ category }}</a>
           {% unless forloop.last %}
             &nbsp;
           {% endunless %}
         {% endfor %}
-      {% endif %}
-    </p>
+      </p>
+    {% endif %}
+    
     <hr>
   </header>
 
@@ -137,7 +138,7 @@ layout: default
     margin-left: auto;
     }
 
-  figure  > img {
+  figure > img {
     vertical-align: top;
     display: block;
     margin-right: 0px;
@@ -178,14 +179,14 @@ layout: default
       }
 
     figure.book-cover img {
-      width: 120px;
+      height: 160px;
       vertical-align: top;
       }
 
     figure.book-cover figcaption {
       caption-side: bottom;
       text-align: left;
-      max-height: 150px;
+      max-height: 160px;
       }
 
     /* Regular figures in content - centered */

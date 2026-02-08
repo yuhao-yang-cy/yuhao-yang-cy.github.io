@@ -53,6 +53,6 @@ linkedin_username: yuhao-yang-cy # your LinkedIn user name
 # youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 # zotero_username: # your zotero username
 custom_social: # can be any name here other than the ones already defined above
-  logo: https://avatars.githubusercontent.com/u/409513?s=200&v=4 # can be png, svg, jpg
+  logo: assets/img/zhihu_logo_icon.png # can be png, svg, jpg
   title: Zhihu
   url: https://www.zhihu.com/people/phycolin

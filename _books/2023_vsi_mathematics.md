@@ -4,8 +4,8 @@ title: "Mathematics: A Very Short Introduction"
 author: Timothy Gowers
 cover: assets/img/book_covers/vsi_mathematics_cover.jpg
 isbn: 9780192853615 # use ISBN to fetch cover
-categories: mathematics
-tags: mathematics
+categories: [mathematics, popular-science]
+tags: [mathematics, oxford-VSI]
 date: 2023-08-04
 finished: 2023-08-04
 released: 2002

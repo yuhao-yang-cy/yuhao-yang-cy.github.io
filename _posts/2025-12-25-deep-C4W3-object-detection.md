@@ -21,7 +21,14 @@ categories: "machine-learning"
 
 - **Semantic Segmentation**: label each pixel in the image with a category label
 
-{% include figure.liquid loading="eager" path="assets/img/deep/C4W3_image_segmentation.jpg" title="Common Computer Vision Tasks" class="img-natural rounded z-depth-1" %}
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/deep/C4W3_image_segmentation.jpg" title="Common Computer Vision Tasks" class="img-natural rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Common Computer Vision Tasks
+</div>
 
 ## Object Detection
 
@@ -44,13 +51,27 @@ y = \left[ \begin{array}{c} P_c \\ b_x  \\ b_y \\ b_w \\ b_h  \\ c \end{array} \
 $$
 where $$c$$ is the class index that represents one of the $$s$$ classes to which the object belongs.
 
-{% include figure.liquid loading="eager" path="assets/img/deep/C4W3_box_label.jpg" title="Output Vector" class="img-natural rounded z-depth-1" %}
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/deep/C4W3_box_label.jpg" title="Output Vector" class="img-natural rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Output Vector for the Problem
+</div>
 
 #### Landmarks
 
 In computer vision problems like face recognition problems, we might also want to output some points on the face like corners of the eyes, corners of he mouth, corners of the nose and so on, which makes it possible to predict the facial expressions of that person. Another example is when we get the skeleton of a person, outputting the positions of the hands, elbows, shoulders, knees, feet and so on could be helpful in predicting what the person is doing. This is called **landmark detection**.
 
-{% include figure.liquid loading="eager" path="assets/img/deep/C4W3_Facial Landmark Detection.jpg" title="Facial Landmarks" class="img-natural rounded z-depth-1" %}
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/deep/C4W3_Facial Landmark Detection.jpg" title="Facial Landmarks" class="img-natural rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Facial Landmarks
+</div>
 
 Instead of using four numbers to give the location and the size of the object of interest, a collection of landmarks are needed in the labelled data.
 $$
@@ -73,7 +94,14 @@ For object detection problems, there could be many objects scattered at multiple
 
 Recall that we have learned how to train a CNN for the image classification problems, that is to identity the only object in one image. For object detection, we can crop specific windows of the images (with varying sizes and varying ratios) and forward the cropped portion into a CNN and predict the corresponding class for each window.
 
-{% include figure.liquid loading="eager" path="assets/img/deep/C4W3_sliding-window-in-action.gif" title="Sliding Windows" class="img-natural rounded z-depth-1" %}_fmt=gif&from=appmsg)
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/deep/C4W3_sliding-window-in-action.gif" title="Sliding Windows" class="img-natural rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    The Sliding Window Technique
+</div>
 
 The disadvantage of this method is its high computational cost. It turns out that the sliding windows can be implemented more efficiently using convolutional networks.
 
@@ -81,7 +109,14 @@ The disadvantage of this method is its high computational cost. It turns out tha
 
 The illustration below shows how a convolutional network takes a $$16\times16\times3$$ image and produces a $$2\times2\times4$$ output. Each $$1\times1\times4$$ slice in the output makes a prediction about the probability that each corresponding sliding window (as shown in different colours) belongs to each one of the $$4$$ classes. Similar architectures can be applied for bigger images and more classes.
 
-{% include figure.liquid loading="eager" path="assets/img/deep/C4W3_sliding-window-by-convolution.png" title="Sliding Window with Convolutional Implementation" class="img-natural rounded z-depth-1" %}
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/deep/C4W3_sliding-window-by-convolution.png" title="Sliding Window with Convolutional Implementation" class="img-natural rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Sliding Window with Convolutional Implementation
+</div>
 
 The sliding window approach treats each window as an independent image patch separately, but neighbouring sliding windows with large fractions of overlapping may share a lot of repeated computations. Therefore, processing the entire image as a whole with a CNN, which shares and reuses the feature map for multiple regions, can significantly eliminate redundant computations and hence reduce computational cost.
 
@@ -89,7 +124,14 @@ The sliding window approach treats each window as an independent image patch sep
 
 **YOLO** (*You Only Look Once*) is a popular algorithm for object detection problems because of its high accuracy and also its ability to run in real time. This algorithm was named YOLO as it requires only one forward propagation pass through the network to make predictions, so in this sense it only looks once at the image. After non-max suppression, it then outputs recognized objects together with the bounding boxes.
 
-{% include figure.liquid loading="eager" path="assets/img/deep/C4W3_yolo_on_predict_time.png" title="YOLO in Real Time" class="img-natural rounded z-depth-1" %}
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/deep/C4W3_yolo_on_predict_time.png" title="YOLO in Real Time" class="img-natural rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    YOLO in Real Time
+</div>
 
 #### Bounding Box Prediction
 
@@ -107,11 +149,25 @@ then the dimension of the output layer is $$G \times G \times (s + 5)$$.
 
 Objects from different classes usually have different shapes. For example, we may expect the bounding box for a pedestrian to be tall and thin, while the bounding box for a car to be  relatively wider. To represent different objects in the training data, we choose reasonable height/width ratios for different classes. Such bounding boxes with predefined reference shapes are called **anchor boxes**.
 
-{% include figure.liquid loading="eager" path="assets/img/deep/C4W3_anchor-boxes.png" title="Anchor Boxes" class="img-natural rounded z-depth-1" %}
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/deep/C4W3_anchor-boxes.png" title="Anchor Boxes" class="img-natural rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Anchor Boxes
+</div>
 
 Suppose we have $$n_A$$ anchor boxes, then the dimension of the output tensor of the last layer is $$G \times G \times n_A \times (s+5)$$.
 
-{% include figure.liquid loading="eager" path="assets/img/deep/C4W3_architecture.jpg" title="Encoding for Multiple Anchor Boxes" class="img-natural rounded z-depth-1" %}
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/deep/C4W3_architecture.jpg" title="Encoding for Multiple Anchor Boxes" class="img-natural rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Encoding for Multiple Anchor Boxes
+</div>
 
 #### Class Scores
 
@@ -124,7 +180,14 @@ One problem with YOLO at this stage is that it detects the same object multiple 
 - choose a threshold for the class scores and get rid of the boxes with a low class score
 - select only one box when several boxes overlap with each other but detect the same object
 
-{% include figure.liquid loading="eager" path="assets/img/deep/C4W3_non-max-suppression.jpg" title="Non-Max Suppression" class="img-natural rounded z-depth-1" %}
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/deep/C4W3_non-max-suppression.jpg" title="Non-Max Suppression" class="img-natural rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Non-Max Suppression
+</div>
 
 To determine which boxes detect the same object, one measure that can be used is the **intersection over union**. The *IoU* between two bounding boxes $$B_1$$ and $$B_2$$ is defined as:
 
@@ -132,7 +195,14 @@ $$
 IoU = \frac{B_1 \cap B_2}{B_1 \cup B_2}
 $$
 
-{% include figure.liquid loading="eager" path="assets/img/deep/C4W3_IoU.png" title="IoU" class="img-natural rounded z-depth-1" %}
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/deep/C4W3_IoU.png" title="IoU" class="img-natural rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    IoU (Intersection over Union)
+</div>
 
 While there are too many remaining boxes, we pick the box with the largest $$P_c$$ and output that as a prediction. At the mean time, we search for and remove any remaining box with the same output but with an *IoU* that is greater than a certain threshold.
 
@@ -142,7 +212,14 @@ If there are $$s$$ classes to be detected, we should run non-max suppression $$s
 
 One way to visualize YOLO's output is to plot the bounding boxes that it predicts. Doing this results in a picture like this:
 
-{% include figure.liquid loading="eager" path="assets/img/deep/C4W3_Detected-with-YOLO.jpg" title="Objects Detected with YOLO" class="img-natural rounded z-depth-1" %}
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/deep/C4W3_Detected-with-YOLO.jpg" title="Objects Detected with YOLO" class="img-natural rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Objects Detected with YOLO
+</div>
 
 Another way to visualise what YOLO predicts on an image is to do the following:
 
@@ -151,4 +228,11 @@ Another way to visualise what YOLO predicts on an image is to do the following:
 
 Doing this results in a picture that looks like this:
 
-{% include figure.liquid loading="eager" path="assets/img/deep/C4W3_proba_map.jpg" title="Colouring Labels with YOLO" class="img-natural rounded z-depth-1" %}
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/deep/C4W3_proba_map.jpg" title="Colouring Labels with YOLO" class="img-natural rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Colouring Labels with YOLO
+</div>

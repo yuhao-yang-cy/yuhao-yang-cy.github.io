@@ -4,8 +4,8 @@ title: "Applied Mathematics: A Very Short Introduction"
 author: Alan Goriely
 cover: assets/img/book_covers/vsi_applied_maths.jpg
 isbn: 9780198754046 # use ISBN to fetch cover (if no `olid` is provided, dashes are optional)
-categories: mathematics
-tags: mathematics
+categories: [mathematics, popular-science]
+tags: [mathematics, oxford-VSI, applied-maths]
 date: 2023-08-08
 finished: 2023-08-08
 released: 2018
@@ -13,7 +13,7 @@ stars: 4.5
 status: Finished
 ---
 
-读完 [VSI to Mathematics]({{ site.baseurl }}/books/2023_vsi_mathematics/)，顺手又把多年前从牛津 Blackwell 书店买回来吹灰多年的 VSI to Applied Mathematics 终于也读了。
+读完 [VSI to Mathematics]({{site.baseurl}}/books/2023_vsi_mathematics/)，顺手又把多年前从牛津 Blackwell 书店买回来吹灰多年的 VSI to Applied Mathematics 终于也读了。
 
 作者 Alan Goriely 也是业内大牛，网上资料查到这位担任牛津大学工业与应用数学所主任的教授，研究方向非常广泛：有关动植物生长的生物动力学，大脑神经网络、癌症、传染病的数学模型，光伏器件开发、锂离子电池建模，当然也有应用数学方法的研究，等等，都有涉猎。在同样篇幅仅有100来页的小册子里，作者概述了他所理解的应用数学究竟是什么？
 

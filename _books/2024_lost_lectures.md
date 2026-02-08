@@ -4,8 +4,8 @@ title: "Feynman's Lost Lectures"
 author: Richard P. Feynman
 cover: assets/img/book_covers/lost_lectures_cover.jpg
 isbn: 9787547860649 # use ISBN to fetch cover
-categories: physics
-tags: physics
+categories: [physics, popular-science]
+tags: [physics, gravity]
 date: 2024-04-04
 finished: 2024-04-04
 released: 2023

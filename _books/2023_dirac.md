@@ -4,8 +4,8 @@ title: "量子怪才：保罗·狄拉克传"
 author: Graham Farmelo
 cover: assets/img/book_covers/dirac_cover.jpg
 isbn: 9787521740752 # use ISBN to fetch cover (if no `olid` is provided, dashes are optional)
-categories: physics
-tags: physics
+categories: [physics, biography]
+tags: [physics, dirac, quantum]
 date: 2023-09-15
 finished: 2023-09-15
 released: 2022

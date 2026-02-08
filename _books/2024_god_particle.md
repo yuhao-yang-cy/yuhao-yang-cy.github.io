@@ -4,8 +4,8 @@ title: 上帝粒子（The God Particle）
 author: Leon M. Lederman
 cover: assets/img/book_covers/god_particle_cover.jpg
 isbn: 9787572705069 # use ISBN to fetch cover
-categories: physics
-tags: physics
+categories: [physics, popular-science]
+tags: [physics, particle-physics, Nobel]
 date: 2024-09-27
 finished: 2024-09-27
 released: 2022
