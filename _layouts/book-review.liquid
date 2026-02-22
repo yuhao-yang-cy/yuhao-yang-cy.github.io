@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-{% assign year = page.started | date: '%Y' %}
+{% assign year = page.date | date: '%Y' %}
 {% assign tags = page.tags | join: '' %}
 {% assign categories = page.categories | join: '' %}
 
@@ -14,16 +14,27 @@ layout: default
 
 <div class="post">
   <header class="post-header">
+    <figure class="book-cover">
+        {% if page.cover %}
+          <img alt="{{ page.title }} cover" src="{{ site.baseurl }}/{{ page.cover }}">
+        {% elsif page.olid %}
+          <img alt="{{ page.title }} cover" src="https://covers.openlibrary.org/b/olid/{{ page.olid }}-L.jpg?default=false">
+        {% elsif page.isbn %}
+          <img alt="{{ page.title }} cover" src="https://covers.openlibrary.org/b/isbn/{{ page.isbn }}-L.jpg?default=false">
+        {% endif %}
+      </figure>
+
     <h1 class="post-title">{{ page.title }}</h1>
-    {% if page.author or page.released %}
-      <p class="post-meta">
+    {% if page.author %}
+      <p class="post-meta"><h3>
         {% if page.author %}
           {{ page.author }}
         {% endif %}
-        {% if page.author and page.released %} &nbsp;&middot;&nbsp; {% endif %}
-        {% if page.released %}
-          {{ page.released }}
-        {% endif %}
+      {% if page.author and page.released %} &nbsp;&middot;&nbsp; {% endif %}
+      {% if page.released %}
+        {{ page.released }}
+      {% endif %}
+      </h3>
       </p>
     {% endif %}
 
@@ -42,9 +53,6 @@ layout: default
           {% if page.started or page.finished %}
             &nbsp;&middot;&nbsp;
           {% endif %}
-          {% if page.goodreads_review %}
-            <a target="_blank" href="https://www.goodreads.com/review/show/{{ page.goodreads_review }}"><i class="fa-brands fa-goodreads-g"></i>
-          {% endif %}
           {% assign full_stars = page.stars | floor %}
           {% assign half_star = page.stars | minus: full_stars %}
           {% assign empty_stars = 5 | minus: full_stars %}
@@ -58,46 +66,32 @@ layout: default
           {%- for i in (1..empty_stars) -%}
             <i class="fa-regular fa-star fa-sm"></i>
           {%- endfor -%}
-          {% if page.goodreads_review %}
-            </a>
-          {% endif %}
-        {% endif %}
-        {% if page.buy_link %}
-          {% if page.started or page.finished or page.stars %}
-            &nbsp;&middot;&nbsp;
-          {% endif %}
-          <a target="_blank" href="{{ page.buy_link }}"
-            ><i class="fa-solid fa-cart-shopping"></i>
-            {% assign is_amazon_link = page.buy_link | slice: 0, 19 %}
-            {% if is_amazon_link == 'https://www.amazon.' %}
-              <i class="fa-brands fa-amazon"></i>
-            {% endif %}
-          </a>
         {% endif %}
       </p>
     {% endif %}
-    <p class="post-tags">
-      <a href="{{ year | prepend: '/books/' | relative_url }}"> <i class="fa-solid fa-calendar fa-sm"></i> {{ year }}</a>
-      {% if tags != '' %}
-        &nbsp;&middot;&nbsp;
+
+    {% if tags != '' %}
+      <p class="post-tags" style="margin-bottom: 0;">
         {% for tag in page.tags %}
           <a href="{{ tag | slugify | prepend: '/books/tag/' | relative_url }}"> <i class="fa-solid fa-hashtag fa-sm"></i> {{ tag }}</a>
           {% unless forloop.last %}
             &nbsp;
           {% endunless %}
         {% endfor %}
-      {% endif %}
-
-      {% if categories != '' %}
-        &nbsp;&middot;&nbsp;
+      </p>
+    {% endif %}
+    
+    {% if categories != '' %}
+      <p class="post-tags" style="margin-top: -20px;">
         {% for category in page.categories %}
           <a href="{{ category | slugify | prepend: '/books/category/' | relative_url }}"> <i class="fa-solid fa-tag fa-sm"></i> {{ category }}</a>
           {% unless forloop.last %}
             &nbsp;
           {% endunless %}
         {% endfor %}
-      {% endif %}
-    </p>
+      </p>
+    {% endif %}
+    
     <hr>
   </header>
 
@@ -109,24 +103,6 @@ layout: default
           <figcaption class="empty-review-caption">
             Cover of <em>{{ page.title }}</em>
           </figcaption>
-        {% elsif page.olid %}
-          <img
-            class="empty-review-cover"
-            alt="{{ page.title }} cover"
-            src="https://covers.openlibrary.org/b/olid/{{ page.olid }}-L.jpg?default=false"
-          >
-          <figcaption class="empty-review-caption">
-            Cover of <em>{{ page.title }}</em> on the <a href="https://openlibrary.org/olid/{{ page.olid }}">Open Library</a>.
-          </figcaption>
-        {% elsif page.isbn %}
-          <img
-            class="empty-review-cover"
-            alt="{{ page.title }} cover"
-            src="https://covers.openlibrary.org/b/isbn/{{ page.isbn }}-L.jpg?default=false"
-          >
-          <figcaption class="empty-review-caption">
-            Cover of <em>{{ page.title }}</em> on the <a href="https://openlibrary.org/isbn/{{ page.isbn }}">Open Library</a>.
-          </figcaption>
         {% endif %}
       </figure>
       {% assign status = page.status | upcase %}
@@ -134,29 +110,7 @@ layout: default
         <h4>{{ status }}</h4>
       </div>
     {% else %}
-      <figure>
-        {% if page.cover %}
-          <img alt="{{ page.title }} cover" src="{{ site.baseurl }}/{{ page.cover }}">
-          <figcaption>
-            Cover of <em>{{ page.title }}</em>
-          </figcaption>
-        {% elsif page.olid %}
-          <img alt="{{ page.title }} cover" src="https://covers.openlibrary.org/b/olid/{{ page.olid }}-L.jpg?default=false">
-          <figcaption>
-            Cover of <em>{{ page.title }}</em> on the <a href="https://openlibrary.org/olid/{{ page.olid }}">Open Library</a>.
-          </figcaption>
-        {% elsif page.isbn %}
-          <img alt="{{ page.title }} cover" src="https://covers.openlibrary.org/b/isbn/{{ page.isbn }}-L.jpg?default=false">
-          <figcaption>
-            Cover of <em>{{ page.title }}</em> on the <a href="https://openlibrary.org/isbn/{{ page.isbn }}">Open Library</a>.
-          </figcaption>
-        {% endif %}
-      </figure>
       <br class="mobile-break" clear="right">
-      <h4>
-        {% if page.start %} Start Date: {{ page.start | date: '%-d %B %Y' }}. {% endif %}
-        {% if page.end %} End Date: {{ page.end | date: '%-d %B %Y' }}. {% endif %}
-      </h4>
       {{ content }}
     {% endif %}
   </article>
@@ -167,99 +121,112 @@ layout: default
 </div>
 
 <style>
-      figure {
-        float: none;
-        width: auto;
-        display: block;
-        margin-right: auto;
-        margin-left: auto;
+  .img-natural {
+  max-width: 100%;
+  width: auto !important;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  }
+  
+  figure {
+    float: none;
+    width: auto;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    }
 
+  figure > img {
+    vertical-align: top;
+    display: block;
+    margin-right: 0px;
+    margin-left: 0px;
+    padding: 0px;
+    width: auto;
+    }
+
+  figure figcaption {
+    display: block;
+    caption-side: bottom;
+    text-align: center;
+    }
+
+  @media screen and (min-width: 600px)  {
+    .empty-review{
+      float: left;
+      display: block; /* in-line block; */
+      margin: 0px 0px 0px 0px;  /* adjust as needed */
+      padding: 0px 0px 0px 20px;
       }
-      figure  > img {
 
-           vertical-align: top;
-           display: block;
-           margin-right: 0px;
-           margin-left: 0px;
-           padding: 0px;
-
-      }
-      figure figcaption {
-
-        display: block;
-        caption-side: bottom;
-        text-align: center;
+    .empty-review-caption {
+      caption-side: left;
+      text-align: left;
       }
 
-      @media screen and (min-width: 600px)  {
+    .empty-review-cover {
+      width:250px;
+      vertical-align: top;
+      padding-right: 40px;
+      }
 
-        .empty-review{
-          float: left;
-          display: block; /* in-line block; */
-          margin: 0px 0px 0px 0px;  /* adjust as needed */
-          padding: 0px 0px 0px 20px;
-         /* top right bottom left */
-          }
+    figure.book-cover {
+      float: right;
+      display: inline-block;
+      margin: 0px 0px 20px 20px;
+      padding: 0px;
+      }
 
-         .empty-review-caption {
-                  caption-side: left;
-                  text-align: left;
+    figure.book-cover img {
+      height: 160px;
+      vertical-align: top;
+      }
 
+    figure.book-cover figcaption {
+      caption-side: bottom;
+      text-align: left;
+      max-height: 160px;
+      }
 
-                  }
+    /* Regular figures in content - centered */
+    article figure:not(.book-cover) {
+      float: none;
+      display: block;
+      margin: 20px auto;
+      max-width: 90%;
+      text-align: center;
+      }
 
-          .empty-review-cover {
-              width:250px;
-              vertical-align: top;
-              padding-right: 40px;
-              }
+    article figure:not(.book-cover) img {
+      max-width: 90%;
+      height: auto;
+      }
 
-          figure {
+    article figure:not(.book-cover) figcaption {
+      text-align: center;
+      }
 
-                float: right;
-                display: in-line block; /* in-line block; */
-                margin: 0px 0px 0px 0px;  /* adjust as needed */
-                padding: 0px 0px 0px 20px;
-               /* top right bottom left */
-              }
-
-          figure img {
-                  width:300px;
-                  vertical-align: top;
-
-                }
-
-          figure figcaption {
-                  caption-side: bottom;
-                  text-align: left;
-
-                  }
-
-          .mobile-break { display: none; }
+    .mobile-break { display: none; }
 
   /* =Blockquote
   -------------------------------------------------------------- */
   blockquote {
-
       position: relative;
       marign: 0px;
       display: table;
-
   }
   blockquote:before, blockquote:after {
-
    /* properties to format the block quotes /*
-
   }
   blockquote:before {
       top: 0;
       left: 0;
-
-
   }
   blockquote:after {
       top: 0;
       right: 0;
-
   }
 </style>
+

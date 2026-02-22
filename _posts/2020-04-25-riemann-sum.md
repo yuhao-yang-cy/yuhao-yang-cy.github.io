@@ -1,0 +1,161 @@
+---
+layout: post
+title: "Riemann Sum 求和法蛮力推导积分基本公式"
+date: 2020-04-25 13:11:00
+description: 通过求一系列矩形的面积和，来估计某个函数曲线下的面积，然后考虑无穷分割的极限，证明几个简单初等函数的定积分结果
+tags: mathematics integration series
+categories: mathematics a-level
+---
+
+去年9月时给申请牛剑数学专业的几个熊孩纸作辅导，发现好些个家伙对于积分计算法则贼麻溜，但是对这些法则的来龙去脉完全不闻不问，我也很是不解这种心态。于是就让熊孩纸试着通过求一系列矩形的面积和，来估计某个函数曲线下的面积，然后考虑无穷分割的极限，证明如下几个简单初等函数的定积分结果：
+- $$\int_0^a x^m \,\mathrm{d}x = \frac{x^{m+1}}{m+1} \quad (m\in\mathbb{Z}^+) \tag{1}$$
+- $$\int_0^a \mathrm{e}^x \,\mathrm{d}x = \mathrm{e}^a - 1 \tag{2} $$
+- $$\int_0^a \cos x \,\mathrm{d}x = \sin a \tag{3} $$
+
+## 定积分的表达式
+
+设连续函数 $$y=f(x)$$ 在 $$x\in[0,a]$$上有定义。若我们将 $$[0,a]$$ 分成 $$n$$ 个等间隔的小区间，其中第 $$k$$ 个区间的范围是 $$ [\frac{(k-1)a}{n}, \frac{ka}{n} ] \, (k=0,1,2,\cdots,n)$$，则在这个区间内曲线 $$y=f(x)$$ 下的面积就近似等于矩形面积 $$\frac{a}{n}\times f(\frac{ka}{n})$$。对所有 $$n$$ 个矩形求和，我们就可以得到在 $$x\in[0,a]$$ 区间内曲线 $$y=f(x)$$ 下的面积的近似值。
+
+ {% include figure.liquid loading="eager" path="assets/img/riemann_sum.jpg" title="" class="img-natural rounded z-depth-1" %}
+
+当我们分割得越来越细，即取 $$n \to \infty$$ 的极限，则可以获得这块面积的准确值，即：
+
+$$\boxed{ \int_0^a f(x) \,\mathrm{d}x = \lim_{n\to\infty} \frac{a}{n}\left[ f\left(\frac{a}{n}\right) + f\left(\frac{2a}{n}\right) + \cdots + f\left(\frac{na}{n}\right) \right]} \tag{4}$$
+
+(4)式将作为我们推导积分公式的核心公式。 
+
+## $$\int_0^a x^m \,\mathrm{d}x $$的推导
+
+将 $$f(x)=x^m $$ 代入(4)式中，我们需要处理形如 $$\left(\frac{a}{n}\right)^m + \left(\frac{2a}{n}\right)^m + \cdots + \left( \frac{na}{n}\right)^m = \left( \frac{a}{n}\right)^m(1^m + 2^m + \cdots + n^m) $$ 的计算。
+
+为此我们先来考察前 $$n $$ 个自然数的 $$m$$ 次方和。
+
+利用二项式展开，注意到：$$(k+1)^{m+1} = k^{m+1} + (m+1)k^m + O(k^{m-1}) $$，其中 $$O(k^s)$$ 表示低于或等于 $$k^s$$ 的项。所以有：
+
+$$(k+1)^{m+1} - k^{m+1} = (m+1)k^m + O(k^{m-1})$$
+
+我们把 $$k=1, 2, \cdots, n$$ 的情况通通排列出来：
+
+$$ \begin{aligned} (n+1)^{m+1} - n^{m+1} &= (m+1)n^m + O(n^{m-1}) \\ n^{m+1} - (n-1)^{m+1} &= (m+1) (n-1)^m + O((n-1)^{m-1}) \\ & \,\vdots \\ 2^{m+1} - 1^{m+1} &= (m+1) 1^m + O(1^{m-1})\end{aligned} $$
+
+将上述等式全部相加，左边逐项相消，很容易发现幸存的只剩下两项。右边则是前 $$n$$ 个自然数一系列的幂次求和：
+
+$$ (n+1)^{m+1} - 1= (m+1)(1^m + 2^m + \cdots n^m) + O(n^m) $$
+
+由此我们可以对数列 $$1^m + 2^m + \cdots + n^m$$ 的最高次项作出估计：
+
+$$ 1^m + 2^m + \cdots n^m = \frac{n^{m+1}}{m+1} + O(n^m) \tag{5}$$
+
+上述证明中，仍需要证明余项的和确实不会超过 $$O(n^m)$$。我们可以先将(5)式的结论作为假定，然后用数学归纳法完成证明，证明过程的细节留给读者。
+
+现在我们一切准备就绪，可以着手计算积分了。
+
+$$ \begin{aligned} \int_0^a x^m \,\mathrm{d}x & = \lim_{n\to\infty} \frac{a}{n} \left[ \left(\frac{a}{n}\right)^m + \left(\frac{2a}{n}\right)^m + \cdots + \left( \frac{na}{n}\right)^m \right] \\ & = \lim_{n\to\infty} \frac{a^{m+1}}{n^{m+1}} \left[ 1^m + 2^m + \cdots n^m \right] \\ & = \lim_{n\to\infty} \frac{a^{m+1}}{n^{m+1}} \left[ \frac{n^{m+1}}{m+1} + O(n^m) \right] \\ & = \lim_{n\to\infty} \left[ \frac{a^{m+1}}{m+1} + O\left(\frac{1}{n}\right) \right] \end{aligned}$$
+
+结果现在就变得一目了然：
+
+$$\boxed{ \int_0^a x^m \,\mathrm{d}x  = \frac{a^{m+1}}{m+1} } \tag{6}$$
+
+这正是为大家所熟知的结论。 
+
+## $$\int_0^a \mathrm{e}^x \,\mathrm{d}x$$ 的推导
+
+对于 $$f(x) = \mathrm{e}^x$$，利用(4)式，我们有：
+
+$$ \int_0^a \mathrm{e}^x \,\mathrm{d}x = \lim_{n\to\infty} \frac{a}{n}\left[  \mathrm{e}^{\frac{a}{n}} +  \mathrm{e}^{\frac{2a}{n}} +  \cdots +  \mathrm{e}^{\frac{na}{n}}\right] \tag{7}$$
+
+方括号中为一个公比为 $$\mathrm{e}^{\frac{a}{n}}$$ 的等比数列，我们可以很容易地求出它的和：
+
+$$\begin{aligned} \mathrm{e}^{\frac{a}{n}} +  \mathrm{e}^{\frac{2a}{n}} +    \cdots +  \mathrm{e}^{\frac{na}{n}} &= \frac{ \mathrm{e}^{\frac{a}{n}} \left(  \mathrm{e}^{n\frac{a}{n}} -1\right)}{ \mathrm{e}^{\frac{a}{n}} -1} \\ &= \frac{\mathrm{e}^a - 1}{1 - \mathrm{e}^{-\frac{a}{n}}} \end{aligned}$$
+
+于是(7)式的积分可以进一步写成：
+
+$$ \begin{aligned} \int_0^a \mathrm{e}^x \,\mathrm{d}x &= \lim_{n\to\infty} \frac{a}{n}  \frac{\mathrm{e}^a - 1}{1 - \mathrm{e}^{-\frac{a}{n}}} \\ &= ( \mathrm{e}^a - 1 )  \lim_{n\to\infty} \frac{a}{n} \frac{1}{1 - \mathrm{e}^{-\frac{a}{n}}} \\ &=  ( \mathrm{e}^a - 1 )  \lim_{t\to0} \frac{t}{1 - \mathrm{e}^{-t}} \end{aligned}$$
+
+可以作代换，令 $$ 1 -\mathrm{e}^{-t} = -\frac{1}{s}$$，则有 $$ t = -\ln(1+\frac{1}{s})$$。注意到 $$t\to 0$$ 时，有 $$1-\mathrm{e}^{-t}\to 0$$，于是 $$s\to\infty$$。因此上式中的极限变成
+
+$$ \begin{aligned} \lim_{t\to0} \frac{t}{1 - \mathrm{e}^{-t}} &= \lim_{s \to \infty} \frac{-\ln(1+\frac{1}{s})}{-\frac{1}{s}} \\ &= \lim_{s\to\infty} \left[ s \ln (1+\frac{1}{s}) \right] \\ &= \lim_{s\to\infty} \left[ \ln (1+\frac{1}{s})^s \right] \\ &= \ln \left[ \lim_{s\to\infty}  (1+\frac{1}{s})^s \right]  \\ &= \ln \mathrm{e} = 1 \end{aligned}$$
+
+代回上面的积分结果中，我们得到：
+
+$$ \boxed{\int_0^a \mathrm{e}^x  \mathrm{d} x =  \mathrm{e}^a - 1} \tag{8}$$
+
+## $$\int_0^a \cos x \,\mathrm{d}x$$ 和  $$\int_0^a \sin x \,\mathrm{d}x$$ 的推导（上）
+
+利用(8)式的结论，我们可以很快地得到这两个三角函数定积分的结果。
+
+注意到 $$\mathrm{e}^{ix} = \cos x + i \sin x$$，所以我们可以考察积分 $$ \int_0^a \mathrm{e}^{ix}  \mathrm{d} x $$，得到结果后，分别取其实部和虚部，就可以得到 $$\int_0^a \cos x \,\mathrm{d}x$$ 和  $$\int_0^a \sin x \,\mathrm{d}x$$。
+
+$$ \begin{aligned}\int_0^a \mathrm{e}^{ix}  \mathrm{d} x &= \frac{1}{i}  \int_0^a \mathrm{e}^{ix}  \mathrm{d} (ix) \\ &= \frac{1}{i}(\mathrm{e}^{ia} - 1) \\ &= (-i)(\cos a - 1 + i\sin a) \\ &= (\sin a) + i(1-\cos a) \end{aligned}$$
+
+提取实部和虚部，我们立刻得到
+
+$$ \boxed{ \int_0^a \cos x \,\mathrm{d}x = \sin a}$$
+
+$$ \boxed{ \int_0^a \sin x \,\mathrm{d}x = 1 - \cos a}$$ 
+
+在上述三角函数的定积分计算中，我们利用了指数函数定积分的结果，并把实数域上的指数函数的积分不作讨论地直接沿用到了复数域上的指数函数。虽然这结果是正确的，但其实这中间的逻辑并不严密。有兴趣的读者可以查阅复变函数中指数函数 $$f(z) = \mathrm{e}^z$$ 的定义和它的性质。
+
+另一方面，我们计算三角函数的积分时，其实可以继续直接用(4)式，即用无限分割的方法暴力求和，然后取极限获得正确的结果。我们接下来给出相关的推导过程。
+
+## $$\int_0^a \cos x \,\mathrm{d}x$$ 和  $$\int_0^a \sin x \,\mathrm{d}x$$ 的推导（下）
+
+### 预备定理
+
+我们先试着来考察 $$\cos \alpha + \cos 2\alpha + \cdots + \cos n\alpha$$ 的和。
+
+对每一项乘上 $$\sin\frac{\alpha}{2}$$，再运用三角函数的积化和差公式 $$2 \cos x \sin y = -\sin(x-y)  +\sin(x+y) $$，我们有：
+
+$$ \begin{aligned}  &\, 2\sin\frac{\alpha}{2} (\cos \alpha + \cos 2\alpha  + \cdots + \cos n\alpha ) \\ =& \, 2\cos\alpha \sin\frac{\alpha}{2}  + 2\cos2\alpha \sin\frac{\alpha}{2}  + \cdots 2\cos n\alpha \sin\frac{\alpha}{2} \\ =& \, - \sin\frac{\alpha}{2} +  \sin\frac{3\alpha}{2} - \sin\frac{3\alpha}{2} + \sin\frac{5\alpha}{2} - \cdots - \sin\frac{(2n-1)\alpha}{2} + \sin\frac{(2n+1)\alpha}{2}  \\ =& \, \sin\frac{(2n+1)\alpha}{2} - \sin\frac{\alpha}{2} \end{aligned}$$
+
+再利用和差化积公式：$$\sin x - \sin y = 2\cos\frac{x+y}{2}\sin\frac{x-y}{2}$$，进一步化简：
+
+$$ \sin\frac{(2n+1)\alpha}{2} - \sin\frac{\alpha}{2} = 2\cos\frac{(n+1)\alpha}{2}\sin \frac{n\alpha}{2}$$
+
+由此我们得到：
+
+$$ \boxed{\cos \alpha + \cos 2\alpha + \cdots + \cos n\alpha  =  \frac{ \sin\frac{n\alpha}{2}  \cos\frac{(n+1)\alpha}{2} }{\sin \frac{\alpha}{2}}  } \tag{9} $$
+
+我们可以利用类似的技巧去获得正弦函数级数和的一个表达式。证明过程留给读者作为练习，我们在此仅列出结果：
+
+$$ \boxed{\sin\alpha + \sin2\alpha + \cdots + \sin n\alpha  =  \frac{ \sin\frac{n\alpha}{2}  \sin\frac{(n+1)\alpha}{2} }{\sin \frac{\alpha}{2}}  } \tag{10} $$
+
+其实上面两式的证明还有另一种思路。注意到 $$\mathrm{e}^{iz} = \cos z + i\sin z$$，即 $$\cos z$$ 和 $$\sin z$$ 分别是复数 $$ \mathrm{e}^{iz} $$ 的实部和虚部。由此，我们可以将上述求和式，转化为一个等比级数的和。
+
+$$  \cos \alpha + \cos 2\alpha + \cdots + \cos n\alpha = \text{Re} \left(\mathrm{e}^{i\alpha} +  \mathrm{e}^{2i\alpha} + \cdots  \mathrm{e}^{in\alpha} \right) $$
+
+$$  \sin \alpha + \sin 2\alpha + \cdots + \sin n\alpha = \text{Im} \left(\mathrm{e}^{i\alpha} +  \mathrm{e}^{2i\alpha} + \cdots  \mathrm{e}^{in\alpha} \right) $$
+
+$$ \begin{aligned} \mathrm{e}^{i\alpha} +  \mathrm{e}^{2i\alpha} + \cdots  \mathrm{e}^{in\alpha} &= \frac{ \mathrm{e}^{i\alpha} ( \mathrm{e}^{in\alpha} -1)}{ \mathrm{e}^{i\alpha} - 1} \\ &=  \mathrm{e}^{i\alpha} \frac{ \mathrm{e}^{\frac{in\alpha}{2}} (\mathrm{e}^{\frac{in\alpha}{2}} -  \mathrm{e}^{-\frac{in\alpha}{2}} ) }{ \mathrm{e}^{\frac{i\alpha}{2}} (\mathrm{e}^{\frac{i\alpha}{2}} -  \mathrm{e}^{-\frac{i\alpha}{2}} ) }  \\ &= \frac{ 2i\sin\frac{n\alpha}{2}}{2i\sin \frac{\alpha}{2}}  \mathrm{e}^{\frac{i(n+1)\alpha}{2}}  \\ &=   \frac{ \sin\frac{n\alpha}{2}}{\sin \frac{\alpha}{2}}  \left[ \cos\frac{(n+1)\alpha}{2} + i  \sin\frac{(n+1)\alpha}{2} \right] \end{aligned}$$
+
+提取实部和虚部，立刻可以得出(9)式和(10)式的结果
+
+### 定积分 $$\int_0^a \cos x \,\mathrm{d}x$$ 的推导
+
+$$ \int_0^a \cos x \,\mathrm{d}x = \lim_{n\to\infty} \frac{a}{n} \left[  \cos\frac{a}{n} + \cos\frac{2a}{n} + \cdots + \cos\frac{na}{n} \right]$$
+
+在(9)式中，令 $$\alpha = \frac{a}{n}$$，我们就有
+
+ $$\begin{aligned} \int_0^a \cos x \,\mathrm{d}x &= \lim_{n\to\infty} \frac{a}{n} \frac{\sin \frac{a}{2}  \cos \frac{(n+1)a}{2n} }{\sin \frac{a}{2n}} \\ &=  \sin \frac{a}{2} \times \lim_{n\to\infty}  \cos \frac{(n+1)a}{2n}  \times \lim_{n\to\infty}  \frac{ \frac{a}{n} }{\sin \frac{a}{2n}} \end{aligned} \tag{11}$$
+
+右边表达式中，第一个极限很容易求出
+
+$$ \lim_{n\to\infty}  \cos \frac{(n+1)a}{2n} = \cos\frac{a}{2} $$
+
+利用 $$t\to0$$ 时，$$\lim \frac{\sin t}{t} =1$$ 的结论，第二个极限也可以求出
+
+$$ \lim_{n\to\infty}  \frac{ \frac{a}{n} }{\sin \frac{a}{2n}} = 2 \times \lim_{n\to\infty}  \frac{ \frac{a}{2n} }{\sin \frac{a}{2n}} = 2\times \lim_{t\to0} \frac{t}{\sin t} = 2$$
+
+把这些结果代回(11)式中
+
+$$ \begin{aligned} \int_0^a \cos x \,\mathrm{d}x & = \sin \frac{a}{2} \times \cos\frac{a}{2} \times 2 \\ &= 2 \sin\frac{a}{2} \cos\frac{a}{2} \end{aligned}$$
+
+最终得到结果：
+
+$$ \boxed{ \int_0^a \cos x \,\mathrm{d}x = \sin a} $$
+
+### 定积分 $$\int_0^a \sin x \,\mathrm{d}x$$ 的推导
+
+$$\int_0^a \sin x \,\mathrm{d}x $$ 的结果完全可以用类似的无限分割求和方法来证明。
+
+具体细节留给读者作为练习。

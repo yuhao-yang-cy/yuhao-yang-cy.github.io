@@ -10,12 +10,17 @@ body {
   background-color: var(--global-bg-color);
 
   h1,
-  h2,
+  h2 {
+    scroll-margin-top: 66px;
+    margin: 18px 0px 12px;
+  }
+
   h3,
   h4,
   h5,
   h6 {
     scroll-margin-top: 66px;
+    margin: 12px 0px 10px;
   }
 }
 

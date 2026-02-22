@@ -1,14 +1,10 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - yuhao-yang-cy
 
 repo_description_lines_max: 2
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - yuhao-yang-cy/a2physics
+  - yuhao-yang-cy/asphysics
+  - yuhao-yang-cy/sci-simulations
+  - yuhao-yang-cy/fmech

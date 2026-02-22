@@ -321,6 +321,7 @@ DEPENDENCIES
   jekyll-terser!
   jekyll-toc
   jekyll-twitter-plugin
+  jekyll-watch
   jemoji
   observer
   ostruct
