@@ -1020,6 +1020,11 @@ ninja.data = [{
           description: "Lecture Notes on Cambridge International A-Level Further Mechanics",
           section: "Projects",handler: () => {
               window.location.href = "/projects/fm_notes/";
+            },},{id: "projects-jigsaw-puzzles",
+          title: 'Jigsaw Puzzles',
+          description: "A collection of jigsaw puzzles that I have completed over the years",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/jigsaw_puzzles/";
             },},{id: "projects-oscillators-and-pd-controllers",
           title: 'Oscillators and PD Controllers',
           description: "A mixed introductory course on scientific computing and simulations",
