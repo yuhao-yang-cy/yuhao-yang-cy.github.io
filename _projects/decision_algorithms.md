@@ -23,7 +23,7 @@ This was basically how the project started. I tried to build everything from scr
 
 The codes are definitely not elegant by any standard, but at least they worked. The improved program can also provide solutions that satisfy the requirements of the Decision course marking schemes.
 
-## Examples
+## Screenshots
 
 Here are some solved problems from the Pearson Edexcel WDM11/01 past papers.
 
@@ -60,7 +60,7 @@ Here are some solved problems from the Pearson Edexcel WDM11/01 past papers.
     </div>
 </div>
 <div class="caption">
-    Enter the information of an activity network into the program.
+    Entering the information of an activity network into the program.
 </div>
 
 <div class="row">

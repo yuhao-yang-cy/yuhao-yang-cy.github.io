@@ -3,7 +3,7 @@ layout: page
 title: Jigsaw Puzzles
 description: A collection of jigsaw puzzles that I have completed over the years
 img: assets/img/projects/jigsaw_tiled_cover.jpg
-importance: 9
+importance: 1
 category: fun
 related_publications: false
 ---

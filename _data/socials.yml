@@ -3,7 +3,8 @@
 # for more information, please refer to the documentation of jekyll-socials plugin: https://github.com/george-gca/jekyll-socials
 github_username: yuhao-yang-cy # your GitHub user name
 linkedin_username: yuhao-yang-cy # your LinkedIn user name
-custom_social:
-  logo: assets/img/zhihu_logo_icon.png # can be png, svg, jpg
-  title: Zhihu
-  url: https://www.zhihu.com/people/phycolin
+zhihu_id: phycolin
+# custom_social:
+#  logo: assets/img/zhihu_logo_icon.png # can be png, svg, jpg
+#  title: Zhihu
+#  url: https://www.zhihu.com/people/phycolin
