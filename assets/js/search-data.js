@@ -1030,6 +1030,11 @@ ninja.data = [{
           description: "A mixed introductory course on scientific computing and simulations",
           section: "Projects",handler: () => {
               window.location.href = "/projects/oscillators/";
+            },},{id: "projects-revision-notes-for-as-a-level-physics",
+          title: 'Revision Notes for AS/A-Level Physics',
+          description: "Handwritten Topical Revision Notes for AS and A-Level Physics",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/revision_notes/";
             },},{
         id: 'social-github',
         title: 'GitHub',
@@ -1045,11 +1050,11 @@ ninja.data = [{
           window.open("https://www.linkedin.com/in/yuhao-yang-cy", "_blank");
         },
       },{
-        id: 'social-custom_social',
-        title: 'Custom_social',
+        id: 'social-zhihu_id',
+        title: 'Zhihu_id',
         section: 'Socials',
         handler: () => {
-          window.open("https://www.zhihu.com/people/phycolin", "_blank");
+          window.open("", "_blank");
         },
       },{
       id: 'light-theme',
