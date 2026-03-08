@@ -106,6 +106,39 @@ ninja.data = [{
             window.location.href = "/blog/2025/deep-C4W2-deeper-CNN/";
           
         },
+      },{id: "post-convolutional-neural-networks-deep-learning-notes-c4w1",
+        
+          title: "Convolutional Neural Networks (Deep Learning Notes C4W1)",
+        
+        description: "ABC of convolutional neural networks",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/deep-C4W1-CNN-basics/";
+          
+        },
+      },{id: "post-multi-layer-neural-networks-deep-learning-notes-c1w1",
+        
+          title: "Multi-layer Neural Networks (Deep Learning Notes C1W1)",
+        
+        description: "forward and backward propagation for a multi-layer neural network",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/deep-C1W1B-multilayer_networks/";
+          
+        },
+      },{id: "post-binary-classifier-with-logistic-regression-deep-learning-notes-c1w1",
+        
+          title: "Binary Classifier with Logistic Regression (Deep Learning Notes C1W1)",
+        
+        description: "forward and backward propagation for a simple binary classifier",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/deep-C1W1A-binary-classifier/";
+          
+        },
       },{id: "post-cie-a2-physics-paper-5-实验设计-范文-8",
         
           title: "CIE A2 Physics Paper 5 实验设计 + 范文×8",
@@ -128,6 +161,17 @@ ninja.data = [{
             window.location.href = "/blog/2025/asphy-practicals/";
           
         },
+      },{id: "post-a-level-数学-物理-past-paper-手写全解答大合集",
+        
+          title: "A-Level 数学/物理 Past Paper 手写全解答大合集",
+        
+        description: "可能是全网最带劲的 A-Level 数学/物理手写刷题集",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/written-solutions-pack/";
+          
+        },
       },{id: "post-跨国旅游-乘坐引力快车-去哪里都仅需42分钟",
         
           title: "跨国旅游？乘坐引力快车，去哪里都仅需42分钟！",
@@ -137,17 +181,6 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2025/gravitational-express/";
-          
-        },
-      },{id: "post-论如何利用概率论科学地谈恋爱",
-        
-          title: "论如何利用概率论科学地谈恋爱",
-        
-        description: "简单粗暴的数学模型，确定最大概率找到此生真爱的那一位的最优策略",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2025/fiancee-problem/";
           
         },
       },{id: "post-线性代数读书笔记-可逆矩阵定理大串烧",
@@ -181,6 +214,17 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2024/newton-raphson/";
+          
+        },
+      },{id: "post-论如何利用概率论科学地谈恋爱",
+        
+          title: "论如何利用概率论科学地谈恋爱",
+        
+        description: "简单粗暴的数学模型，确定最大概率找到此生真爱的那一位的最优策略",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/fiancee-problem/";
           
         },
       },{id: "post-2021-step-ii-q8-e-的近似分数值",
