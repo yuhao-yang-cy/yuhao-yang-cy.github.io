@@ -3,7 +3,7 @@ layout: post
 title: "单变量线性回归模型"
 date: 2022-08-10 11:20:00
 description: 一篇写给小小白们的线性回归入门教程
-tags: mathematics linear-algebra matrix
+tags: mathematics linear-algebra matrix regression
 categories: mathematics linear-algebra machine-learning
 ---
 

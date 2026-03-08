@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "论如何利用概率论科学地谈恋爱"
-date: 2025-03-28 21:26:00
+date: 2024-03-24 21:26:00
 description: 简单粗暴的数学模型，确定最大概率找到此生真爱的那一位的最优策略
 tags: mathematics probability modelling
 categories: mathematics
