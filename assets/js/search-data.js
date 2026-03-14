@@ -117,26 +117,37 @@ ninja.data = [{
             window.location.href = "/blog/2025/deep-C4W1-CNN-basics/";
           
         },
-      },{id: "post-multi-layer-neural-networks-deep-learning-notes-c1w1",
+      },{id: "post-improving-deep-neural-networks-deep-learning-notes-c2-full",
         
-          title: "Multi-layer Neural Networks (Deep Learning Notes C1W1)",
+          title: "Improving Deep Neural Networks (Deep Learning Notes C2 Full)",
+        
+        description: "hyper-parameter tuning, regularization and optimization algorithms",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/deep-C2-optimisation/";
+          
+        },
+      },{id: "post-multi-layer-neural-networks-deep-learning-notes-c1-b",
+        
+          title: "Multi-layer Neural Networks (Deep Learning Notes C1-B)",
         
         description: "forward and backward propagation for a multi-layer neural network",
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2025/deep-C1W1B-multilayer_networks/";
+            window.location.href = "/blog/2025/deep-C1-B-multilayer_networks/";
           
         },
-      },{id: "post-binary-classifier-with-logistic-regression-deep-learning-notes-c1w1",
+      },{id: "post-binary-classifier-with-logistic-regression-deep-learning-notes-c1-a",
         
-          title: "Binary Classifier with Logistic Regression (Deep Learning Notes C1W1)",
+          title: "Binary Classifier with Logistic Regression (Deep Learning Notes C1-A)",
         
         description: "forward and backward propagation for a simple binary classifier",
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2025/deep-C1W1A-binary-classifier/";
+            window.location.href = "/blog/2025/deep-C1-A-binary-classifier/";
           
         },
       },{id: "post-cie-a2-physics-paper-5-实验设计-范文-8",
@@ -203,6 +214,17 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2024/square-matrix/";
+          
+        },
+      },{id: "post-烤羚羊-as-amp-a-level-物理讲义",
+        
+          title: "烤羚羊 AS &amp; A-Level 物理讲义",
+        
+        description: "可能是全网最棒的 AS/A-Level 物理讲义",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/a2-physics-notes/";
           
         },
       },{id: "post-浅说-newton-raphson-方法-从一道-step-ii-2023-的真题说起",
@@ -425,17 +447,6 @@ ninja.data = [{
             window.location.href = "/blog/2021/bertrand-theorem/";
           
         },
-      },{id: "post-分析力学读书笔记-限制性三体问题及拉格朗日点",
-        
-          title: "分析力学读书笔记：限制性三体问题及拉格朗日点",
-        
-        description: "简化版的限制性三体问题的6000字长文笔记",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2021/three-body-problem/";
-          
-        },
       },{id: "post-分析力学读书笔记-阻尼振子的-lagrangian",
         
           title: "分析力学读书笔记：阻尼振子的 Lagrangian",
@@ -467,6 +478,17 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2021/STEP2-2020-Q12/";
+          
+        },
+      },{id: "post-分析力学读书笔记-限制性三体问题及拉格朗日点",
+        
+          title: "分析力学读书笔记：限制性三体问题及拉格朗日点",
+        
+        description: "简化版的限制性三体问题的6000字长文笔记",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2020/three-body-problem/";
           
         },
       },{id: "post-从勾股数到费马大定理",
