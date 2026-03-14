@@ -16,7 +16,7 @@ This is a short course that I have done for high school students who are interes
 
 In this eight-week course, the students would learn about the mathematical modelling of infectious diseases based on the SIR equations. As the students gain a deeper understanding of how mathematical tools can be applied into real-world problems and bring new insights to the society, they would also hone their mathematical skills in handling differential equations and also build the starter skills to carry out scientific computing tasks with Python.
 
-For the reference if you want to check out, I have also written a set of [blog posts]({{ site.baseurl }}/blog/tag/SIR/) on the same topic in Chinese.
+For your reference if you want to check out, I have also written a set of [blog posts]({{ site.baseurl }}/blog/tag/SIR/) on the same topic in Chinese.
 
 ## Structure
 

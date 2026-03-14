@@ -101,24 +101,18 @@ A2 部分有
     手写版复习讲义（关键词 『9702-as-revision』和『9702-a2-revision』）
 </div>
 
-当然，全家桶的讲义，必须不厌其烦地搬出我那 LaTeX 强迫症排版的完全版电子讲义，可以在公众号窗口通过关键词『**asnotes**』或者『**a2notes**』获取下载链接。
+当然，全家桶的讲义，必须不厌其烦地搬出我那 LaTeX 强迫症排版的完全版电子讲义，可以点击百度网盘链接：[https://pan.baidu.com/s/1GSQd-hltubE2xmltsxPeAQ?pwd=sre4](https://pan.baidu.com/s/1GSQd-hltubE2xmltsxPeAQ?pwd=sre4)，或者在我的公众号窗口通过关键词『**asnotes**』或者『**a2notes**』获取下载链接。
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/projects/asnotes_cover.jpg" title="" class="img-natural rounded z-depth-1" %}
     </div>
-</div>
-<div class="caption">
-    AS 物理电子版讲义（关键词『asnotes』）
-</div>
-
-<div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/projects/a2notes_cover.jpg" title="" class="img-natural rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    A2 物理电子版讲义（关键词『a2notes』）
+    AS 物理电子版讲义（关键词『asnotes』）以及A2 物理电子版讲义（关键词『a2notes』）
 </div>
 
 ## CIE A-Level 物理手写刷题
@@ -153,7 +147,7 @@ A2 部分包括
 
 ## Edexcel A-Level 数学手写刷题
 
-获取方式：公众号输入关键词 『edexcel刷题』，或者直接点击百度网盘网址：[https://pan.baidu.com/s/15g7NO4pljfuV3dQJqu-9bg?pwd=math](https://pan.baidu.com/s/15g7NO4pljfuV3dQJqu-9bg?pwd=math)，获取下载链接。
+获取方式：公众号输入关键词 『**edexcel刷题**』，或者直接点击百度网盘网址：[https://pan.baidu.com/s/15g7NO4pljfuV3dQJqu-9bg?pwd=math](https://pan.baidu.com/s/15g7NO4pljfuV3dQJqu-9bg?pwd=math)，获取下载链接。
 
 其中包含
 
@@ -179,7 +173,7 @@ A2 部分包括
 
 ## MAT/STEP 手写刷题集
 
-公众号输入关键词 『mat-step』，或者直接点击百度网盘网址：[https://pan.baidu.com/s/1mi1SIik1_ubVlopj1n13SQ?pwd=math](https://pan.baidu.com/s/1mi1SIik1_ubVlopj1n13SQ?pwd=math)，获取下载链接。
+公众号输入关键词 『**mat-step**』，或者直接点击百度网盘网址：[https://pan.baidu.com/s/1mi1SIik1_ubVlopj1n13SQ?pwd=math](https://pan.baidu.com/s/1mi1SIik1_ubVlopj1n13SQ?pwd=math)，获取下载链接。
 
 其中包括：
 

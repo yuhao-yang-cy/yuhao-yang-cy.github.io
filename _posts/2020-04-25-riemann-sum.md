@@ -8,9 +8,9 @@ categories: mathematics a-level
 ---
 
 去年9月时给申请牛剑数学专业的几个熊孩纸作辅导，发现好些个家伙对于积分计算法则贼麻溜，但是对这些法则的来龙去脉完全不闻不问，我也很是不解这种心态。于是就让熊孩纸试着通过求一系列矩形的面积和，来估计某个函数曲线下的面积，然后考虑无穷分割的极限，证明如下几个简单初等函数的定积分结果：
-- $$\int_0^a x^m \,\mathrm{d}x = \frac{x^{m+1}}{m+1} \quad (m\in\mathbb{Z}^+) \tag{1}$$
-- $$\int_0^a \mathrm{e}^x \,\mathrm{d}x = \mathrm{e}^a - 1 \tag{2} $$
-- $$\int_0^a \cos x \,\mathrm{d}x = \sin a \tag{3} $$
+- $$\int_0^a x^m \,\mathrm{d}x = \frac{x^{m+1}}{m+1} \quad (m\in\mathbb{Z}^+) \tag{1}$$ 
+- $$\int_0^a \mathrm{e}^x \,\mathrm{d}x = \mathrm{e}^a - 1 \tag{2} $$ 
+- $$\int_0^a \cos x \,\mathrm{d}x = \sin a \tag{3} $$ 
 
 ## 定积分的表达式
 

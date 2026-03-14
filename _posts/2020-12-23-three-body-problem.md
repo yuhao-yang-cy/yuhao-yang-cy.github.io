@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "分析力学读书笔记：限制性三体问题及拉格朗日点"
-date: 2021-05-24 21:16:00
+date: 2020-12-23 18:15:00
 description: 简化版的限制性三体问题的6000字长文笔记
 tags: mathematics physics mechanics gravity
 categories: mathematics physics theoretical-physics

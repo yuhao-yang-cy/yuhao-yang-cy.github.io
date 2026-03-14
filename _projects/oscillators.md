@@ -14,7 +14,7 @@ images:
 
 This is a short project-based course that I have done for high school students who are interested in physical and engineering sciences. The contents are also suitable for first-year undergraduates.
 
-There are two main streams that the student could choose from:
+There are two main streams that the student could choose:
 
 - The Oscillator Stream: The student would go beyond what they have learned about simple harmonic oscillators in their A-Level physics course, and move on to study oscillatory motion from a more mathematical perspective. They would also have the opportunity to see damping and resonance in action via numerical simulations with Python.
 - The Controller Stream: The students might get a stronger taste of practical engineering. They could also dive into PD controllers, a commonly used close-loop feedback mechanism in many engineering designs. In the guided studies, the students would see how the ideas of damped oscillators extend to the design of PD controllers, and get their hands on seeking for the best parameters to make an aerial vehicle stay on desired paths.
@@ -53,7 +53,7 @@ Then I guess you would have some fun from this course.
 
 ## Acknowledgement
 
-Most of the ideas on PD controllers come from the open course on Robotics by [Professor Vijay Kumar](https://www.kumarrobotics.org/). Unfortunately this course is no longer available on Coursera the last time I checked. An archive of the course lectures might be found [here](https://www.bilibili.com/video/BV1Xa4y1h7Xt).
+Most of the ideas on PD controllers came from the open course on Robotics by [Professor Vijay Kumar](https://www.kumarrobotics.org/). Unfortunately this course is no longer available on Coursera the last time I checked. An archive of the course lectures might be found [here](https://www.bilibili.com/video/BV1Xa4y1h7Xt).
 
 ## Download
 

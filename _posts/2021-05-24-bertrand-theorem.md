@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "分析力学读书笔记：Bertrand 定理"
-date: 2021-05-24 21:16:00
+date: 2021-05-24 12:33:00
 description: why does the gravitational force obey inverse square law?
 tags: mathematics physics mechanics gravity
 categories: mathematics physics theoretical-physics

@@ -124,7 +124,7 @@ $$
 对新算出的平均值进行类似的操作，就可以继续 Haar 分解：
 
 $$
-\frac{\color{blue}{8}+\color{blue}{4}}{2} = \color{red}{6} \qquad \frac{\color{blue}{8} - \color{blue}{4}}{2} = \color{red}{2}
+\frac{\color{blue}{8}+\color{blue}{4}}{2} = {\color{red}{6}} \qquad \frac{\color{blue}{8} - \color{blue}{4}}{2} = \color{red}{2}
 $$
 
 至此，整个向量的 Haar 分解可以小结如下：

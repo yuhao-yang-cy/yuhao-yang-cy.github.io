@@ -107,9 +107,9 @@ for i in range(10):
 ```python
 import decimal
 # decimal expansion of the fractional approximation
-appr_frac = x[10]
+res = x[10]
 decimal.getcontext().prec = 800
-appr = decimal.Decimal(appr_frac.numerator)/decimal.Decimal(appr_frac.denominator)
+appr = decimal.Decimal(res.numerator)/decimal.Decimal(res.denominator)
 print(f"{appr:2.800f}")
 ```
 
@@ -117,24 +117,23 @@ print(f"{appr:2.800f}")
 
 ```python
 import decimal
-# decimal expansion of the fractional approximation
-res = x[10]
+# decimal expansion of sqrt(2)
 decimal.getcontext().prec = 800
-appr = decimal.Decimal(res.numerator) / decimal.Decimal(res.denominator)
-print(f"{appr:2.800f}")
+exact = decimal.Decimal(2).sqrt()
+print(f"{exact:2.800f}")
 ```
 
 好了，接下来就是见证神奇的时刻了，我们的暴算结果如下图：
 
-{% include figure.liquid loading="eager" path="assets/img/newton_raphson_test_2.jpg" title="Inverse Matrix Theorem" class="img-natural rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="assets/img/newton_raphson_test_2.jpg" title="" class="img-natural rounded z-depth-1" %}
 
-{% include figure.liquid loading="eager" path="assets/img/newton_raphson_test_3.jpg" title="Inverse Matrix Theorem" class="img-natural rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="assets/img/newton_raphson_test_3.jpg" title="" class="img-natural rounded z-depth-1" %}
 
 那个10轮迭代得到的暴躁的有理分式和 $$\sqrt{2}$$ 能够匹配到小数点后780+位，这精度是不是高得非常出人意料？！
 
 ## Newton-Raphson 求根公式为什么收敛得这么快？
 
-这么一个看起来人畜无害的迭代公式 $$x_{n+1} = \frac{x_n^2+a}{2x_n}$$，为什么可以有如此的魔力？
+这么一个看起来人畜无害的迭代公式 $$\\displaystyle x_{n+1} = \frac{x_n^2+a}{2x_n}$$，为什么可以有如此的魔力？
 
 以下的讨论借鉴了 STEP II 2023 卷的 Question 5。原问题只关注 $$\sqrt{2}$$ 的估值，但在它的启发下，我对中间的推导作了一些推广和改进，使得问题的讨论可以适用于任意 $$a>0$$ 的求根运算，也将迭代的偏差估计缩得更紧。
 

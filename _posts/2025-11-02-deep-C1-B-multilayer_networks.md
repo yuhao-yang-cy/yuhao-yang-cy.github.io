@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Multi-layer Neural Networks (Deep Learning Notes C1W1)
+title: Multi-layer Neural Networks (Deep Learning Notes C1-B)
 date: 2025-11-02 10:28:00
 description: forward and backward propagation for a multi-layer neural network
 tags: machine-learning deep-learning classification regression

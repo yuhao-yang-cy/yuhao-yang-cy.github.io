@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Binary Classifier with Logistic Regression (Deep Learning Notes C1W1)
+title: Binary Classifier with Logistic Regression (Deep Learning Notes C1-A)
 date: 2025-10-27 13:21:00
 description: forward and backward propagation for a simple binary classifier
 tags: machine-learning deep-learning classification regression
