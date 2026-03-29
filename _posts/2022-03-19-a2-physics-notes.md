@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "烤羚羊 AS & A-Level 物理讲义"
-date: 2024-08-31 14:24:00
+title: "烤羚羊 AS & A-Level 物理讲义（精编 LaTeX 排版）"
+date: 2022-03-19 14:24:00
 description: "可能是全网最棒的 AS/A-Level 物理讲义"
 tags: physics a-level notes
 categories: physics a-level

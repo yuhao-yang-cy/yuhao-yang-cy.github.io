@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A-Level 数学/物理 Past Paper 手写全解答大合集"
-date: 2025-04-27 14:30:00
+date: 2024-04-01 10:15:00
 description: "可能是全网最带劲的 A-Level 数学/物理手写刷题集"
 tags: physics mathematics a-level past-papers
 categories: physics mathematics a-level
