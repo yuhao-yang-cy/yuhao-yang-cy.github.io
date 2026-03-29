@@ -51,7 +51,29 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-neural-style-transfer-deep-learning-notes-c4w4",
+        },{id: "post-lstm-and-gru-networks-deep-learning-notes-c5w1b",
+        
+          title: "LSTM and GRU Networks (Deep Learning Notes C5W1B)",
+        
+        description: "introduction to LSTM and GRU networks: forward pass and backward pass",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/deep-C5W1-LSTM/";
+          
+        },
+      },{id: "post-recurrent-neural-networks-deep-learning-notes-c5w1a",
+        
+          title: "Recurrent Neural Networks (Deep Learning Notes C5W1A)",
+        
+        description: "basics of RNNs: features and problems; forward propagation and backward pass",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/deep-C5W1-RNN/";
+          
+        },
+      },{id: "post-neural-style-transfer-deep-learning-notes-c4w4",
         
           title: "Neural Style Transfer (Deep Learning Notes C4W4)",
         
@@ -128,9 +150,9 @@ ninja.data = [{
             window.location.href = "/blog/2025/deep-C2-optimisation/";
           
         },
-      },{id: "post-multi-layer-neural-networks-deep-learning-notes-c1-b",
+      },{id: "post-multi-layer-neural-networks-deep-learning-notes-c1w4",
         
-          title: "Multi-layer Neural Networks (Deep Learning Notes C1-B)",
+          title: "Multi-layer Neural Networks (Deep Learning Notes C1W4)",
         
         description: "forward and backward propagation for a multi-layer neural network",
         section: "Posts",
@@ -139,9 +161,9 @@ ninja.data = [{
             window.location.href = "/blog/2025/deep-C1-B-multilayer_networks/";
           
         },
-      },{id: "post-binary-classifier-with-logistic-regression-deep-learning-notes-c1-a",
+      },{id: "post-binary-classifier-with-logistic-regression-deep-learning-notes-c1w1-3",
         
-          title: "Binary Classifier with Logistic Regression (Deep Learning Notes C1-A)",
+          title: "Binary Classifier with Logistic Regression (Deep Learning Notes C1W1-3)",
         
         description: "forward and backward propagation for a simple binary classifier",
         section: "Posts",
@@ -170,17 +192,6 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2025/asphy-practicals/";
-          
-        },
-      },{id: "post-a-level-数学-物理-past-paper-手写全解答大合集",
-        
-          title: "A-Level 数学/物理 Past Paper 手写全解答大合集",
-        
-        description: "可能是全网最带劲的 A-Level 数学/物理手写刷题集",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2025/written-solutions-pack/";
           
         },
       },{id: "post-跨国旅游-乘坐引力快车-去哪里都仅需42分钟",
@@ -216,17 +227,6 @@ ninja.data = [{
             window.location.href = "/blog/2024/square-matrix/";
           
         },
-      },{id: "post-烤羚羊-as-amp-a-level-物理讲义",
-        
-          title: "烤羚羊 AS &amp; A-Level 物理讲义",
-        
-        description: "可能是全网最棒的 AS/A-Level 物理讲义",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2024/a2-physics-notes/";
-          
-        },
       },{id: "post-浅说-newton-raphson-方法-从一道-step-ii-2023-的真题说起",
         
           title: "浅说 Newton-Raphson 方法——从一道 STEP II 2023 的真题说起",
@@ -236,6 +236,17 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2024/newton-raphson/";
+          
+        },
+      },{id: "post-a-level-数学-物理-past-paper-手写全解答大合集",
+        
+          title: "A-Level 数学/物理 Past Paper 手写全解答大合集",
+        
+        description: "可能是全网最带劲的 A-Level 数学/物理手写刷题集",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/written-solutions-pack/";
           
         },
       },{id: "post-论如何利用概率论科学地谈恋爱",
@@ -379,6 +390,17 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2022/adiabatic-process/";
+          
+        },
+      },{id: "post-烤羚羊-as-amp-a-level-物理讲义-精编-latex-排版",
+        
+          title: "烤羚羊 AS &amp; A-Level 物理讲义（精编 LaTeX 排版）",
+        
+        description: "可能是全网最棒的 AS/A-Level 物理讲义",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2022/a2-physics-notes/";
           
         },
       },{id: "post-无人机轨迹规划",
