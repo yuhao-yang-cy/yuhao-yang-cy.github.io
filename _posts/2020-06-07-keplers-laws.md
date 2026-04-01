@@ -28,7 +28,7 @@ $$
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/kepler_1.jpg" title="" class="img-natural rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/kepler-1.jpg" title="" class="img-natural rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -139,7 +139,7 @@ $$
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/kepler_2.jpg" title="" class="img-natural rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/kepler-2.jpg" title="" class="img-natural rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -286,7 +286,7 @@ $$
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/kepler_3.jpg" title="" class="img-natural rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/kepler-3.jpg" title="" class="img-natural rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -311,7 +311,7 @@ $$
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/kepler_4.jpg" title="" class="img-natural rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/kepler-4.jpg" title="" class="img-natural rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">

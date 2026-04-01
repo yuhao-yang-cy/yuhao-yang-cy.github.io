@@ -2,7 +2,7 @@
 layout: post
 title: "从勾股数到费马大定理"
 date: 2020-11-19 14:07:00
-description: 受西蒙·辛格的数学科普《费马大定理》启发，写写费马大定理的故事，然后写写 $$n=4$$ 和 $$n=3$$ 时费马大定理的证明
+description: 受西蒙·辛格的数学科普《费马大定理》启发，写写费马大定理的故事，然后写写 $n=4$ 和 $n=3$ 时费马大定理的证明
 tags: mathematics number-theory
 categories: mathematics
 ---

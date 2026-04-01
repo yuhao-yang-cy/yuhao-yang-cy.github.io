@@ -19,7 +19,7 @@ categories: physics theoretical-physics
 <div class="caption">
     文章题图来自 A. V. Kashnikov, et al, 2019, J. Phys.: Conf. Ser. 1348 012092
     
-    (<a href="[url](https://iopscience.iop.org/article/10.1088/1742-6596/1348/1/012092/pdf)">https://iopscience.iop.org/article/10.1088/1742-6596/1348/1/012092/pdf</a>)
+    (<a href="https://iopscience.iop.org/article/10.1088/1742-6596/1348/1/012092/pdf">https://iopscience.iop.org/article/10.1088/1742-6596/1348/1/012092/pdf</a>)
 </div>
 
 ## Lorentz 变换的推导
