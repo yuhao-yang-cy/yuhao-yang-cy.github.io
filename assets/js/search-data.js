@@ -51,7 +51,40 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-lstm-and-gru-networks-deep-learning-notes-c5w1b",
+        },{id: "post-从无序到正态分布-信息熵的极值原理",
+        
+          title: "从无序到正态分布：信息熵的极值原理",
+        
+        description: "本篇从信息量的基本性质出发，导出信息熵的定义，并借助统计力学中的热力学熵给出其直观诠释。在此基础上，我们将证明，在均值与方差给定的约束下，使信息熵取得最大值的概率分布正是正态分布。",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/maximum-entropy/";
+          
+        },
+      },{id: "post-word-embeddings-deep-learning-notes-c5w2",
+        
+          title: "Word Embeddings (Deep Learning Notes C5W2)",
+        
+        description: "generation of dense vector representations of words that can capture semantic relationships between words",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/deep-C5W2-word-embeddings/";
+          
+        },
+      },{id: "post-从概率到预测-理解最大似然估计与线性回归",
+        
+          title: "从概率到预测：理解最大似然估计与线性回归",
+        
+        description: "笔记将以正态分布为例，推导最大似然估计的求解过程，分析其统计偏差，并展示其与线性回归中误差平方和最小化之间的联系",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/maximum_likelihood/";
+          
+        },
+      },{id: "post-lstm-and-gru-networks-deep-learning-notes-c5w1b",
         
           title: "LSTM and GRU Networks (Deep Learning Notes C5W1B)",
         
