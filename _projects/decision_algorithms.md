@@ -12,16 +12,16 @@ related_publications: false
 
 Decision Mathematics is an interesting module in the A-Level Mathematics and Further Mathematics curriculum. Unlike the traditional pure mathematics module or statistics module, decision mathematics focuses on algorithmic thinking and graph theory, a branch of mathematics not quite often seen in high school curriculums.
 
-It was also a matter of coincidence that I began to teach this module. After a year of teaching or two, I became very familiar with how the simple algorithms work in theory, but I always felt that there was something missing unless I could implement these algorithms with computer programs. This is because that the students studying Decision Mathematics are not expected to write a single line of code. Instead, they are expected to turn themselves into a human computer and carry out the algorithms with pen and paper. I have wanted to turn the theories into codes for quite a long time.
+It was also a matter of coincidence that I began to teach this module. After a year of teaching or two, I became familiar with how the simple algorithms work in theory, but I always felt that there was something missing unless I could implement these algorithms with computer programs. This is because that the students studying Decision Mathematics are not expected to write a single line of code. Instead, they are expected to turn themselves into a human computer and carry out the algorithms with pen and paper. I have wanted to turn the theories into codes for quite a long time.
 
-I did not have the skills to do this until I finished reading [the book on data structures](https://runestone.academy/runestone/books/published/pythonds/index.html) written by *Bradley N. Miller* and *David L. Ranum*. Greatly inspired by the problems and the example codes in the book, I began to have some idea on how I could possibly implement the algorithms on graphs with Python.
+I did not have the skills to do this until I finished reading [a nice book on algorithms and data structures](https://runestone.academy/runestone/books/published/pythonds/index.html) written by *Bradley N. Miller* and *David L. Ranum*. Greatly inspired by the problems and the example codes in the book, I began to have some idea on how I could possibly implement the algorithms on graphs with Python.
 
 This was basically how the project started. I tried to build everything from scratch without using any third-party library. Starting with self-defined classes for `Vertex` and `Edge`, I managed to further create classes for `Graph` and `Network`. By recording the information about how the vertices are interrelated using lists and dictionaries, I was able to realize several key algorithms in decision mathematics including:
 - **Dijkstra's algorithm** to find the shortest path from a start vertex to any vertex on a graph
 - **Route inspection algorithm** to find the length of the shortest route to traverse all edges on a graph
 - **Critical path analysis** to time manage an activity network
 
-The codes are definitely not elegant by any standard, but at least they worked. The improved program can also provide solutions that satisfy the requirements of the Decision course marking schemes.
+The codes are definitely not elegant by any standard, but at least they worked. The later improved program can also provide machine solutions that satisfy the requirements of the Decision course marking schemes.
 
 ## Screenshots
 
@@ -33,7 +33,7 @@ Here are some solved problems from the Pearson Edexcel WDM11/01 past papers.
     </div>
 </div>
 <div class="caption">
-    Using a self-defined class, Graph, the information of the graph to be solved is entered into the program.
+    Using a self-defined class, Graph, the information of the graph to be solved is fed into the program.
 </div>
 
 <div class="row">

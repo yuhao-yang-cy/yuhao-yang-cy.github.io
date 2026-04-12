@@ -19,7 +19,7 @@ categories: physics theoretical-physics
 <div class="caption">
     文章题图来自 A. V. Kashnikov, et al, 2019, J. Phys.: Conf. Ser. 1348 012092
     
-    (<a href="https://iopscience.iop.org/article/10.1088/1742-6596/1348/1/012092/pdf">https://iopscience.iop.org/article/10.1088/1742-6596/1348/1/012092/pdf</a>)
+    (<a href="https://iopscience.iop.org/article/10.1088/1742-6596/1348/1/012092/">https://iopscience.iop.org/article/10.1088/1742-6596/1348/1/012092/</a>)
 </div>
 
 ## Lorentz 变换的推导
@@ -166,8 +166,10 @@ $$
 我们还可以尝试反过来从 $$S'$$ 系推回 $$S$$ 系。利用逆变换，我们可以写出
 
 $$
-\Delta x = x_2 - x_1 = \frac{x_2' + vt_2'}{\sqrt{1 - \frac{v^2}{c^2} }} - \frac{x_1' + vt_1'}{\sqrt{1 - \frac{v^2}{c^2} }} = \frac{\Delta x' + v \Delta t'}{\sqrt{1 - \frac{v^2}{c^2} }} \qquad (14a) \\
+\begin{align*}
+    \Delta x = x_2 - x_1 = \frac{x_2' + vt_2'}{\sqrt{1 - \frac{v^2}{c^2} }} - \frac{x_1' + vt_1'}{\sqrt{1 - \frac{v^2}{c^2} }} = \frac{\Delta x' + v \Delta t'}{\sqrt{1 - \frac{v^2}{c^2} }} \qquad (14a) \\
 \Delta t = t_2 - t_1 = \frac{t_2' + \frac{vx_2'}{c^2}}{\sqrt{1 - \frac{v^2}{c^2} }} - \frac{t_1' + \frac{vx_1'}{c^2}}{\sqrt{1 - \frac{v^2}{c^2} }} = \frac{\Delta t' + \frac{v \Delta x'}{c^2}}{\sqrt{1 - \frac{v^2}{c^2} }} \qquad (14b)
+\end{align*}
 $$
 
 我们先前假定了两个事件发生在 $$S$$ 系中的同一地点，为了满足 $$\Delta x = 0$$，由 $$(14a)$$ 将必然有 $$\Delta x' = -v\Delta t'$$，这其实代表着 $$S'$$ 系在眼瞅着 $$S$$ 系向着反方向以速度 $$v$$ 扬长而去。将其代回 $$(14b)$$ 中，可以得到
@@ -204,8 +206,10 @@ $$
 我们也可以换个方式通过逆变换来推导同样的结论。可以写出
 
 $$
-L = x_2 - x_1 = \frac{x_2' + vt_2'}{\sqrt{1 - \frac{v^2}{c^2} }} - \frac{x_1' + vt_1'}{\sqrt{1 - \frac{v^2}{c^2} }} = \frac{L_0 + v \Delta t'}{\sqrt{1 - \frac{v^2}{c^2} }} \qquad (17a) \\
-0 = t_2 - t_1 = \frac{t_2' + \frac{vx_2'}{c^2}}{\sqrt{1 - \frac{v^2}{c^2} }} - \frac{t_1' + \frac{vx_1'}{c^2}}{\sqrt{1 - \frac{v^2}{c^2} }} = \frac{\Delta t' + \frac{v L_0}{c^2}}{\sqrt{1 - \frac{v^2}{c^2} }} \qquad (17b)
+\begin{align*}}
+    L = x_2 - x_1 = \frac{x_2' + vt_2'}{\sqrt{1 - \frac{v^2}{c^2} }} - \frac{x_1' + vt_1'}{\sqrt{1 - \frac{v^2}{c^2} }} = \frac{L_0 + v \Delta t'}{\sqrt{1 - \frac{v^2}{c^2} }} \qquad (17a) \\
+    0 = t_2 - t_1 = \frac{t_2' + \frac{vx_2'}{c^2}}{\sqrt{1 - \frac{v^2}{c^2} }} - \frac{t_1' + \frac{vx_1'}{c^2}}{\sqrt{1 - \frac{v^2}{c^2} }} = \frac{\Delta t' + \frac{v L_0}{c^2}}{\sqrt{1 - \frac{v^2}{c^2} }} \qquad (17b)
+\end{align*}}
 $$
 
 $$S$$ 系中对物体两个端点坐标要同时作测量，就意味着 $$(17b)$$ 中必须有 $$\Delta t' = -\frac{vL_0}{c^2}$$。塞进 $$(17a)$$ 里面，
