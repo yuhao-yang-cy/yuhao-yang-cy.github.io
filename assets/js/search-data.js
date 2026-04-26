@@ -51,7 +51,29 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-从无序到正态分布-信息熵的极值原理",
+        },{id: "post-attention-mechanism-and-transformer-deep-learning-notes-c5w4",
+        
+          title: "Attention Mechanism and Transformer (Deep Learning Notes C5W4)",
+        
+        description: "an introduction to the transformer architecture and its underlying self-attention mechanism",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/deep-C5W4-transformer/";
+          
+        },
+      },{id: "post-beam-search-amp-bleu-score-deep-learning-notes-c5w3",
+        
+          title: "Beam Search &amp; BLEU Score (Deep Learning Notes C5W3)",
+        
+        description: "approaches to find the optimal output and evaluate the accuracy for a machine translation task",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/deep-C5W3-beam-BLEU/";
+          
+        },
+      },{id: "post-从无序到正态分布-信息熵的极值原理",
         
           title: "从无序到正态分布：信息熵的极值原理",
         
@@ -191,7 +213,7 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2025/deep-C1-B-multilayer_networks/";
+            window.location.href = "/blog/2025/deep-C1B-multilayer_networks/";
           
         },
       },{id: "post-binary-classifier-with-logistic-regression-deep-learning-notes-c1w1-3",
@@ -202,7 +224,7 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2025/deep-C1-A-binary-classifier/";
+            window.location.href = "/blog/2025/deep-C1A-binary-classifier/";
           
         },
       },{id: "post-cie-a2-physics-paper-5-实验设计-范文-8",
@@ -1126,6 +1148,11 @@ ninja.data = [{
           description: "Implementation of decision mathematics algorithms with Python",
           section: "Projects",handler: () => {
               window.location.href = "/projects/decision_algorithms/";
+            },},{id: "projects-deep-learning-notes",
+          title: 'Deep Learning Notes',
+          description: "A collection of study notes on Andrew Ng&#39;s Deep Learning Courses",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/deep_learning_notes/";
             },},{id: "projects-written-solutions-to-edexcel-a-level-maths-papers",
           title: 'Written Solutions to Edexcel A-Level Maths Papers',
           description: "Handwritten solutions to Edexcel International A-Level Mathematics and Further Mathematics Exam Papers",
@@ -1136,8 +1163,8 @@ ninja.data = [{
           description: "A short course on the mathematical modelling of epidemics",
           section: "Projects",handler: () => {
               window.location.href = "/projects/epidemic-modelling/";
-            },},{id: "projects-further-mechanics-notes-dated",
-          title: 'Further Mechanics Notes (Dated)',
+            },},{id: "projects-further-mechanics-notes-outdated",
+          title: 'Further Mechanics Notes (Outdated)',
           description: "Lecture Notes on Cambridge International A-Level Further Mechanics",
           section: "Projects",handler: () => {
               window.location.href = "/projects/fm_notes/";
