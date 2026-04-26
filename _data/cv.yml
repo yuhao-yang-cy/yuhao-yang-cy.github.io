@@ -17,7 +17,7 @@
       year: 2017 - Present
       description:
         - Physics & Maths Teacher (CAIE Physics / AQA Physics / Edexcel Mechanics & Decision)
-        - University Guidance Counselor for STEM Majors (Choices / Personal Statements / References)
+        - University Guidance Counsellor for STEM Majors (Choices / Personal Statements / References)
         - Curriculum Development (Oxford MAT & PAT Courses / STEP Courses / University Admission Interview Preparation Courses / Guided STEM Projects / Guided Reading)
     - title: Deputy Head of Academic Affairs & Head of Physics Department
       institution: Shanghai Experimental Foreign Language School
@@ -66,7 +66,7 @@
             - Physics Experiments
             - Quantum Mechanics
             - Thermodynamics and Statistical Physics
-            - Electrodyanmics
+            - Electrodynamics
             - Solid State Physics
             - Advanced Quantum Mechanics
             - Quantum Field Theory
@@ -78,7 +78,7 @@
   contents:
     - year: 2011
       items:
-        - Distinction honor for MSc & DIC degree, Imperial College London
+        - Distinction honour for MSc & DIC degree, Imperial College London
     - year: 2008
       items:
         - People Scholarship (1st Prize), Fudan University 
@@ -88,17 +88,19 @@
 - title: Open Course Certificates
   type: time_table
   contents:
-    - title: Convolutional Neural Networks
+    - title: Deep Learning (Specialisation)
       institution: DeepLearning.AI
-      year: 2025
-      url: https://www.coursera.org/account/accomplishments/verify/0Q60YZ97BUQK
-    - title: Neural Networks and Deep Learning
-      institution: DeepLearning.AI
-      year: 2025
-      url: https://www.coursera.org/account/accomplishments/verify/FA8HKS1CD8RO
+      year: 2025 - 2026
+      url: https://www.coursera.org/account/accomplishments/specialization/VOMQQXRD5BQS
+      description:
+        - "Neural Networks and Deep Learning"
+        - "Hyperparameter Tuning, Regularization and Optimization"
+        - "Structuring Machine Learning Projects"
+        - "Convolutional Neural Networks"
+        - "Sequence Models"
     - title: Machine Learning (Specialisation)
       institution: University of Washington
-      year: 2024
+      year: 2023 - 2024
       url: https://www.coursera.org/account/accomplishments/specialization/HZNHCK6TUYGO
       description:
         - "Machine Learning Foundations: A Case Study Approach"
@@ -107,7 +109,7 @@
         - "Machine Learning: Clustering & Retrieval"
     - title: "Computers, Waves, Simulations: A Practical Introduction to Numerical Methods Using Python"
       institution: Ludwig-Maximilians-Universität München (LMU)
-      year: 2024
+      year: 2023-2024
       url: https://www.coursera.org/account/accomplishments/verify/WMWGF6WBPDW7
     - title: "The Physics of Emergence: Introduction to Condensed Matter (Specialisation)"
       institution: University of Colorado Boulder
@@ -170,7 +172,7 @@
     - title: English (Professional Fluency)
       items:
         - "IELTS: Overall Band 8.0"
-        - "TOEFL (Internet Based): Overal Score 105"
+        - "TOEFL (Internet Based): Overall Score 105"
     - title: French (CEFR B1 Level)
       items:
         - Ongoing Studies with Duolingo

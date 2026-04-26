@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Further Mechanics Notes (Dated)
+title: Further Mechanics Notes (Outdated)
 description: Lecture Notes on Cambridge International A-Level Further Mechanics
 img: assets/img/projects/fm_cover.jpg
 importance: 9
