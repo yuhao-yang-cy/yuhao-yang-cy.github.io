@@ -35,7 +35,9 @@ I hope you enjoy reading the notes. But if you spot any mistake (as I guarantee 
 
 The project is hosted on [https://github.com/yuhao-yang-cy/fmech](https://github.com/yuhao-yang-cy/fmech).
 
-If you are a student, you might simply want to download the compiled .pdf file via [my GitHub repository](https://github.com/yuhao-yang-cy/fmech/blob/master/fmech-notes.pdf) or [Baidu Netdisc](https://pan.baidu.com/s/1REqJ__Wwm6x7X_LevVlsXg?pwd=7g5c) for your own use.
+The compiled .pdf file is directly available for download [here]({{site.baseurl}}/assets/pdf/fmech-notes.pdf).
+
+The same file is also hosted on [my Baidu Netdisc](https://pan.baidu.com/s/1REqJ__Wwm6x7X_LevVlsXg?pwd=7g5c) for your own use.
 
 ## Copyright
 

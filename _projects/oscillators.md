@@ -59,6 +59,8 @@ Most of the ideas on PD controllers came from the open course on Robotics by [Pr
 
 The project is hosted on [https://github.com/yuhao-yang-cy/sci-simulations/tree/main/PD-controller](https://github.com/yuhao-yang-cy/sci-simulations/tree/main/PD-controller).
 
+The Jupyter notebooks and other Python scripts associated to this project can also be downloaded directly using [this link]({{site.baseurl}}/assets/pdf/PD-Workshop-2023.zip).
+
 ## Copyright
 
 This work is offered under a **CC BY-NC** (Creative Commons Attribution-Non-Commercial) license. You may remix, adapt, and build upon this work, as long as the attribution is given and the new work is *non-commercial*.

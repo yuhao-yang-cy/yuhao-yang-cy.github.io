@@ -48,7 +48,9 @@ Here are some screenshots from the notes.
 
 The project is hosted on [https://github.com/yuhao-yang-cy/a2physics](https://github.com/yuhao-yang-cy/a2physics).
 
-If you are a student, you might simply want to download the compiled .pdf file via [my GitHub repository](https://github.com/yuhao-yang-cy/a2physics/blob/master/a2physics.pdf) or [Baidu Netdisc](https://pan.baidu.com/s/1GSQd-hltubE2xmltsxPeAQ?pwd=sre4) for your own use.
+The compiled .pdf file is directly available for download [here]({{site.baseurl}}/assets/pdf/a2physics.pdf).
+
+The same file is also hosted on [my Baidu Netdisc](https://pan.baidu.com/s/1GSQd-hltubE2xmltsxPeAQ?pwd=sre4) for your own use.
 
 ## Copyright
 

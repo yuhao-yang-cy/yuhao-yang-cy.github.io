@@ -24,7 +24,7 @@ For your reference if you want to check out, I have also written a set of [blog 
 - Week 2: Numerical methods to ODEs and implementation with Python
 - Week 3: SIR modelling: simulation and interpretations
 - Week 4: Data fitting with simple linear regression
-- Week 5: Basic reproductive ratio; conditions for an epidemic outbreat
+- Week 5: Basic reproductive ratio; conditions for an epidemic outbreak
 - Week 6: Scale of an epidemics; consequence of virus mutation
 - Week 7: Extensions of the SIR model
 - Week 8: Wrap-up
@@ -53,6 +53,8 @@ Most of the ideas of the lectures come from the brilliant online resources liste
 ## Download
 
 The project is hosted on [https://github.com/yuhao-yang-cy/sci-simulations/tree/main/SIR-modelling](https://github.com/yuhao-yang-cy/sci-simulations/tree/main/SIR-modelling).
+
+The Jupyter notebooks and other Python scripts associated to this project can also be downloaded directly using [this link]({{site.baseurl}}/assets/pdf/SIR-Workshop-2023.zip).
 
 ## Copyright
 

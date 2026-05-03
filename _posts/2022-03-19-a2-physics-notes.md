@@ -47,7 +47,13 @@ images:
     </div>
 </div>
 
-学生党们更关心的 pdf 版本讲义，可以从以上的地址下载到最新版本，也可以在我公开分享的百度网盘 [https://pan.baidu.com/s/1GSQd-hltubE2xmltsxPeAQ?pwd=sre4](https://pan.baidu.com/s/1GSQd-hltubE2xmltsxPeAQ?pwd=sre4) 直接下载。
+学生党们更关心的 pdf 版本讲义，可以从以上的地址下载到最新版本，也可以直接从本站的直链下载：
+
+- AS Physics Notes: [asphysics.pdf]({{site.baseurl}}/assets/pdf/asphysics.pdf)
+- A2 Physics Notes: [a2physics.pdf]({{site.baseurl}}/assets/pdf/a2physics.pdf)
+
+
+同样的文件我也公开分享在我的百度网盘 [https://pan.baidu.com/s/1GSQd-hltubE2xmltsxPeAQ?pwd=sre4](https://pan.baidu.com/s/1GSQd-hltubE2xmltsxPeAQ?pwd=sre4)，可供共享和下载。
 
 当然，如果你一直关注我的微信公众号“**烤羚羊的公众号**”，最早分享的『**asnotes**』及『**a2notes**』关键词回复获取下载地址的方式依然有效。
 

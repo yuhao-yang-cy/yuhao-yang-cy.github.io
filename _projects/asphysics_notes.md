@@ -46,7 +46,9 @@ Here are some screenshots from the notes.
 
 The project is hosted on [https://github.com/yuhao-yang-cy/asphysics](https://github.com/yuhao-yang-cy/asphysics).
 
-If you are a student, you might simply want to download the compiled .pdf file via [my GitHub repository](https://github.com/yuhao-yang-cy/asphysics/blob/master/asphysics.pdf) or [Baidu Netdisc](https://pan.baidu.com/s/1GSQd-hltubE2xmltsxPeAQ?pwd=sre4) for your own use.
+The compiled .pdf file is directly available for download [here]({{site.baseurl}}/assets/pdf/asphysics.pdf).
+
+The same file is also hosted on [my Baidu Netdisc](https://pan.baidu.com/s/1GSQd-hltubE2xmltsxPeAQ?pwd=sre4) for your own use.
 
 ## Copyright
 
