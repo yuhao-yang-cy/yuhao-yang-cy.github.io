@@ -9,14 +9,7 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-bio",
-          title: "bio",
-          description: "In learning you will teach, and in teaching you will learn.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/bio/";
-          },
-        },{id: "nav-posts",
+  },{id: "nav-posts",
           title: "posts",
           description: "",
           section: "Navigation",
@@ -44,14 +37,32 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/news/";
           },
+        },{id: "nav-bio",
+          title: "bio",
+          description: "In learning you will teach, and in teaching you will learn.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/bio/";
+          },
         },{id: "nav-cv",
-          title: "CV",
+          title: "cv",
           description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-attention-mechanism-and-transformer-deep-learning-notes-c5w4",
+        },{id: "post-从声速到超声波成像-a-level-声波物理背后的完整故事",
+        
+          title: "从声速到超声波成像：A-Level 声波物理背后的完整故事",
+        
+        description: "本文由理想气体的绝热过程出发，导出声波的波动方程与传播速度，推导声波的强度以及在穿过介质交界面时的强度反射系数",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/sound-physics/";
+          
+        },
+      },{id: "post-attention-mechanism-and-transformer-deep-learning-notes-c5w4",
         
           title: "Attention Mechanism and Transformer (Deep Learning Notes C5W4)",
         
