@@ -4,7 +4,7 @@ permalink: /bio/
 title: bio
 description: In learning you will teach, and in teaching you will learn.
 nav: true
-nav_order: 1
+nav_order: 5
 ---
 
 For those who are interested, here is more about my personal stories.

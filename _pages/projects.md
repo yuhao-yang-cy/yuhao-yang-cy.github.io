@@ -4,7 +4,7 @@ title: projects
 permalink: /projects/
 description: A collection of my teaching resources and cool projects.
 nav: true
-nav_order: 3
+nav_order: 2
 display_categories: [A-Levels, STEM, fun]
 horizontal: false
 ---
