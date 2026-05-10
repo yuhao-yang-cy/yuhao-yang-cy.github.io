@@ -1154,6 +1154,11 @@ ninja.data = [{
           description: "Handwritten Solutions to CIE A-Level Physics Past Exam Papers",
           section: "Projects",handler: () => {
               window.location.href = "/projects/cie_physics_solutions/";
+            },},{id: "projects-construction-toys",
+          title: 'Construction Toys',
+          description: "It is never too old to be a boy",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/construction_toys/";
             },},{id: "projects-decision-maths-algorithms",
           title: 'Decision Maths Algorithms',
           description: "Implementation of decision mathematics algorithms with Python",
