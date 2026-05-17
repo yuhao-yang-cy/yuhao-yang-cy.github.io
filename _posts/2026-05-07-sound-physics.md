@@ -7,61 +7,23 @@ tags: physics a-level thermodynamics mechanics
 categories: physics a-level 
 ---
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <style>
-    * { box-sizing: border-box; } /* Essential for perfect alignment */
-
-    body { 
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-        display: flex; 
-        flex-direction: column; 
-        align-items: center; 
-        background: #f0f2f5; 
-        margin: 0;
-        padding: 40px 0;
-    }
-    
-    .dashboard-container {
-        width: 800px; /* Matches Canvas width exactly */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 0 auto;
-    }
-    
-    .legend { 
-        margin-bottom: 20px; 
-        font-size: 0.85em; 
-        color: #666; 
-        text-align: center; 
-        line-height: 1.5; 
-    }
-
-    canvas#mainCanvas { 
-        background: white; 
-        border: 1px solid #ccc; 
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
-        border-radius: 4px;
-        display: block; /* Removes bottom whitespace */
-    }
-
-    .charts-grid { 
-        display: grid; 
-        grid-template-columns: repeat(3, 1fr); 
-        gap: 10px; 
-        width: 100%; /* Spans the full 800px of the container */
-        height: 220px; 
-        margin-top: 15px;
-    }
-
-    .chart-wrapper { 
-        background: white; 
-        padding: 8px; 
-        border-radius: 8px; 
-        border: 1px solid #ddd; 
-        box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-        min-width: 0; /* Prevents chart blowout */
-    }
+  .sim-wrap { display: flex; flex-direction: column; gap: 14px; padding: 0.5rem 0; }
+  .panel { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 12px 14px; }
+  .panel-title { font-size: 14px; letter-spacing: 0.08em; color: var(--color-text-tertiary); margin-bottom: 8px; font-weight: 500; }
+  canvas { display: block; width: 100%; border-radius: 6px; }
+  .legend { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 8px; }
+  .leg { display: flex; align-items: center; gap: 5px; font-size: 12px; color: var(--color-text-secondary); }
+  .ldot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+  .lline { width: 16px; height: 3px; border-radius: 1px; flex-shrink: 0; }
+  .controls { display: flex; gap: 16px; flex-wrap: wrap; align-items: flex-end; margin-top: 10px; padding-top: 10px; border-top: 0.5px solid var(--color-border-tertiary); }
+  .cg { display: flex; flex-direction: column; gap: 4px; }
+  .cg label { font-size: 12px; color: var(--color-text-tertiary); letter-spacing: 0.06em; }
+  .cg input[type=range] { width: 120px; }
+  .cv { font-size: 14px; color: var(--color-text-secondary); font-variant-numeric: tabular-nums; }
+  .info-bar { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 10px; padding-top: 8px; border-top: 0.5px solid var(--color-border-tertiary); }
+  .info-item { font-size: 14px; color: var(--color-text-tertiary); }
+  .info-item b { color: var(--color-text-primary); font-weight: 500; font-variant-numeric: tabular-nums; }
 </style>
 
 声音是我们日常生活中最熟悉的物理现象之一，却也是一个值得细细推敲的波动力学问题。几天前刚新出炉的 A-Level 物理2026年3月印度区 Paper 5 碰着了一个探究声速和温度关系的数据处理题，前阵子又有学生问到 Paper 4 理论卷里为什么超声波的反射系数公式长成 $$\frac{I_r}{I_i} = \left(\frac{Z_2 - Z_1}{Z_2 + Z_1} \right)^2$$ 这么幅模样。我一盘声波这故事叙事从头到尾好像能串成一条线么，索性就来写一篇文章来细细掰扯吧。
@@ -220,129 +182,281 @@ $$
 
 ## 声波动画演示
 
-下面是借助 Gemini 生成的一个动画演示，展示了介质中的分子们如何像交谊舞般和谐地跳动形成行进的压力波。
+下面是借助 Claude 生成的一个动画演示，展示了介质中的分子们如何像交谊舞般和谐地跳动形成行进的压力波。
 
-动画中的红色线条追踪了某处的分子振动，并在下方同步展示了其位移（绿色）、速度（红色）和所在位置的压强（蓝色）随时间的动态变化。
+动画追踪了某处的分子振动，并在下方同步展示了其位移（绿色）、速度（黄色）和所在位置的压强（红色）随时间的动态变化。
 
-<div class="dashboard-container">
-    <canvas id="mainCanvas" width="800" height="150"></canvas>
-
-    <div class="charts-grid">
-        <div class="chart-wrapper">
-            <canvas id="displacementChart"></canvas>
-        </div>
-        <div class="chart-wrapper">
-            <canvas id="velocityChart"></canvas>
-        </div>
-        <div class="chart-wrapper">
-            <canvas id="pressureChart"></canvas>
-        </div>
+<div class="sim-wrap">
+  <div class="panel">
+    <div class="panel-title">Particle Displacement &amp; Wave Field</div>
+    <canvas id="wC" height="185"></canvas>
+    <div class="legend">
+      <div class="leg"><div class="ldot" style="background:#378add"></div>Air Particles</div>
+      <div class="leg"><div class="ldot" style="background:#ef9f27"></div>Tracked Particle</div>
+      <div class="leg"><div class="lline" style="background:#e24b4a"></div>Compression (High-pressure)</div>
+      <div class="leg"><div class="lline" style="background:#85b7eb;opacity:0.7"></div>Rarefaction (Low-pressure)</div>
     </div>
+    <div class="controls">
+      <div class="cg">
+        <label>Frequency</label>
+        <input type="range" id="fSlider" min="0.2" max="1.6" step="0.02" value="0.5">
+        <span class="cv" id="fVal">0.50 Hz</span>
+      </div>
+      <div class="cg">
+        <label>Amplitude</label>
+        <input type="range" id="aSlider" min="5" max="35" step="1" value="18">
+        <span class="cv" id="aVal">18 px</span>
+      </div>
+      <div class="cg">
+        <label>Wave speed</label>
+        <input type="range" id="sSlider" min="30" max="300" step="10" value="100">
+        <span class="cv" id="sVal">100 px/s</span>
+      </div>
+    </div>
+    <div class="info-bar">
+      <div class="info-item">Displacement: <b id="dDisp">0.00</b> px</div>
+      <div class="info-item">Velocity: <b id="vDisp">0.00</b> px/s</div>
+      <div class="info-item">Pressure: <b id="pDisp">0.000</b> (rel.)</div>
+      <div class="info-item">Wavelength λ: <b id="lDisp">—</b> px</div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-title">Tracked Particle — Displacement vs Time</div>
+    <canvas id="dC" height="110"></canvas>
+  </div>
+
+  <div class="panel">
+    <div class="panel-title">Tracked Particle — Velocity vs Time</div>
+    <canvas id="vC" height="110"></canvas>
+  </div>
+
+  <div class="panel">
+    <div class="panel-title">Local Pressure vs Time (at Tracked Particle's Equilibrium Position)</div>
+    <canvas id="pC" height="110"></canvas>
+  </div>
 </div>
 
 <script>
-    const canvas = document.getElementById('mainCanvas');
-    const ctx = canvas.getContext('2d');
-    
-    // Physics
-    const numParticles = 45; 
-    const spacing = canvas.width / numParticles;
-    const amplitude = 35;       
-    const frequency = 0.0015;  
-    const waveSpeed = 0.04;     
-    let time = 0;
+const wC=document.getElementById('wC'), dC=document.getElementById('dC'),
+      vC=document.getElementById('vC'), pC=document.getElementById('pC');
+const wX=wC.getContext('2d'), dX=dC.getContext('2d'),
+      vX=vC.getContext('2d'), pX=pC.getContext('2d');
 
-    // Data
-    const maxDataPoints = 150;
-    let labels = Array(maxDataPoints).fill('');
-    let displacementData = Array(maxDataPoints).fill(0);
-    let velocityData = Array(maxDataPoints).fill(0);
-    let pressureData = Array(maxDataPoints).fill(0);
+let freq=0.8, amp=18, spd=120, T=0, lastTS=null;
+const HIST=350;
+const dH=new Float32Array(HIST), vH=new Float32Array(HIST), pH=new Float32Array(HIST);
+let hi=0;
 
-    const chartConfig = (label, color, minMax) => ({
-        type: 'line',
-        data: {
-            labels: labels,
-            datasets: [{ 
-                label: label, 
-                data: [], 
-                borderColor: color, 
-                borderWidth: 2, 
-                fill: false, 
-                pointRadius: 0,
-                tension: 0.4
-            }]
-        },
-        options: {
-            animation: false,
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: { legend: { labels: { boxWidth: 10, font: { size: 10 } } } },
-            scales: { 
-                y: { min: -minMax, max: minMax, ticks: { font: { size: 9 } } },
-                x: { display: true }
-            }
+function resize(){
+  const W=wC.parentElement.clientWidth-28;
+  wC.width=W; wC.height=185;
+  dC.width=W; dC.height=110;
+  vC.width=W; vC.height=110;
+  pC.width=W; pC.height=110;
+}
+resize();
+window.addEventListener('resize',resize);
+
+document.getElementById('fSlider').oninput=e=>{freq=+e.target.value;document.getElementById('fVal').textContent=freq.toFixed(2)+' Hz';};
+document.getElementById('aSlider').oninput=e=>{amp=+e.target.value;document.getElementById('aVal').textContent=amp+' px';};
+document.getElementById('sSlider').oninput=e=>{spd=+e.target.value;document.getElementById('sVal').textContent=spd+' px/s';};
+
+const om=()=>2*Math.PI*freq;
+const kk=()=>om()/spd;
+const disp =(x,t)=> amp*Math.sin(kk()*x - om()*t);
+const vel  =(x,t)=> -amp*om()*Math.cos(kk()*x - om()*t);
+const pres =(x,t)=> -amp*kk()*Math.cos(kk()*x - om()*t);
+
+const ROWS=7, TCOL=8;
+const isDark=()=>window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches;
+
+function drawWave(){
+  const W=wC.width, H=wC.height;
+  wX.clearRect(0,0,W,H);
+  const dark=isDark();
+  wX.fillStyle=dark?'#0d1117':'#f8f9fb';
+  wX.fillRect(0,0,W,H);
+
+  const maxP=amp*kk()||1;
+
+  // Pressure stripes — displaced exactly like particles
+  const BASE_SPACING=14;
+  const stripes=[];
+  for(let xEq=-amp-BASE_SPACING; xEq<W+amp+BASE_SPACING; xEq+=BASE_SPACING){
+    const xDraw=xEq+disp(xEq,T);
+    const p=pres(xEq,T);
+    stripes.push({xDraw,p});
+  }
+  stripes.sort((a,b)=>a.xDraw-b.xDraw);
+  for(const {xDraw,p} of stripes){
+    if(xDraw<0||xDraw>W) continue;
+    const norm=p/maxP;
+    const a=0.12+Math.abs(norm)*0.50;
+    wX.strokeStyle=norm>0?`rgba(210,65,50,${a})`:`rgba(55,138,221,${a*0.75})`;
+    wX.lineWidth=norm>0?1.8:0.9;
+    wX.beginPath(); wX.moveTo(xDraw,0); wX.lineTo(xDraw,H); wX.stroke();
+  }
+
+  // Particles
+  const cols=Math.floor(W/22);
+  const sx=W/(cols+1), sy=H/(ROWS+1);
+  const r=4, trow=Math.ceil(ROWS/2);
+
+  for(let row=1;row<=ROWS;row++){
+    const y0=row*sy;
+    for(let col=0;col<cols;col++){
+      const xEq=(col+1)*sx;
+      const dx=disp(xEq,T);
+      const px=xEq+dx;
+      const tracked=(row===trow&&col===TCOL);
+
+      if(tracked){
+        const v=vel(xEq,T);
+        const maxV=amp*om()||1;
+        const aLen=(v/maxV)*48;
+
+        wX.save();
+        wX.strokeStyle='#ef9f27'; wX.lineWidth=2.5;
+        wX.beginPath(); wX.moveTo(px,y0); wX.lineTo(px+aLen,y0); wX.stroke();
+        if(Math.abs(aLen)>5){
+          const d=Math.sign(aLen);
+          wX.fillStyle='#ef9f27';
+          wX.beginPath();
+          wX.moveTo(px+aLen,y0);
+          wX.lineTo(px+aLen-d*9,y0-5);
+          wX.lineTo(px+aLen-d*9,y0+5);
+          wX.closePath(); wX.fill();
         }
-    });
+        wX.fillStyle=dark?'#fac775':'#854f0b';
+        wX.font='bold 10px monospace';
+        const lx=aLen>=0?px+aLen+7:px+aLen-68;
+        wX.fillText('v='+v.toFixed(1),lx,y0-8);
+        wX.restore();
 
-    const dChart = new Chart(document.getElementById('displacementChart'), chartConfig('位移 (y)', 'green', 40));
-    const vChart = new Chart(document.getElementById('velocityChart'), chartConfig('速度 (v)', 'red', 0.1));
-    const pChart = new Chart(document.getElementById('pressureChart'), chartConfig('压强 (δp)', 'blue', 1.5));
+        // Equilibrium marker
+        wX.save();
+        wX.setLineDash([3,4]);
+        wX.strokeStyle='rgba(239,159,39,0.3)'; wX.lineWidth=1;
+        wX.beginPath(); wX.moveTo(xEq,y0-13); wX.lineTo(xEq,y0+13); wX.stroke();
+        wX.restore();
 
-    function animate() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        time += 16; 
+        // Dot
+        wX.beginPath(); wX.arc(px,y0,r+3,0,Math.PI*2);
+        wX.fillStyle='#ef9f27'; wX.fill();
+        wX.strokeStyle=dark?'rgba(255,255,255,0.5)':'rgba(0,0,0,0.2)';
+        wX.lineWidth=1.5; wX.stroke();
 
-        const targetIndex = 15; 
-        let tDisp, tVel, tPres;
-
-        for (let i = 0; i < numParticles; i++) {
-            const x0 = i * spacing + spacing / 2;
-            const phase = (x0 * waveSpeed) - (time * frequency);
-            const displacement = amplitude * Math.cos(phase);
-            const velocity = amplitude * frequency * Math.sin(phase);
-
-            const currentX = x0 + displacement;
-
-            ctx.beginPath();
-            if (i === targetIndex) {
-                ctx.strokeStyle = '#e74c3c';
-                ctx.lineWidth = 4;
-                tDisp = displacement;
-                tVel = velocity;
-                tPres = Math.sin(phase); 
-            } else {
-                ctx.strokeStyle = '#34495e';
-                ctx.lineWidth = 1;
-            }
-            
-            ctx.moveTo(currentX, 20);
-            ctx.lineTo(currentX, 130);
-            ctx.stroke();
-        }
-
-        displacementData.push(tDisp);
-        velocityData.push(tVel);
-        pressureData.push(tPres);
-
-        if (displacementData.length > maxDataPoints) {
-            displacementData.shift();
-            velocityData.shift();
-            pressureData.shift();
-        }
-
-        dChart.data.datasets[0].data = displacementData;
-        vChart.data.datasets[0].data = velocityData;
-        pChart.data.datasets[0].data = pressureData;
-
-        dChart.update();
-        vChart.update();
-        pChart.update();
-
-        requestAnimationFrame(animate);
+        document.getElementById('dDisp').textContent=dx.toFixed(2);
+        document.getElementById('vDisp').textContent=v.toFixed(2);
+        document.getElementById('pDisp').textContent=pres(xEq,T).toFixed(3);
+      } else {
+        wX.beginPath(); wX.arc(px,y0,r,0,Math.PI*2);
+        wX.fillStyle=dark?'#4a90d9':'#185fa5';
+        wX.fill();
+      }
     }
+  }
+  document.getElementById('lDisp').textContent=Math.round(spd/freq);
+}
 
-    animate();
+function drawPlot(ctx,data,stroke,fillR,fillG,fillB,label,unit,maxV){
+  const W=ctx.canvas.width, H=ctx.canvas.height;
+  const dark=isDark();
+  const pad={l:58,r:12,t:16,b:26};
+  const pw=W-pad.l-pad.r, ph=H-pad.t-pad.b;
+  const zy=pad.t+ph/2;
+
+  ctx.clearRect(0,0,W,H);
+  ctx.fillStyle=dark?'#0d1117':'#f8f9fb';
+  ctx.fillRect(0,0,W,H);
+
+  // Grid
+  ctx.strokeStyle=dark?'rgba(255,255,255,0.05)':'rgba(0,0,0,0.05)';
+  ctx.lineWidth=1;
+  [0,0.5,1].forEach(f=>{
+    const y=pad.t+f*ph;
+    ctx.beginPath(); ctx.moveTo(pad.l,y); ctx.lineTo(pad.l+pw,y); ctx.stroke();
+  });
+  // Zero line
+  ctx.strokeStyle=dark?'rgba(255,255,255,0.15)':'rgba(0,0,0,0.12)';
+  ctx.lineWidth=1.2;
+  ctx.beginPath(); ctx.moveTo(pad.l,zy); ctx.lineTo(pad.l+pw,zy); ctx.stroke();
+  // Y axis
+  ctx.strokeStyle=dark?'rgba(255,255,255,0.1)':'rgba(0,0,0,0.1)';
+  ctx.lineWidth=1;
+  ctx.beginPath(); ctx.moveTo(pad.l,pad.t); ctx.lineTo(pad.l,pad.t+ph); ctx.stroke();
+
+  // Y labels
+  ctx.fillStyle=dark?'rgba(255,255,255,0.3)':'rgba(0,0,0,0.35)';
+  ctx.font='10px monospace'; ctx.textAlign='right';
+  const dv=maxV>=10?maxV.toFixed(1):maxV.toFixed(2);
+  ctx.fillText('+'+dv,pad.l-4,pad.t+6);
+  ctx.fillText('0',pad.l-4,zy+4);
+  ctx.fillText('-'+dv,pad.l-4,pad.t+ph+4);
+
+  // X label
+  ctx.fillStyle=dark?'rgba(255,255,255,0.2)':'rgba(0,0,0,0.25)';
+  ctx.textAlign='center';
+  ctx.fillText('time →',pad.l+pw/2,H-3);
+
+  // Series label
+  ctx.fillStyle=stroke;
+  ctx.font='bold 11px monospace'; ctx.textAlign='left';
+  ctx.fillText(label+' ('+unit+')',pad.l+5,pad.t+13);
+
+  ctx.save();
+  ctx.beginPath(); ctx.rect(pad.l,pad.t,pw,ph); ctx.clip();
+
+  // Fill
+  ctx.beginPath();
+  for(let i=0;i<HIST;i++){
+    const idx=(hi+i)%HIST;
+    const x=pad.l+(i/(HIST-1))*pw;
+    const y=zy-(data[idx]/maxV)*(ph/2);
+    i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);
+  }
+  ctx.lineTo(pad.l+pw,zy); ctx.lineTo(pad.l,zy); ctx.closePath();
+  ctx.fillStyle=`rgba(${fillR},${fillG},${fillB},0.15)`; ctx.fill();
+
+  // Line
+  ctx.beginPath();
+  for(let i=0;i<HIST;i++){
+    const idx=(hi+i)%HIST;
+    const x=pad.l+(i/(HIST-1))*pw;
+    const y=zy-(data[idx]/maxV)*(ph/2);
+    i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);
+  }
+  ctx.strokeStyle=stroke; ctx.lineWidth=2; ctx.stroke();
+  ctx.restore();
+}
+
+function loop(ts){
+  if(!lastTS) lastTS=ts;
+  const dt=Math.min((ts-lastTS)/1000,0.05);
+  lastTS=ts; T+=dt;
+
+  const W=wC.width;
+  const cols=Math.floor(W/22);
+  const sx=W/(cols+1);
+  const xEq=(TCOL+1)*sx;
+
+  dH[hi]=disp(xEq,T);
+  vH[hi]=vel(xEq,T);
+  pH[hi]=pres(xEq,T);
+  hi=(hi+1)%HIST;
+
+  drawWave();
+  const maxD=amp*1.05;
+  const maxV=amp*om()*1.05||1;
+  const maxP=amp*kk()*1.05||1;
+  drawPlot(dX,dH,'#50c8a0',80,200,160,'Displacement','px',  maxD);
+  drawPlot(vX,vH,'#ef9f27',239,159,39,'Velocity',    'px/s',maxV);
+  drawPlot(pX,pH,'#e24b4a',226,75,74, 'Pressure',    'Pa',  maxP);
+
+  requestAnimationFrame(loop);
+}
+requestAnimationFrame(loop);
 </script>
 
 
