@@ -1,108 +1,225 @@
 <!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> 从声速到超声波成像：A-Level 声波物理背后的完整故事 | Colin Young's Personal Site </title> <meta name="author" content="Colin Young"> <meta name="description" content="本文由理想气体的绝热过程出发，导出声波的波动方程与传播速度，推导声波的强度以及在穿过介质交界面时的强度反射系数"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <link rel="stylesheet" href="/assets/css/bootstrap.min.css?v=a4b3f509e79c54a512b890d73235ef04"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="/assets/css/academicons.min.css?v=f0b7046b84e425c55f3463ac249818f5"> <link defer rel="stylesheet" href="/assets/css/scholar-icons.css?v=62b2ac103a88034e6882a5be5f3e2772"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="/assets/img/antelope_logo.ico?v=c3d70f40fa1ac6221c6377ae921a97e8"> <link rel="stylesheet" href="/assets/css/main.css?v=d41d8cd98f00b204e9800998ecf8427e"> <link rel="canonical" href="https://yuhao-yang-cy.github.io//blog/2026/sound-physics/"> <script src="/assets/js/theme.js?v=5fea5159b787642c1bbc1f334d60f883"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
     initTheme();
-  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> Colin Young's Personal Site </a> <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse text-right" id="navbarNav"> <ul class="navbar-nav ml-auto flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">home </a> </li> <li class="nav-item active"> <a class="nav-link" href="/blog/">posts </a> </li> <li class="nav-item "> <a class="nav-link" href="/projects/">projects </a> </li> <li class="nav-item "> <a class="nav-link" href="/books/">bookshelf </a> </li> <li class="nav-item "> <a class="nav-link" href="/news/">logs </a> </li> <li class="nav-item "> <a class="nav-link" href="/bio/">bio </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">cv </a> </li> <li class="nav-item"> <button id="search-toggle" title="Search" onclick="openSearchModal()"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" title="Change theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">从声速到超声波成像：A-Level 声波物理背后的完整故事</h1> <p class="post-meta"> Created on May 07, 2026 </p> <p class="post-tags"> <a href="/blog/2026"> <i class="fa-solid fa-calendar fa-sm"></i> 2026 </a>   ·   <a href="/blog/tag/physics"> <i class="fa-solid fa-hashtag fa-sm"></i> physics</a>   <a href="/blog/tag/a-level"> <i class="fa-solid fa-hashtag fa-sm"></i> a-level</a>   <a href="/blog/tag/thermodynamics"> <i class="fa-solid fa-hashtag fa-sm"></i> thermodynamics</a>   <a href="/blog/tag/mechanics"> <i class="fa-solid fa-hashtag fa-sm"></i> mechanics</a>   ·   <a href="/blog/category/physics"> <i class="fa-solid fa-tag fa-sm"></i> physics</a>   <a href="/blog/category/a-level"> <i class="fa-solid fa-tag fa-sm"></i> a-level</a> </p> </header> <article class="post-content"> <div id="markdown-content"> <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <style>*{box-sizing:border-box}body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;display:flex;flex-direction:column;align-items:center;background:#f0f2f5;margin:0;padding:40px 0}.dashboard-container{width:800px;display:flex;flex-direction:column;align-items:center;margin:0 auto}.legend{margin-bottom:20px;font-size:.85em;color:#666;text-align:center;line-height:1.5}canvas#mainCanvas{background:white;border:1px solid #ccc;box-shadow:0 2px 10px rgba(0,0,0,0.1);border-radius:4px;display:block}.charts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;width:100%;height:220px;margin-top:15px}.chart-wrapper{background:white;padding:8px;border-radius:8px;border:1px solid #ddd;box-shadow:0 1px 4px rgba(0,0,0,0.05);min-width:0}</style> <p>声音是我们日常生活中最熟悉的物理现象之一，却也是一个值得细细推敲的波动力学问题。几天前刚新出炉的 A-Level 物理2026年3月印度区 Paper 5 碰着了一个探究声速和温度关系的数据处理题，前阵子又有学生问到 Paper 4 理论卷里为什么超声波的反射系数公式长成 \(\frac{I_r}{I_i} = \left(\frac{Z_2 - Z_1}{Z_2 + Z_1} \right)^2\) 这么幅模样。我一盘声波这故事叙事从头到尾好像能串成一条线么，索性就来写一篇文章来细细掰扯吧。</p> <p>本文试图从第一性原理出发，按照以下的主线脉络逐一梳理声波物理的核心结果：</p> <ul> <li>由理想气体的绝热过程出发，导出声波的波动方程与传播速度</li> <li>探讨粒子速度与声压的关系，引入声阻抗的概念</li> <li>推导声波的能量密度与强度</li> <li>讨论声波垂直入射至两种介质交界面时的反射与透射系数</li> </ul> <h2 id="声波的波动方程与声速">声波的波动方程与声速</h2> <p>当我们谈论声音在空气中的传播，我们实际上是在描述气体分子在平衡位置附近的集体振动。作为典型的<strong>纵波</strong>（longitudinal wave），声波中的粒子位移方向与能量传播方向平行。考虑 \(x\) 至 \(x+\Delta x\) 范围内的一段横截面积为 \(A\) 的空气柱。假定气体压强在平衡压强 \(p_0\) 附近波动，从而导致空气柱不同位置处的截面产生纵向的位移 \(y(x,t)\)。我们先试着导出 \(y(x,t)\) 需遵从的波动方程，并由此导出声波的速度。</p> <div class="row"> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/sound-wave-volume-unit-480.webp 480w,/assets/img/sound-wave-volume-unit-800.webp 800w,/assets/img/sound-wave-volume-unit-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/sound-wave-volume-unit.jpg" class="img-natural rounded z-depth-1" width="100%" height="auto" title="" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"> </picture> </figure> </div> </div> <p>由于声波的频率通常很高，空气的压缩和膨胀过程会非常迅速，空气柱没有足够的时间与其周围的气体进行热交换，因此可以将其作为<strong>绝热过程</strong>（adiabatic process）来处理。理想气体的绝热过程符合方程（不熟悉绝热过程的读者不妨参阅<a href="/blog/2022/adiabatic-process/">这篇文章</a>）：</p> \[pV^\gamma = \text{constant}\] <p>其中绝热指数 \(\gamma\) 是由气体粒子的运动自由度所决定的常数。对于主要由氮气和氧气这样的双原子粒子构成的空气，有 \(\gamma = \frac{7}{5}\).</p> <p>当然，如果声波的频率很低，压缩和膨胀过程足够缓慢，气体将有更充分的时间与外界交换热量，过程会更偏向等温过程（isothermal process），此时理想气体符合 Boyle 定律 \(pV = \text{contant}\)，也可以视作取 \(\gamma = 1\)。这节的最后我们将导出声速 \(v \propto \sqrt{\gamma}\) 的结果，而历史上，牛顿最初采用了等温假设来处理常规的、频率较高的声波，这导致了计算结果仅是实际值的 \(\sqrt{\frac{5}{7}} \approx 85\%\)，直到后来 Laplace 引入了绝热近似进行修正，才得到了与实际值符合的非常好的结果。</p> <p>对绝热方程的两边取对数后再作微分：</p> \[\begin{align*} \ln p + \gamma \ln V &amp;= \text{constant} \\ \frac{\mathrm{d} p}{p} + \gamma \frac{\mathrm{d} V}{V} &amp;= 0 \\ \Rightarrow \; \mathrm{d} p &amp;= -\gamma p \frac{\mathrm{d} V}{V} \tag{1} \end{align*}\] <p>我们所考察的空气柱在平衡态下的体积为 \(V = A \Delta x\)，由于扰动产生的体积变化量为 \(\Delta V = A [y(x+\Delta x) - y(x)] \approx A \frac{\partial y}{\partial x} \Delta x\)，于是 \(\frac{\Delta V}{V} = \frac{\partial y}{\partial x}\). 又由于假定了压强仅仅是在平衡压强附近小幅波动，可以作线性化处理 \(p\approx p_0\)，如此得到：</p> \[\mathrm{d} p = -\gamma p_0 \frac{\partial y}{\partial x} \tag{2}\] <p>空气柱左右两个截面处的压强分别可以写成：</p> \[\begin{align*} p(x) &amp;= p_0 + \delta p(x) = p_0 - \gamma p_0 \frac{\partial y}{\partial x} \Bigg\vert_x \\ p(x+\Delta x) &amp;= p_0 + \delta p(x+\Delta x) = p_0 - \gamma p_0 \frac{\partial y}{\partial x} \Bigg\vert_{x+\Delta x} \\ \end{align*}\] <p>此段空气柱所受的合力为：</p> \[\begin{align*} F &amp;= p(x) A - p(x+\Delta x) A \\ &amp; = \gamma p_0 \left[ \frac{\partial y}{\partial x} \Bigg\vert_{x+\Delta x} - \frac{\partial y}{\partial x} \Bigg\vert_{x}\right] \\ \Rightarrow \; F &amp; \approx \gamma p_0 \frac{\partial^2 y}{\partial x^2} \Delta x \end{align*}\] <p>空气柱的质量写作 \(\rho_0 A \Delta x\)，由牛顿定律可以得到运动方程：</p> \[\begin{align*} \gamma p_0 \frac{\partial^2 y}{\partial x^2} \Delta x &amp;= \rho_0 A \Delta x \frac{\partial^2 y}{\partial t^2} \\ \Rightarrow \; \frac{\partial^2 y}{\partial t^2} &amp;= \frac{\gamma p_0}{\rho_0} \frac{\partial^2 y}{\partial x^2} \tag{3} \end{align*}\] <p>此即声波的波动方程。本着所有微小扰动在理论物理学家眼里都是简谐振动的精神，立刻可以写出波动方程的解的形式：</p> \[y(x,t) = y_0 \cos (kx - \omega t) \tag{4}\] <p>代回 \((3)\) 式后不难得到：</p> \[\omega^2 = \frac{\gamma p_0}{\rho_0} \times k^2\] <p>由此得到声波的传播速度为：</p> \[c = \frac{\omega}{k} = \sqrt{\frac{\gamma p_0}{\rho_0}} \tag{5}\] <p>代入空气的绝热指数 ，标准大气压 \(p_0 = 1.01\times10^5 \text{ Pa}\) 以及空气密度 \(\rho_0 = 1.29 \text{ kg/m}^3\)：</p> \[c = \sqrt{\frac{\frac{7}{5} \times 1.01\times10^5}{1.29}} \approx 331 \text{ m/s}\] <p>和我们所熟悉的空气中的声速数值相符。</p> <p>我们还可以对声速的公式作进一步改写。同时将 \((5)\) 式根式下的粒子分母乘以气体的摩尔体积 \(V_m\)，利用理想气体方程 \(pV = nRT\)，再注意到空气粒子的摩尔质量为 \(M = \rho_0 V_m\)，我们有：</p> \[c = \sqrt{\frac{\gamma RT}{M}} \tag{6}\] <p>从中可以清楚地看到声速随温度的升高而变快的结论，在某些精密的声纳测距的技术应用里这也是必须要考虑的影响因素。代入空气的绝热指数 \(\gamma = \frac{7}{5}\)，摩尔气体常数 \(R = 8.31 \text{J/(K mol)}\)，标准大气压对应的温度 \(T=273 \text{ K}\)，以及空气粒子的摩尔质量 \(M=0.029 \text{ kg/mol}\)，同样地很容易验证：</p> \[c = \sqrt{\frac{\frac{7}{5} \times 8.31 \times 273}{0.029}} \approx 331 \text{ m/s}\] <h2 id="粒子速度与声波压强">粒子速度与声波压强</h2> <p>基于已经导出的声波方程和其行波解，粒子的速度和声波压强的关系式就变得手到擒来了。</p> <p>依旧考察体积元 \(\Delta V = A \Delta x\) 内的空气柱。粒子的速度为：</p> \[v = \frac{\partial y}{\partial t} = \omega y_0 \sin(kx - \omega t) \tag{7}\] <p>同样不断波动的声波压强有：</p> \[\begin{align*} p(x) &amp;= p_0 - \gamma p_0 \frac{\partial y}{\partial x} \Bigg\vert_x \\ &amp; = p_0 + \gamma p_0 \times k y_0 \sin(kx - \omega t) \\ &amp; = p_0 + \rho_0 c^2 \times k y_0 \sin(kx - \omega t) \\ \Rightarrow \; \delta p &amp;= \rho_0 c \omega y_0 \sin(kx - \omega t) \tag{8} \end{align*}\] <p>上面倒数第二行用到了之前得到的声速公式 \(c =\sqrt{\frac{\gamma p_0}{\rho_0}}\)，最后一行用到了 \(c=\frac{\omega}{k}\).</p> <p>对比粒子速度和声波压强的结果，不难看出行波中的声压波动和粒子速度始终同相（in phase），并且有：</p> \[\delta p = \rho_0 c v \tag{9}\] <p>类比于电路中电压和电流之间的关系，引入<strong>介质声阻抗</strong>（specific acoustic impedance）\(Z\)，其定义为介质密度与介质中声波传播速度的乘积，即</p> \[Z \equiv \rho_0 c \tag{10}\] <p>声波压强和粒子速度的关系可以写成更简明的形式：</p> \[v = \frac{\delta p}{Z} \tag{11}\] <h2 id="声波动画演示">声波动画演示</h2> <p>下面是借助 Gemini 生成的一个动画演示，展示了介质中的分子们如何像交谊舞般和谐地跳动形成行进的压力波。</p> <p>动画中的红色线条追踪了某处的分子振动，并在下方同步展示了其位移（绿色）、速度（红色）和所在位置的压强（蓝色）随时间的动态变化。</p> <div class="dashboard-container"> <canvas id="mainCanvas" width="800" height="150"></canvas> <div class="charts-grid"> <div class="chart-wrapper"> <canvas id="displacementChart"></canvas> </div> <div class="chart-wrapper"> <canvas id="velocityChart"></canvas> </div> <div class="chart-wrapper"> <canvas id="pressureChart"></canvas> </div> </div> </div> <script>
-    const canvas = document.getElementById('mainCanvas');
-    const ctx = canvas.getContext('2d');
-    
-    // Physics
-    const numParticles = 45; 
-    const spacing = canvas.width / numParticles;
-    const amplitude = 35;       
-    const frequency = 0.0015;  
-    const waveSpeed = 0.04;     
-    let time = 0;
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> Colin Young's Personal Site </a> <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse text-right" id="navbarNav"> <ul class="navbar-nav ml-auto flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">home </a> </li> <li class="nav-item active"> <a class="nav-link" href="/blog/">posts </a> </li> <li class="nav-item "> <a class="nav-link" href="/projects/">projects </a> </li> <li class="nav-item "> <a class="nav-link" href="/books/">bookshelf </a> </li> <li class="nav-item "> <a class="nav-link" href="/news/">logs </a> </li> <li class="nav-item "> <a class="nav-link" href="/bio/">bio </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">cv </a> </li> <li class="nav-item"> <button id="search-toggle" title="Search" onclick="openSearchModal()"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" title="Change theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">从声速到超声波成像：A-Level 声波物理背后的完整故事</h1> <p class="post-meta"> Created on May 07, 2026 </p> <p class="post-tags"> <a href="/blog/2026"> <i class="fa-solid fa-calendar fa-sm"></i> 2026 </a>   ·   <a href="/blog/tag/physics"> <i class="fa-solid fa-hashtag fa-sm"></i> physics</a>   <a href="/blog/tag/a-level"> <i class="fa-solid fa-hashtag fa-sm"></i> a-level</a>   <a href="/blog/tag/thermodynamics"> <i class="fa-solid fa-hashtag fa-sm"></i> thermodynamics</a>   <a href="/blog/tag/mechanics"> <i class="fa-solid fa-hashtag fa-sm"></i> mechanics</a>   ·   <a href="/blog/category/physics"> <i class="fa-solid fa-tag fa-sm"></i> physics</a>   <a href="/blog/category/a-level"> <i class="fa-solid fa-tag fa-sm"></i> a-level</a> </p> </header> <article class="post-content"> <div id="markdown-content"> <style>.sim-wrap{display:flex;flex-direction:column;gap:14px;padding:.5rem 0}.panel{background:var(--color-background-primary);border:.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:12px 14px}.panel-title{font-size:14px;letter-spacing:.08em;color:var(--color-text-tertiary);margin-bottom:8px;font-weight:500}canvas{display:block;width:100%;border-radius:6px}.legend{display:flex;gap:14px;flex-wrap:wrap;margin-top:8px}.leg{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--color-text-secondary)}.ldot{width:9px;height:9px;border-radius:50%;flex-shrink:0}.lline{width:16px;height:3px;border-radius:1px;flex-shrink:0}.controls{display:flex;gap:16px;flex-wrap:wrap;align-items:flex-end;margin-top:10px;padding-top:10px;border-top:.5px solid var(--color-border-tertiary)}.cg{display:flex;flex-direction:column;gap:4px}.cg label{font-size:12px;color:var(--color-text-tertiary);letter-spacing:.06em}.cg input[type=range]{width:120px}.cv{font-size:14px;color:var(--color-text-secondary);font-variant-numeric:tabular-nums}.info-bar{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px;padding-top:8px;border-top:.5px solid var(--color-border-tertiary)}.info-item{font-size:14px;color:var(--color-text-tertiary)}.info-item b{color:var(--color-text-primary);font-weight:500;font-variant-numeric:tabular-nums}</style> <p>声音是我们日常生活中最熟悉的物理现象之一，却也是一个值得细细推敲的波动力学问题。几天前刚新出炉的 A-Level 物理2026年3月印度区 Paper 5 碰着了一个探究声速和温度关系的数据处理题，前阵子又有学生问到 Paper 4 理论卷里为什么超声波的反射系数公式长成 \(\frac{I_r}{I_i} = \left(\frac{Z_2 - Z_1}{Z_2 + Z_1} \right)^2\) 这么幅模样。我一盘声波这故事叙事从头到尾好像能串成一条线么，索性就来写一篇文章来细细掰扯吧。</p> <p>本文试图从第一性原理出发，按照以下的主线脉络逐一梳理声波物理的核心结果：</p> <ul> <li>由理想气体的绝热过程出发，导出声波的波动方程与传播速度</li> <li>探讨粒子速度与声压的关系，引入声阻抗的概念</li> <li>推导声波的能量密度与强度</li> <li>讨论声波垂直入射至两种介质交界面时的反射与透射系数</li> </ul> <h2 id="声波的波动方程与声速">声波的波动方程与声速</h2> <p>当我们谈论声音在空气中的传播，我们实际上是在描述气体分子在平衡位置附近的集体振动。作为典型的<strong>纵波</strong>（longitudinal wave），声波中的粒子位移方向与能量传播方向平行。考虑 \(x\) 至 \(x+\Delta x\) 范围内的一段横截面积为 \(A\) 的空气柱。假定气体压强在平衡压强 \(p_0\) 附近波动，从而导致空气柱不同位置处的截面产生纵向的位移 \(y(x,t)\)。我们先试着导出 \(y(x,t)\) 需遵从的波动方程，并由此导出声波的速度。</p> <div class="row"> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/sound-wave-volume-unit-480.webp 480w,/assets/img/sound-wave-volume-unit-800.webp 800w,/assets/img/sound-wave-volume-unit-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/sound-wave-volume-unit.jpg" class="img-natural rounded z-depth-1" width="100%" height="auto" title="" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"> </picture> </figure> </div> </div> <p>由于声波的频率通常很高，空气的压缩和膨胀过程会非常迅速，空气柱没有足够的时间与其周围的气体进行热交换，因此可以将其作为<strong>绝热过程</strong>（adiabatic process）来处理。理想气体的绝热过程符合方程（不熟悉绝热过程的读者不妨参阅<a href="/blog/2022/adiabatic-process/">这篇文章</a>）：</p> \[pV^\gamma = \text{constant}\] <p>其中绝热指数 \(\gamma\) 是由气体粒子的运动自由度所决定的常数。对于主要由氮气和氧气这样的双原子粒子构成的空气，有 \(\gamma = \frac{7}{5}\).</p> <p>当然，如果声波的频率很低，压缩和膨胀过程足够缓慢，气体将有更充分的时间与外界交换热量，过程会更偏向等温过程（isothermal process），此时理想气体符合 Boyle 定律 \(pV = \text{contant}\)，也可以视作取 \(\gamma = 1\)。这节的最后我们将导出声速 \(v \propto \sqrt{\gamma}\) 的结果，而历史上，牛顿最初采用了等温假设来处理常规的、频率较高的声波，这导致了计算结果仅是实际值的 \(\sqrt{\frac{5}{7}} \approx 85\%\)，直到后来 Laplace 引入了绝热近似进行修正，才得到了与实际值符合的非常好的结果。</p> <p>对绝热方程的两边取对数后再作微分：</p> \[\begin{align*} \ln p + \gamma \ln V &amp;= \text{constant} \\ \frac{\mathrm{d} p}{p} + \gamma \frac{\mathrm{d} V}{V} &amp;= 0 \\ \Rightarrow \; \mathrm{d} p &amp;= -\gamma p \frac{\mathrm{d} V}{V} \tag{1} \end{align*}\] <p>我们所考察的空气柱在平衡态下的体积为 \(V = A \Delta x\)，由于扰动产生的体积变化量为 \(\Delta V = A [y(x+\Delta x) - y(x)] \approx A \frac{\partial y}{\partial x} \Delta x\)，于是 \(\frac{\Delta V}{V} = \frac{\partial y}{\partial x}\). 又由于假定了压强仅仅是在平衡压强附近小幅波动，可以作线性化处理 \(p\approx p_0\)，如此得到：</p> \[\mathrm{d} p = -\gamma p_0 \frac{\partial y}{\partial x} \tag{2}\] <p>空气柱左右两个截面处的压强分别可以写成：</p> \[\begin{align*} p(x) &amp;= p_0 + \delta p(x) = p_0 - \gamma p_0 \frac{\partial y}{\partial x} \Bigg\vert_x \\ p(x+\Delta x) &amp;= p_0 + \delta p(x+\Delta x) = p_0 - \gamma p_0 \frac{\partial y}{\partial x} \Bigg\vert_{x+\Delta x} \\ \end{align*}\] <p>此段空气柱所受的合力为：</p> \[\begin{align*} F &amp;= p(x) A - p(x+\Delta x) A \\ &amp; = \gamma p_0 \left[ \frac{\partial y}{\partial x} \Bigg\vert_{x+\Delta x} - \frac{\partial y}{\partial x} \Bigg\vert_{x}\right] \\ \Rightarrow \; F &amp; \approx \gamma p_0 \frac{\partial^2 y}{\partial x^2} \Delta x \end{align*}\] <p>空气柱的质量写作 \(\rho_0 A \Delta x\)，由牛顿定律可以得到运动方程：</p> \[\begin{align*} \gamma p_0 \frac{\partial^2 y}{\partial x^2} \Delta x &amp;= \rho_0 A \Delta x \frac{\partial^2 y}{\partial t^2} \\ \Rightarrow \; \frac{\partial^2 y}{\partial t^2} &amp;= \frac{\gamma p_0}{\rho_0} \frac{\partial^2 y}{\partial x^2} \tag{3} \end{align*}\] <p>此即声波的波动方程。本着所有微小扰动在理论物理学家眼里都是简谐振动的精神，立刻可以写出波动方程的解的形式：</p> \[y(x,t) = y_0 \cos (kx - \omega t) \tag{4}\] <p>代回 \((3)\) 式后不难得到：</p> \[\omega^2 = \frac{\gamma p_0}{\rho_0} \times k^2\] <p>由此得到声波的传播速度为：</p> \[c = \frac{\omega}{k} = \sqrt{\frac{\gamma p_0}{\rho_0}} \tag{5}\] <p>代入空气的绝热指数 ，标准大气压 \(p_0 = 1.01\times10^5 \text{ Pa}\) 以及空气密度 \(\rho_0 = 1.29 \text{ kg/m}^3\)：</p> \[c = \sqrt{\frac{\frac{7}{5} \times 1.01\times10^5}{1.29}} \approx 331 \text{ m/s}\] <p>和我们所熟悉的空气中的声速数值相符。</p> <p>我们还可以对声速的公式作进一步改写。同时将 \((5)\) 式根式下的粒子分母乘以气体的摩尔体积 \(V_m\)，利用理想气体方程 \(pV = nRT\)，再注意到空气粒子的摩尔质量为 \(M = \rho_0 V_m\)，我们有：</p> \[c = \sqrt{\frac{\gamma RT}{M}} \tag{6}\] <p>从中可以清楚地看到声速随温度的升高而变快的结论，在某些精密的声纳测距的技术应用里这也是必须要考虑的影响因素。代入空气的绝热指数 \(\gamma = \frac{7}{5}\)，摩尔气体常数 \(R = 8.31 \text{J/(K mol)}\)，标准大气压对应的温度 \(T=273 \text{ K}\)，以及空气粒子的摩尔质量 \(M=0.029 \text{ kg/mol}\)，同样地很容易验证：</p> \[c = \sqrt{\frac{\frac{7}{5} \times 8.31 \times 273}{0.029}} \approx 331 \text{ m/s}\] <h2 id="粒子速度与声波压强">粒子速度与声波压强</h2> <p>基于已经导出的声波方程和其行波解，粒子的速度和声波压强的关系式就变得手到擒来了。</p> <p>依旧考察体积元 \(\Delta V = A \Delta x\) 内的空气柱。粒子的速度为：</p> \[v = \frac{\partial y}{\partial t} = \omega y_0 \sin(kx - \omega t) \tag{7}\] <p>同样不断波动的声波压强有：</p> \[\begin{align*} p(x) &amp;= p_0 - \gamma p_0 \frac{\partial y}{\partial x} \Bigg\vert_x \\ &amp; = p_0 + \gamma p_0 \times k y_0 \sin(kx - \omega t) \\ &amp; = p_0 + \rho_0 c^2 \times k y_0 \sin(kx - \omega t) \\ \Rightarrow \; \delta p &amp;= \rho_0 c \omega y_0 \sin(kx - \omega t) \tag{8} \end{align*}\] <p>上面倒数第二行用到了之前得到的声速公式 \(c =\sqrt{\frac{\gamma p_0}{\rho_0}}\)，最后一行用到了 \(c=\frac{\omega}{k}\).</p> <p>对比粒子速度和声波压强的结果，不难看出行波中的声压波动和粒子速度始终同相（in phase），并且有：</p> \[\delta p = \rho_0 c v \tag{9}\] <p>类比于电路中电压和电流之间的关系，引入<strong>介质声阻抗</strong>（specific acoustic impedance）\(Z\)，其定义为介质密度与介质中声波传播速度的乘积，即</p> \[Z \equiv \rho_0 c \tag{10}\] <p>声波压强和粒子速度的关系可以写成更简明的形式：</p> \[v = \frac{\delta p}{Z} \tag{11}\] <h2 id="声波动画演示">声波动画演示</h2> <p>下面是借助 Claude 生成的一个动画演示，展示了介质中的分子们如何像交谊舞般和谐地跳动形成行进的压力波。</p> <p>动画追踪了某处的分子振动，并在下方同步展示了其位移（绿色）、速度（黄色）和所在位置的压强（红色）随时间的动态变化。</p> <div class="sim-wrap"> <div class="panel"> <div class="panel-title">Particle Displacement &amp; Wave Field</div> <canvas id="wC" height="185"></canvas> <div class="legend"> <div class="leg"> <div class="ldot" style="background:#378add"></div>Air Particles</div> <div class="leg"> <div class="ldot" style="background:#ef9f27"></div>Tracked Particle</div> <div class="leg"> <div class="lline" style="background:#e24b4a"></div>Compression (High-pressure)</div> <div class="leg"> <div class="lline" style="background:#85b7eb;opacity:0.7"></div>Rarefaction (Low-pressure)</div> </div> <div class="controls"> <div class="cg"> <label>Frequency</label> <input type="range" id="fSlider" min="0.2" max="1.6" step="0.02" value="0.5"> <span class="cv" id="fVal">0.50 Hz</span> </div> <div class="cg"> <label>Amplitude</label> <input type="range" id="aSlider" min="5" max="35" step="1" value="18"> <span class="cv" id="aVal">18 px</span> </div> <div class="cg"> <label>Wave speed</label> <input type="range" id="sSlider" min="30" max="300" step="10" value="100"> <span class="cv" id="sVal">100 px/s</span> </div> </div> <div class="info-bar"> <div class="info-item">Displacement: <b id="dDisp">0.00</b> px</div> <div class="info-item">Velocity: <b id="vDisp">0.00</b> px/s</div> <div class="info-item">Pressure: <b id="pDisp">0.000</b> (rel.)</div> <div class="info-item">Wavelength λ: <b id="lDisp">—</b> px</div> </div> </div> <div class="panel"> <div class="panel-title">Tracked Particle — Displacement vs Time</div> <canvas id="dC" height="110"></canvas> </div> <div class="panel"> <div class="panel-title">Tracked Particle — Velocity vs Time</div> <canvas id="vC" height="110"></canvas> </div> <div class="panel"> <div class="panel-title">Local Pressure vs Time (at Tracked Particle's Equilibrium Position)</div> <canvas id="pC" height="110"></canvas> </div> </div> <script>
+const wC=document.getElementById('wC'), dC=document.getElementById('dC'),
+      vC=document.getElementById('vC'), pC=document.getElementById('pC');
+const wX=wC.getContext('2d'), dX=dC.getContext('2d'),
+      vX=vC.getContext('2d'), pX=pC.getContext('2d');
 
-    // Data
-    const maxDataPoints = 150;
-    let labels = Array(maxDataPoints).fill('');
-    let displacementData = Array(maxDataPoints).fill(0);
-    let velocityData = Array(maxDataPoints).fill(0);
-    let pressureData = Array(maxDataPoints).fill(0);
+let freq=0.8, amp=18, spd=120, T=0, lastTS=null;
+const HIST=350;
+const dH=new Float32Array(HIST), vH=new Float32Array(HIST), pH=new Float32Array(HIST);
+let hi=0;
 
-    const chartConfig = (label, color, minMax) => ({
-        type: 'line',
-        data: {
-            labels: labels,
-            datasets: [{ 
-                label: label, 
-                data: [], 
-                borderColor: color, 
-                borderWidth: 2, 
-                fill: false, 
-                pointRadius: 0,
-                tension: 0.4
-            }]
-        },
-        options: {
-            animation: false,
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: { legend: { labels: { boxWidth: 10, font: { size: 10 } } } },
-            scales: { 
-                y: { min: -minMax, max: minMax, ticks: { font: { size: 9 } } },
-                x: { display: true }
-            }
+function resize(){
+  const W=wC.parentElement.clientWidth-28;
+  wC.width=W; wC.height=185;
+  dC.width=W; dC.height=110;
+  vC.width=W; vC.height=110;
+  pC.width=W; pC.height=110;
+}
+resize();
+window.addEventListener('resize',resize);
+
+document.getElementById('fSlider').oninput=e=>{freq=+e.target.value;document.getElementById('fVal').textContent=freq.toFixed(2)+' Hz';};
+document.getElementById('aSlider').oninput=e=>{amp=+e.target.value;document.getElementById('aVal').textContent=amp+' px';};
+document.getElementById('sSlider').oninput=e=>{spd=+e.target.value;document.getElementById('sVal').textContent=spd+' px/s';};
+
+const om=()=>2*Math.PI*freq;
+const kk=()=>om()/spd;
+const disp =(x,t)=> amp*Math.sin(kk()*x - om()*t);
+const vel  =(x,t)=> -amp*om()*Math.cos(kk()*x - om()*t);
+const pres =(x,t)=> -amp*kk()*Math.cos(kk()*x - om()*t);
+
+const ROWS=7, TCOL=8;
+const isDark=()=>window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches;
+
+function drawWave(){
+  const W=wC.width, H=wC.height;
+  wX.clearRect(0,0,W,H);
+  const dark=isDark();
+  wX.fillStyle=dark?'#0d1117':'#f8f9fb';
+  wX.fillRect(0,0,W,H);
+
+  const maxP=amp*kk()||1;
+
+  // Pressure stripes — displaced exactly like particles
+  const BASE_SPACING=14;
+  const stripes=[];
+  for(let xEq=-amp-BASE_SPACING; xEq<W+amp+BASE_SPACING; xEq+=BASE_SPACING){
+    const xDraw=xEq+disp(xEq,T);
+    const p=pres(xEq,T);
+    stripes.push({xDraw,p});
+  }
+  stripes.sort((a,b)=>a.xDraw-b.xDraw);
+  for(const {xDraw,p} of stripes){
+    if(xDraw<0||xDraw>W) continue;
+    const norm=p/maxP;
+    const a=0.12+Math.abs(norm)*0.50;
+    wX.strokeStyle=norm>0?`rgba(210,65,50,${a})`:`rgba(55,138,221,${a*0.75})`;
+    wX.lineWidth=norm>0?1.8:0.9;
+    wX.beginPath(); wX.moveTo(xDraw,0); wX.lineTo(xDraw,H); wX.stroke();
+  }
+
+  // Particles
+  const cols=Math.floor(W/22);
+  const sx=W/(cols+1), sy=H/(ROWS+1);
+  const r=4, trow=Math.ceil(ROWS/2);
+
+  for(let row=1;row<=ROWS;row++){
+    const y0=row*sy;
+    for(let col=0;col<cols;col++){
+      const xEq=(col+1)*sx;
+      const dx=disp(xEq,T);
+      const px=xEq+dx;
+      const tracked=(row===trow&&col===TCOL);
+
+      if(tracked){
+        const v=vel(xEq,T);
+        const maxV=amp*om()||1;
+        const aLen=(v/maxV)*48;
+
+        wX.save();
+        wX.strokeStyle='#ef9f27'; wX.lineWidth=2.5;
+        wX.beginPath(); wX.moveTo(px,y0); wX.lineTo(px+aLen,y0); wX.stroke();
+        if(Math.abs(aLen)>5){
+          const d=Math.sign(aLen);
+          wX.fillStyle='#ef9f27';
+          wX.beginPath();
+          wX.moveTo(px+aLen,y0);
+          wX.lineTo(px+aLen-d*9,y0-5);
+          wX.lineTo(px+aLen-d*9,y0+5);
+          wX.closePath(); wX.fill();
         }
-    });
+        wX.fillStyle=dark?'#fac775':'#854f0b';
+        wX.font='bold 10px monospace';
+        const lx=aLen>=0?px+aLen+7:px+aLen-68;
+        wX.fillText('v='+v.toFixed(1),lx,y0-8);
+        wX.restore();
 
-    const dChart = new Chart(document.getElementById('displacementChart'), chartConfig('位移 (y)', 'green', 40));
-    const vChart = new Chart(document.getElementById('velocityChart'), chartConfig('速度 (v)', 'red', 0.1));
-    const pChart = new Chart(document.getElementById('pressureChart'), chartConfig('压强 (δp)', 'blue', 1.5));
+        // Equilibrium marker
+        wX.save();
+        wX.setLineDash([3,4]);
+        wX.strokeStyle='rgba(239,159,39,0.3)'; wX.lineWidth=1;
+        wX.beginPath(); wX.moveTo(xEq,y0-13); wX.lineTo(xEq,y0+13); wX.stroke();
+        wX.restore();
 
-    function animate() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        time += 16; 
+        // Dot
+        wX.beginPath(); wX.arc(px,y0,r+3,0,Math.PI*2);
+        wX.fillStyle='#ef9f27'; wX.fill();
+        wX.strokeStyle=dark?'rgba(255,255,255,0.5)':'rgba(0,0,0,0.2)';
+        wX.lineWidth=1.5; wX.stroke();
 
-        const targetIndex = 15; 
-        let tDisp, tVel, tPres;
-
-        for (let i = 0; i < numParticles; i++) {
-            const x0 = i * spacing + spacing / 2;
-            const phase = (x0 * waveSpeed) - (time * frequency);
-            const displacement = amplitude * Math.cos(phase);
-            const velocity = amplitude * frequency * Math.sin(phase);
-
-            const currentX = x0 + displacement;
-
-            ctx.beginPath();
-            if (i === targetIndex) {
-                ctx.strokeStyle = '#e74c3c';
-                ctx.lineWidth = 4;
-                tDisp = displacement;
-                tVel = velocity;
-                tPres = Math.sin(phase); 
-            } else {
-                ctx.strokeStyle = '#34495e';
-                ctx.lineWidth = 1;
-            }
-            
-            ctx.moveTo(currentX, 20);
-            ctx.lineTo(currentX, 130);
-            ctx.stroke();
-        }
-
-        displacementData.push(tDisp);
-        velocityData.push(tVel);
-        pressureData.push(tPres);
-
-        if (displacementData.length > maxDataPoints) {
-            displacementData.shift();
-            velocityData.shift();
-            pressureData.shift();
-        }
-
-        dChart.data.datasets[0].data = displacementData;
-        vChart.data.datasets[0].data = velocityData;
-        pChart.data.datasets[0].data = pressureData;
-
-        dChart.update();
-        vChart.update();
-        pChart.update();
-
-        requestAnimationFrame(animate);
+        document.getElementById('dDisp').textContent=dx.toFixed(2);
+        document.getElementById('vDisp').textContent=v.toFixed(2);
+        document.getElementById('pDisp').textContent=pres(xEq,T).toFixed(3);
+      } else {
+        wX.beginPath(); wX.arc(px,y0,r,0,Math.PI*2);
+        wX.fillStyle=dark?'#4a90d9':'#185fa5';
+        wX.fill();
+      }
     }
+  }
+  document.getElementById('lDisp').textContent=Math.round(spd/freq);
+}
 
-    animate();
+function drawPlot(ctx,data,stroke,fillR,fillG,fillB,label,unit,maxV){
+  const W=ctx.canvas.width, H=ctx.canvas.height;
+  const dark=isDark();
+  const pad={l:58,r:12,t:16,b:26};
+  const pw=W-pad.l-pad.r, ph=H-pad.t-pad.b;
+  const zy=pad.t+ph/2;
+
+  ctx.clearRect(0,0,W,H);
+  ctx.fillStyle=dark?'#0d1117':'#f8f9fb';
+  ctx.fillRect(0,0,W,H);
+
+  // Grid
+  ctx.strokeStyle=dark?'rgba(255,255,255,0.05)':'rgba(0,0,0,0.05)';
+  ctx.lineWidth=1;
+  [0,0.5,1].forEach(f=>{
+    const y=pad.t+f*ph;
+    ctx.beginPath(); ctx.moveTo(pad.l,y); ctx.lineTo(pad.l+pw,y); ctx.stroke();
+  });
+  // Zero line
+  ctx.strokeStyle=dark?'rgba(255,255,255,0.15)':'rgba(0,0,0,0.12)';
+  ctx.lineWidth=1.2;
+  ctx.beginPath(); ctx.moveTo(pad.l,zy); ctx.lineTo(pad.l+pw,zy); ctx.stroke();
+  // Y axis
+  ctx.strokeStyle=dark?'rgba(255,255,255,0.1)':'rgba(0,0,0,0.1)';
+  ctx.lineWidth=1;
+  ctx.beginPath(); ctx.moveTo(pad.l,pad.t); ctx.lineTo(pad.l,pad.t+ph); ctx.stroke();
+
+  // Y labels
+  ctx.fillStyle=dark?'rgba(255,255,255,0.3)':'rgba(0,0,0,0.35)';
+  ctx.font='10px monospace'; ctx.textAlign='right';
+  const dv=maxV>=10?maxV.toFixed(1):maxV.toFixed(2);
+  ctx.fillText('+'+dv,pad.l-4,pad.t+6);
+  ctx.fillText('0',pad.l-4,zy+4);
+  ctx.fillText('-'+dv,pad.l-4,pad.t+ph+4);
+
+  // X label
+  ctx.fillStyle=dark?'rgba(255,255,255,0.2)':'rgba(0,0,0,0.25)';
+  ctx.textAlign='center';
+  ctx.fillText('time →',pad.l+pw/2,H-3);
+
+  // Series label
+  ctx.fillStyle=stroke;
+  ctx.font='bold 11px monospace'; ctx.textAlign='left';
+  ctx.fillText(label+' ('+unit+')',pad.l+5,pad.t+13);
+
+  ctx.save();
+  ctx.beginPath(); ctx.rect(pad.l,pad.t,pw,ph); ctx.clip();
+
+  // Fill
+  ctx.beginPath();
+  for(let i=0;i<HIST;i++){
+    const idx=(hi+i)%HIST;
+    const x=pad.l+(i/(HIST-1))*pw;
+    const y=zy-(data[idx]/maxV)*(ph/2);
+    i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);
+  }
+  ctx.lineTo(pad.l+pw,zy); ctx.lineTo(pad.l,zy); ctx.closePath();
+  ctx.fillStyle=`rgba(${fillR},${fillG},${fillB},0.15)`; ctx.fill();
+
+  // Line
+  ctx.beginPath();
+  for(let i=0;i<HIST;i++){
+    const idx=(hi+i)%HIST;
+    const x=pad.l+(i/(HIST-1))*pw;
+    const y=zy-(data[idx]/maxV)*(ph/2);
+    i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);
+  }
+  ctx.strokeStyle=stroke; ctx.lineWidth=2; ctx.stroke();
+  ctx.restore();
+}
+
+function loop(ts){
+  if(!lastTS) lastTS=ts;
+  const dt=Math.min((ts-lastTS)/1000,0.05);
+  lastTS=ts; T+=dt;
+
+  const W=wC.width;
+  const cols=Math.floor(W/22);
+  const sx=W/(cols+1);
+  const xEq=(TCOL+1)*sx;
+
+  dH[hi]=disp(xEq,T);
+  vH[hi]=vel(xEq,T);
+  pH[hi]=pres(xEq,T);
+  hi=(hi+1)%HIST;
+
+  drawWave();
+  const maxD=amp*1.05;
+  const maxV=amp*om()*1.05||1;
+  const maxP=amp*kk()*1.05||1;
+  drawPlot(dX,dH,'#50c8a0',80,200,160,'Displacement','px',  maxD);
+  drawPlot(vX,vH,'#ef9f27',239,159,39,'Velocity',    'px/s',maxV);
+  drawPlot(pX,pH,'#e24b4a',226,75,74, 'Pressure',    'Pa',  maxP);
+
+  requestAnimationFrame(loop);
+}
+requestAnimationFrame(loop);
 </script> <h2 id="能量密度和声波强度">能量密度和声波强度</h2> <p>声波的能量由粒子的动能和气体在膨胀和压缩过程中的弹性势能两部分构成。</p> <p>其中，<strong>动能密度</strong>：</p> \[\begin{align*} u_k &amp; = \frac{\frac{1}{2}\Delta m \cdot v^2}{\Delta V} \\ &amp; = \frac{1}{2}\rho v^2 \\ \Rightarrow \; u_k &amp;= \frac{1}{2}\rho_0 \omega^2 y_0^2 \sin^2 (kx-\omega t) \tag{12} \end{align*}\] <p><strong>弹性势能密度</strong>：</p> \[\begin{align*} u_p &amp; = \frac{-\frac{1}{2} \delta p \cdot \delta V}{\Delta V} \\ &amp; = \frac{1}{2}\delta p \cdot \frac{\delta p}{\gamma p_0} \\ &amp; = \frac{1}{2} \frac{(\delta p)^2}{\rho_0 c^2} \\ &amp; = \frac{1}{2} \frac{\rho_0^2 c^2 \omega^2 y_0^2 \sin^2(kx - \omega t)}{\rho_0 c^2} \\ \Rightarrow \; u_p &amp;= \frac{1}{2} \rho_0 \omega ^2 y_0^2 \sin^2 (kx-\omega t) \tag{13} \end{align*}\] <p>注意第一行中的负号，这是由于气体被压缩时 \(\delta V &lt;0\)，外界对气体作正功，弹性势能增大，但此时压强因被压缩也增大即 \(\delta p &gt; 0\)，因此弹性势能项需引入负号。后续几行的推导中，我们又分别在第二行用到了 \(\mathrm{d} p = -\gamma p_0 \frac{\mathrm{d} V}{V}\)，在第三行再次用到了 \(c =\sqrt{\frac{\gamma p_0}{\rho_0}}\)，并在倒数第二行代入了 \((8)\) 式的结果。</p> <p>很有意思的，可以注意到粒子动能的能量密度和弹性势能能量密度是完全一样的。容易写出<strong>总能量密度</strong>：</p> \[u(x,t) = u_k + u_p = \rho_0 \omega ^2 y_0^2 \sin^2 (kx-\omega t) \tag{14}\] <p>对时间求平均：</p> \[\begin{align*} \bar{u}(x) &amp; = \frac{1}{T} \int_0^T u(x,t) \, \mathrm{d} t \\ &amp; = \rho_0 \omega ^2 y_0^2 \times \frac{1}{T} \int_0^T \sin^2 (kx-\omega t) \, \mathrm{d} t \\ &amp; = \rho_0 \omega ^2 y_0^2 \times \frac{1}{T} \int_0^T \frac{1}{2}\left[ 1 - 2\cos(kx-\omega t)\right] \, \mathrm{d} t \\ \Rightarrow \; \bar{u}(x) &amp;= \frac{1}{2} \rho_0 \omega ^2 y_0^2 \tag{15} \end{align*}\] <p>对于横截面积为 \(A\)、体积为 \(\Delta V\) 的空气柱，声波传播的功率为</p> \[P = \frac{\bar{u} \Delta V}{\Delta t} = \bar{u}Ac\] <p>于是声波的<strong>强度</strong>（intensity）：</p> \[I = \frac{P}{A} = \bar{u} c \; \Rightarrow \; I= \frac{1}{2} \rho_0 c \omega ^2 y_0^2 \tag{16}\] <p>从 \((8)\) 式我们可以看出压强波动的振幅为：</p> \[\delta p_\text{max} = \rho_0 c \omega y_0\] <p>因此声波强度还可以被改写成：</p> \[I = \frac{(\delta p_\text{max})^2}{2\rho_0 c}\] <p>注意到上式分母部分又出现了可以打包进声阻抗 \(Z = \rho_0 c\) 的乘积组合，于是有：</p> \[I = \frac{(\delta p_\text{max})^2}{2 Z} \tag{17}\] <p>这说明<strong>声波的强度正比于压强振幅的平方</strong>，这也是 A-Level 物理考纲中需要学生知道、但是其实得来需要费不少功夫的一个结论。</p> <h2 id="反射系数与透射系数">反射系数与透射系数</h2> <p>声波从一种介质向另一种介质入射时，在两种介质的交界面上，部分声波发生反射，部分声波会透射。我们接下来分析最简单的垂直入射的情况下，反射和透射的声波强度占比分别是多少。</p> <div class="row"> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/sound-wave-boundary-480.webp 480w,/assets/img/sound-wave-boundary-800.webp 800w,/assets/img/sound-wave-boundary-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/sound-wave-boundary.jpg" class="img-natural rounded z-depth-1" width="100%" height="auto" title="" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"> </picture> </figure> </div> </div> <p>我们选用下标 \(i\)，\(r\) 和 \(t\) 分别代表入射（incident）、反射（reflected）和透射（transmitted）。</p> <p>首先，<strong>在交界面上应有连续的声压</strong>。若声压不连续，则界面两侧存在不为零的压强差，这将导致界面处极薄的质量层产生无限大的加速度，这在稳定的物理系统中是不可能发生的。声压的连续性条件可以写作：</p> \[\delta p_i + \delta p_r = \delta p_t \tag{18}\] <p>另一方面，<strong>交界面上粒子的法向速度也必须连续</strong>。如果界面一侧的粒子以不同于另一侧的速度运动，那么界面两侧的介质要么被拉扯开分出间隙，要么挤到一起互相重叠，这对于连续介质也是不能发生的。由粒子速度的连续性条件，我们有：</p> \[v_i - v_r = v_t \tag{19}\] <p>注意 \(v_r\) 前面的负号，这是因为反射波的传播方向发生了翻转。</p> <p>利用 \((10)\) 式 \(v = \frac{\delta p}{Z}\)，我们可以把以上两组连续性边界条件的方程联立写成：</p> \[\begin{align*} \delta p_t - \delta p_r &amp;= \delta p_i \\ \displaystyle \frac{\delta p_t}{Z_2} + \frac{\delta p_r}{Z_1} &amp;= \frac{\delta p_i}{Z_1} \end{align*}\] <p>从中可以解出反射波和透射波的压强：</p> \[\delta p_r = \frac{Z_2 - Z_1}{Z_2 + Z_1} \delta p_i \qquad \delta p_t = \frac{2Z_2}{Z_2 + Z_1} \delta p_i \tag{20}\] <p>利用 \((17)\) 式有关声波强度的结果，我们可以算出<strong>反射系数</strong>：</p> \[\begin{align*} \frac{I_r}{I_i} &amp;= \frac{\frac{(\delta p_r)^2}{2Z_1}}{\frac{(\delta p_i)^2}{2Z_1}} \\ &amp;= \left(\frac{\delta p_r}{\delta p_i} \right)^2 \\ \Rightarrow \frac{I_r}{I_i} &amp;= \left(\frac{Z_2 - Z_1}{Z_2 + Z_1} \right)^2 \tag{21} \end{align*}\] <p>以及类似地计算出<strong>透射系数</strong>：</p> \[\begin{align*} \frac{I_t}{I_i} &amp;= \frac{\frac{(\delta p_t)^2}{2Z_2}}{\frac{(\delta p_i)^2}{2Z_1}} \\ &amp;= \left(\frac{\delta p_t}{\delta p_i} \right)^2 \times \frac{Z_1}{Z_2} \\ &amp;= \frac{4Z_2^2}{(Z_2 + Z_1)^2} \times \frac{Z_1}{Z_2} \\ \Rightarrow \frac{I_t}{I_i} &amp;= \frac{4 Z_1Z_2}{(Z_2 + Z_1)^2} \tag{22} \end{align*}\] <p>这正是 A-Level 物理中超声波成像版块中的核心结论。</p> <p>不难验证 \((21)\)、\((22)\) 式满足 \(\frac{I_r}{I_i} + \frac{I_t}{I_i} = 1\)，这也是能量守恒的必然结果。从这两式也不难得出，若两种介质的声阻抗相差很大，\(Z_1 \gg Z_2\) 或 \(Z_1 \ll Z_2\)，则反射很强，透射很弱；反之，若两种介质的声阻抗十分接近，\(Z_1 \approx Z_2\)，则反射很弱，可以达到几乎完全透射。</p> <h2 id="小结">小结</h2> <p>本文我们基于理想气体的绝热过程导出了声波的波动方程，进而推导了声波波速、能量密度、声波强度的公式，最后讨论了声波垂直入射至两种不同介质交界面时的反射强度、透射强度。</p> <p>贯穿全文的核心量是在 A-Level 物理课程中很突兀就登场亮相的声阻抗 \(Z=\rho_0c\). 但我们看到，声阻抗不仅将声压与粒子速度联系在了一起，又决定了介质界面处的能量分配比例。</p> <p>最后给有心的读者留一个练习题：参考本文的推导，试从 Maxwell 方程组出发，导出电磁波的波动方程，并推导出电磁波能量密度、强度的公式，并证明电磁波垂直入射至两种不同介质交界面时，其反射系数和透射系数的结果在形式上与 \((21)\)、\((22)\) 式有非常类似的形式。（手动狗头）</p> </div> </article> </div> <style>.img-natural{max-width:90%;width:auto!important;height:auto;display:block;margin-left:auto;margin-right:auto}h2{color:var(--global-bg-color);background:var(--global-theme-color);line-height:1.6em;border-radius:3px;padding:2px;display:inline-block}</style> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Colin Young. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> <script src="/assets/js/bootstrap.bundle.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=a0db7e5d5c70cc3252b3138b0c91dcaf" type="text/javascript"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/js/zoom.js?v=85ddb88934d28b74e78031fd54cf8308"></script> <script src="/assets/js/no_defer.js?v=2781658a0a2b13ed609542042a859126"></script> <script defer src="/assets/js/common.js?v=c15de51d4bb57887caa2c21988d97279"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=d9f17b6adc2311cbabd747f4538bb15f"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/js/mathjax-setup.js?v=a5bb4e6a542c546dd929b24b8b236dfd"></script> <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script> <script defer src="/assets/js/progress-bar.js?v=2f30e0e6801ea8f5036fa66e1ab0a71a" type="text/javascript"></script> <script src="/assets/js/vanilla-back-to-top.min.js?v=f40d453793ff4f64e238e420181a1d17"></script> <script>
     addBackToTop();
   </script> <script type="module" src="/assets/js/search/ninja-keys.min.js?v=a3446f084dcaecc5f75aa1757d087dcf"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/js/search-setup.js?v=6c304f7b1992d4b60f7a07956e52f04a"></script> <script src="/assets/js/search-data.js"></script> <script src="/assets/js/shortcut-key.js?v=ccc841c459bfc0e64c1c2b5acd10df02"></script> </body> </html>
