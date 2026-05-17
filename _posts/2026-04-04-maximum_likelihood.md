@@ -9,7 +9,7 @@ categories: mathematics linear-algebra machine-learning
 
 > Coursera 刷完吴恩达的『[Deep Learning Specialization](https://www.coursera.org/specializations/deep-learning)』系列后，在课程结尾的推荐书目发现了一本 Christopher M. Bishop 和 Hugh Bishop 父子合著的『[Deep Learning: Foundations and Concepts](https://www.bishopbook.com/)』，似乎是个非常适合我这半吊子水平，最近每天拿来当睡前读物。目前也还有3分钟热度，做的读书笔记就趁热乎地发了。
 
-在概率与统计学中，我们常常面临这样一类问题：已知某些数据是由某个参数化的概率分布产生的，但分布的参数本身是未知的。这篇笔记介绍求解这类问题最经典的框架之一——**最大似然估计法**（maximum likelihood estimation）。其核心思想直观而朴素——选取使观测数据出现概率最大的参数值，作为对真实参数的估计。
+在概率与统计学中，我们常常面临这样一类问题：已知某些数据是由某个参数化的概率分布产生的，但分布的参数本身是未知的。这篇笔记介绍求解这类问题最经典的框架之一——**最大似然估计法**（maximum likelihood estimation）。其核心思想直观而朴素——选取使观测数据出现可能性最大的参数值，作为对真实参数的估计。
 
 笔记将以正态分布为例，具体推导最大似然估计的求解过程，分析其统计偏差，并进一步展示其与线性回归中误差平方和最小化之间的联系。
 
@@ -22,7 +22,7 @@ $$
 \mathcal{N}(x |\mu, \sigma^2) = \frac{1}{\sqrt{2\pi \sigma^2}} \mathrm{e}^{-\frac{(x-\mu)^2}{2\sigma^2}} \tag{1}
 $$
 
-如果我们对该变量作观测，进而得到了一系列的观测值 $$\mathbf{x} = (x_1, x_2, \cdots, x_N)$$。如果每次观测得到的数据点都是相互独立的，那么整个数据集出现的概率，也可称为**似然函数**（likelihood function），可以写成：
+如果我们对该变量作观测，进而得到了一系列的观测值 $$\mathbf{x} = (x_1, x_2, \cdots, x_N)$$。如果每次观测得到的数据点都是相互独立的，那么整个数据集出现的可能性，也可称为**似然函数**（likelihood function），可以写成：
 
 $$
 p(\mathbf{x}|\mu, \sigma^2) = \prod_{n=1}^N p(x_n|\mu, \sigma^2) = \prod_{n=1}^N \mathcal{N}(x_n |\mu, \sigma^2) \tag{2}

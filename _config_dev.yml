@@ -1,0 +1,6 @@
+# _config_dev.yml — local development overrides
+imagemagick:
+  enabled: false
+
+jupyter:
+  enabled: false
