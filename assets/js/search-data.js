@@ -304,6 +304,17 @@ ninja.data = [{
             window.location.href = "/blog/2024/newton-raphson/";
           
         },
+      },{id: "post-标准模型和-higgs-玻色子-悼念英国理论物理学家-peter-higgs",
+        
+          title: "标准模型和 Higgs 玻色子 —— 悼念英国理论物理学家 Peter Higgs",
+        
+        description: "听闻英国理论物理学家 Peter Higgs 逝世的消息，不禁思绪万千。翻出当年写的一篇长博客，是以悼念这位在粒子物理研究中开疆辟土的大神。",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/peter-higgs/";
+          
+        },
       },{id: "post-a-level-数学-物理-past-paper-手写全解答大合集",
         
           title: "A-Level 数学/物理 Past Paper 手写全解答大合集",
@@ -1121,6 +1132,21 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/2025_linear_algebra/";
+            },},{id: "books-数学奇观-让数学之美带给你灵感与启发",
+          title: '数学奇观：让数学之美带给你灵感与启发',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/2026_math_wonders/";
+            },},{id: "books-基本粒子发现之旅",
+          title: '基本粒子发现之旅',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/2026_CNY_1959/";
+            },},{id: "books-希格斯-上帝粒子-的发明与发现",
+          title: '希格斯：“上帝粒子”的发明与发现',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/2026_higgs/";
             },},{id: "news-流水账的2022年终总结-学习资源推荐",
           title: '流水账的2022年终总结 + 学习资源推荐',
           description: "",
