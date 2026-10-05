@@ -51,7 +51,62 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-从声速到超声波成像-a-level-声波物理背后的完整故事",
+        },{id: "post-概率论笔记-中心极限定理-从二项分布到正态分布",
+        
+          title: "『概率论笔记』中心极限定理：从二项分布到正态分布",
+        
+        description: "重温概率论的抄书笔记：随机过程在不确定性的外表之下，如何暗藏着有组织有纪律的规律",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/central-limit/";
+          
+        },
+      },{id: "post-概率论笔记-chebyshev-不等式与大数定理",
+        
+          title: "『概率论笔记』Chebyshev 不等式与大数定理",
+        
+        description: "重温概率论的抄书笔记：仅靠很少量的信息，就可以得到关于随机事件发生概率的一些量化的估计，数学世界总是如此充满魔力",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/chebyshev/";
+          
+        },
+      },{id: "post-从极限到级数-证明-e-的两种定义等价",
+        
+          title: "从极限到级数：证明 e 的两种定义等价",
+        
+        description: "本抄书笔记证明了为什么看起来毫不相关的通过无穷级数展开定义的常数 e 和一个特殊数列极限值 e 最终殊途同归完全等价",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/euler-constant-e/";
+          
+        },
+      },{id: "post-amc10-备课笔记-stewart-定理-三角形顶角平分线长度公式-中线长度公式",
+        
+          title: "AMC10 备课笔记——Stewart 定理、三角形顶角平分线长度公式、中线长度公式",
+        
+        description: "AMC10 数学竞赛真是能学到东西，在初等数学领域竟有如此之多我活了大半辈子都还不曾知道的神奇定理",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/triangle-theorems/";
+          
+        },
+      },{id: "post-exp-x-与-ln-x-的另一种诞生方式",
+        
+          title: "exp(x) 与 ln(x) 的另一种诞生方式",
+        
+        description: "本文从 $$\ln(x)$$ 等于一个变上限的定积分作为定义出发，并以此为基石推导出所有关于 $$f(x) = \exp(x)$$ 和 $$f(x) = \ln x$$ 的基本性质。",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/exp-log-functions/";
+          
+        },
+      },{id: "post-从声速到超声波成像-a-level-声波物理背后的完整故事",
         
           title: "从声速到超声波成像：A-Level 声波物理背后的完整故事",
         
@@ -341,7 +396,7 @@ ninja.data = [{
         
           title: "2021 STEP II Q8 —— e 的近似分数值",
         
-        description: "本篇介绍一种巧妙地利用积分构造的递推关系，找到数学常数 $\mathrm{e}$ 的分式近似表达式的方法",
+        description: "本篇介绍一种巧妙地利用积分构造的递推关系，找到数学常数 $$\mathrm{e}$$ 的分式近似表达式的方法",
         section: "Posts",
         handler: () => {
           
@@ -385,7 +440,7 @@ ninja.data = [{
         
           title: "1997 STEP I Q6 —— π 的近似分数值",
         
-        description: "一个很有意思的关于圆周率 $\pi$ 的近似有理分式表达式的结果",
+        description: "一个很有意思的关于圆周率 $$\pi$$ 的近似有理分式表达式的结果",
         section: "Posts",
         handler: () => {
           
@@ -594,7 +649,7 @@ ninja.data = [{
         
           title: "从勾股数到费马大定理",
         
-        description: "受西蒙·辛格的数学科普《费马大定理》启发，写写费马大定理的故事，然后写写 $n=4$ 和 $n=3$ 时费马大定理的证明",
+        description: "受西蒙·辛格的数学科普《费马大定理》启发，写写费马大定理的故事，然后写写 $$n=4$$ 和 $$n=3$$ 时费马大定理的证明",
         section: "Posts",
         handler: () => {
           
@@ -737,7 +792,7 @@ ninja.data = [{
         
           title: "2017 STEP I Q8 —— √2 的有理分式近似",
         
-        description: "通过递推来构造一个数列，逼近 $\sqrt{2}$ 的近似值。",
+        description: "通过递推来构造一个数列，逼近 $$\sqrt{2}$$ 的近似值。",
         section: "Posts",
         handler: () => {
           
@@ -746,9 +801,9 @@ ninja.data = [{
         },
       },{id: "post-2012-step-iii-q11-a-gt-g-的自由下落运动",
         
-          title: "2012 STEP III Q11 —— $a&gt;g$ 的自由下落运动",
+          title: "2012 STEP III Q11 —— a&gt;g 的自由下落运动",
         
-        description: "一个神奇的模型：当一个物体栓在一根绳子的尾端作自由下落运动时，其加速度可以大于重力加速度 $a&gt;g$",
+        description: "一个神奇的模型：当一个物体栓在一根绳子的尾端作自由下落运动时，其加速度可以大于重力加速度 $$a&gt;g$$",
         section: "Posts",
         handler: () => {
           
@@ -1147,6 +1202,21 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/2026_higgs/";
+            },},{id: "books-地球探索史话",
+          title: '地球探索史话',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/2026_earth_exploration/";
+            },},{id: "books-a-mathematical-bridge-an-intuitive-journey-in-higher-mathematics",
+          title: 'A Mathematical Bridge: An Intuitive Journey in Higher Mathematics',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/2026_math_bridge/";
+            },},{id: "books-我看见的世界-人工智能领域的好奇-探索与发现",
+          title: '我看见的世界——人工智能领域的好奇、探索与发现',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/2026_li_feifei/";
             },},{id: "news-流水账的2022年终总结-学习资源推荐",
           title: '流水账的2022年终总结 + 学习资源推荐',
           description: "",
