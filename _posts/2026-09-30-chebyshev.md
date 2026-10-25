@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "『概率论笔记』Chebyshev 不等式与大数定理"
+title: "概率论笔记：Chebyshev 不等式与大数定理"
 date: 2026-09-15 10:04:00
-description: 重温概率论的抄书笔记：仅靠很少量的信息，就可以得到关于随机事件发生概率的一些量化的估计，数学世界总是如此充满魔力
+description: 仅靠很少量的信息，就可以得到关于随机事件发生概率的一些量化的估计，数学世界总是如此充满魔力
 tags: mathematics a-level calculus probability
 categories: mathematics a-level 
 ---

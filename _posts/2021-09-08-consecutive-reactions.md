@@ -3,7 +3,7 @@ layout: post
 title: "反应动力学——连续两个一级反应的产物生成率"
 date: 2021-09-08 15:21:00
 description: 这次没有披着物理的外皮来写数学了，我这次披了个化学的外衣……
-tags: mathematics chemistry
+tags: mathematics chemistry calculus
 categories: mathematics chemistry
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: "浅说 Newton-Raphson 方法——从一道 STEP II 2023 的真题说起"
 date: 2024-05-09 07:27:00
 description: 启发于 STEP II 2023 的卷子中出现的一个设计非常惊艳的大题，来水一点 Newton-Raphson 方法的科普
-tags: mathematics analysis step
+tags: mathematics analysis step calculus
 categories: mathematics step
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "『概率论笔记』中心极限定理：从二项分布到正态分布"
+title: "概率论笔记：中心极限定理——从二项分布到正态分布"
 date: 2026-10-01 10:56:00
 description: 重温概率论的抄书笔记：随机过程在不确定性的外表之下，如何暗藏着有组织有纪律的规律
 tags: mathematics a-level calculus probability

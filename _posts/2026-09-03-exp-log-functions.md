@@ -2,8 +2,8 @@
 layout: post
 title: "exp(x) 与 ln(x) 的另一种诞生方式"
 date: 2026-09-03 20:48:00
-description: 本文从 $$\ln(x)$$ 等于一个变上限的定积分作为定义出发，并以此为基石推导出所有关于 $$f(x) = \exp(x)$$ 和 $$f(x) = \ln x$$ 的基本性质。
-tags: mathematics a-level calculus
+description: 本文从 ln(x) 等于一个变上限的定积分作为定义出发，并以此为基石推导出所有关于 f(x) = exp(x) 和 f(x) = ln(x) 的基本性质。
+tags: mathematics a-level calculus analysis
 categories: mathematics a-level 
 ---
 

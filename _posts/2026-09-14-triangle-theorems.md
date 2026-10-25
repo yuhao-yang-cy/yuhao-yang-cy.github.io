@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "AMC10 备课笔记——Stewart 定理、三角形顶角平分线长度公式、中线长度公式"
+title: "AMC10 备课笔记：Stewart 定理、三角形顶角平分线长度公式、中线长度公式"
 date: 2026-09-14 11:07:00
 description: AMC10 数学竞赛真是能学到东西，在初等数学领域竟有如此之多我活了大半辈子都还不曾知道的神奇定理
 tags: mathematics a-level geometry

@@ -3,7 +3,7 @@ layout: post
 title: "Riemann Sum 求和法蛮力推导积分基本公式"
 date: 2020-04-25 13:11:00
 description: 通过求一系列矩形的面积和，来估计某个函数曲线下的面积，然后考虑无穷分割的极限，证明几个简单初等函数的定积分结果
-tags: mathematics integration series
+tags: mathematics integration series calculus
 categories: mathematics a-level
 ---
 

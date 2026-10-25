@@ -3,7 +3,7 @@ layout: post
 title: "从极限到级数：证明 e 的两种定义等价"
 date: 2026-09-15 09:38:00
 description: 本抄书笔记证明了为什么看起来毫不相关的通过无穷级数展开定义的常数 e 和一个特殊数列极限值 e 最终殊途同归完全等价
-tags: mathematics a-level calculus
+tags: mathematics a-level calculus analysis
 categories: mathematics a-level 
 ---
 
